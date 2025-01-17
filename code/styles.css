@@ -2,7 +2,7 @@
     box-sizing:border-box;
     margin: 10px;
     padding: 0;
-    background-color:#fdfcf6
+    background-color:#fdfef9
 }
 li, a, button{
     text-decoration: none;
@@ -13,7 +13,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items:center;
-    padding: 30px 10%;
+    /* padding: 30px 10%; */
+    padding:0px;
 }
 .logo{
     cursor:pointer;
@@ -27,6 +28,8 @@ header{
     li a{
         transition: all 0.3s ease 0s;
         text-decoration:none;
+        font-size: 24px;
+
 
     }
     li a:hover{
@@ -43,5 +46,11 @@ button{
     transition: all 0.3s ease 0s;
     :hover{
         background-color:rgba(174, 205, 171,.8);
+    }
+}
+.con{
+    img{
+        color:#657264;
+        width:30px;
     }
 }
