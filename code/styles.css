@@ -29,6 +29,8 @@ header{
         transition: all 0.3s ease 0s;
         text-decoration:none;
         font-size: 24px;
+        font-family: 'DM Sans';
+
 
 
     }
@@ -49,8 +51,67 @@ button{
     }
 }
 .con{
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+    :hover{
+        width:30px;
+    }
     img{
         color:#657264;
         width:30px;
     }
 }
+h1{
+    font-size:60px;
+    color:#657264;
+    font-family: 'DM Sans';
+}
+.space{
+    /* margin-bottom:5cm; */
+    padding-bottom:3cm;
+}
+p{
+    font-family:'DM Sans';
+}
+.acth2{
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+    margin-right: 45%;
+    margin-left:5%;
+    font-size:30px;
+    font-family:'DM Sans';
+    font-weight:bold;
+}
+.actbox{
+        width:20%;
+        display:flex;
+        justify-content:center;
+        background-color:#e4b5c2;
+        cursor:pointer;
+        transition:all 0.3s ease 0s;
+        text-decoration:none;
+        /* border:5px solid #657264; */
+        /* padding:2%; */
+        /* text-decoration:none; */
+        /* flex-direction:column; */
+        :hover{
+            background-color:#e4b5c2
+
+        }
+}
+/*          .clickable-box { 
+                width: 150px; 
+                height: 150px; 
+                background-color: #4CAF50; 
+                color: white; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                cursor: pointer; 
+                border-radius: 8px; 
+                text-decoration: none; 
+                } 
+                .clickable-box:hover { 
+                    background-color: #45a049; 
+                    } */
