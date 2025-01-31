@@ -6,6 +6,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+        } */
+        .directory {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .profile {
+
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            width: calc(50% - 32px); /* Adjusting width for two cards per row */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+        }
+        .procont{
+            flex-direction: column;
+            display: flex;
+        }
+        .profile img {
+            /* max-width: 10%;
+            height: auto;
+            border-radius: 5px; */
+            margin-right: 16px;
+            width: 50px; /* You can adjust the image size */
+            height: 50px; /* You can adjust the image size */
+            border-radius: 50%; /* Making the image circular */
+        }
+        .profile h2 {
+            margin: 0 0 10px 0;
+        }
+    </style>
 <!--nav bar-->
 <header>
     <a href = "home.html"><img class="logo" src="Screenshot 2024-12-14 120813.png" alt =" logo" width = 100px> </a>
@@ -29,10 +66,82 @@
 
 <p style="text-align:center;padding-bottom:5%">Why Cherielle was created</p>
 <h2>Heads</h2>
-
+<div class="directory">
+    <div class="profile">
+        <img src="Screenshot 2024-12-14 120813.png" alt="Qwyen">
+            <div class="procont">
+            <h2>Qwyen Le</h2>
+            <p>Co-Founder</p>
+            <p>abt qwyen</p>
+        </div>
+    </div>
+    <div class="profile">
+        <img src="profile2.jpg" alt="Reanna">
+        <div class="procont">
+            <h2>Reanna Jin</h2>
+            <p>Co-Founder</p>
+            <p>abt reanna</p>
+        </div>
+    </div>
+    <div class="profile">
+        <img src="profile3.jpg" alt="Shreya">
+        <div clas="=procont">
+            <h2>Shreya</h2>
+            <p>Secretary</p>
+            <p>abt shreya</p>
+        </div>
+    </div>
+</div>
 <h2>Executives</h2>
-<h2>General Team</h2>
-
-
+<div class="directory">
+    <div class="profile">
+        <img src="Screenshot 2024-12-14 120813.png" alt="Placeholder">
+            <div class="procont">
+            <h2>[Name]</h2>
+            <p>[Role]</p>
+            <p>[desc]</p>
+        </div>
+    </div>
+    <div class="profile">
+        <img src="profile2.jpg" alt="Placeholder">
+        <div class="procont">
+            <h2>[Name]</h2>
+            <p>[Role]</p>
+            <p>[desc]</p>
+        </div>
+    </div>
+    <div class="profile">
+        <img src="profile3.jpg" alt="Placeholder">
+        <div clas="=procont">
+            <h2>[Name]</h2>
+            <p>[Role]</p>
+            <p>[desc]</p>
+        </div>
+    </div>
+    <div class="profile">
+        <img src="Screenshot 2024-12-14 120813.png" alt="Placeholder">
+            <div class="procont">
+            <h2>[Name]</h2>
+            <p>[Role]</p>
+            <p>[desc]</p>
+        </div>
+    </div>
+    <div class="profile">
+        <img src="profile2.jpg" alt="Placeholder">
+        <div class="procont">
+            <h2>[Name]</h2>
+            <p>[Role]</p>
+            <p>[desc]</p>
+        </div>
+    </div>
+    <div class="profile">
+        <img src="profile3.jpg" alt="Placeholder">
+        <div clas="=procont">
+            <h2>[Name]</h2>
+            <p>[Role]</p>
+            <p>[desc]</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>

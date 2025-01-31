@@ -67,7 +67,6 @@ h1{
     font-family: 'DM Sans';
 }
 .space{
-    /* margin-bottom:5cm; */
     padding-bottom:3cm;
 }
 p{
@@ -100,18 +99,3 @@ p{
 
         }
 }
-/*          .clickable-box { 
-                width: 150px; 
-                height: 150px; 
-                background-color: #4CAF50; 
-                color: white; 
-                display: flex; 
-                justify-content: center; 
-                align-items: center; 
-                cursor: pointer; 
-                border-radius: 8px; 
-                text-decoration: none; 
-                } 
-                .clickable-box:hover { 
-                    background-color: #45a049; 
-                    } */
