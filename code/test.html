@@ -1,80 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Directory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Peek with Dynamic Content</title>
     <style>
-        .directory {
-            display: flex;
-            flex-wrap: wrap;
+        body {
+            font-family: Arial, sans-serif;
         }
-        .card {
-            border: 1px solid black;
-            padding: 16px;
-            margin: 8px;
-            width: calc(50% - 32px); 
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
+        .main-content {
+            padding: 20px;
         }
-        .card img {
-            margin-right: 16px;
-            width: 50px; 
-            height: 50px;
-            border-radius: 50%; 
+        .side-panel {
+            position: fixed;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #f4f4f4;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding: 20px;
         }
-        .card-content {
-            display: flex;
-            flex-direction: column;
+        .side-panel.active {
+            left: 0;
         }
-        .card-content h3 {
-            margin: 0;
-            margin-bottom: 8px;
-            font-size: 1.2em;
+        .toggle-btn {
+            position: fixed;
+            left: 0;
+            top: 50px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
         }
-        .card-content p {
-            margin: 4px 0;
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
         }
     </style>
 </head>
 <body>
+    <button class="toggle-btn" onclick="toggleSidePanel()">Toggle Side Peek</button>
 
-<h2>Directory</h2>
+    <div class="side-panel" id="sidePanel">
+        <button class="close-btn" onclick="closeSidePanel()">Close</button>
+        <div id="sidePanelContent">
+            <h2>Side Panel</h2>
+            <p>This is the side panel content.</p>
+        </div>
+    </div>
 
-<div class="directory">
-    <div class="card">
-        <img src="path_to_image1.jpg" alt="John Doe">
-        <div class="card-content">
-            <h3>John Doe</h3>
-            <p>Position: Manager</p>
-            <p>Contact: john.doe@example.com</p>
-        </div>
+    <div class="main-content">
+        <h1>Main Content</h1>
+        <p>This is the main content area. Click a link to load content in the side panel.</p>
+        <ul>
+            <li><a href="#" onclick="loadContent('home.html')">Home</a></li>
+            <li><a href="#" onclick="loadContent('about.html')">About</a></li>
+            <li><a href="#" onclick="loadContent('articles.html')">Contact</a></li>
+        </ul>
     </div>
-    <div class="card">
-        <img src="path_to_image2.jpg" alt="Jane Smith">
-        <div class="card-content">
-            <h3>Jane Smith</h3>
-            <p>Position: Assistant</p>
-            <p>Contact: jane.smith@example.com</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="path_to_image3.jpg" alt="Mike Johnson">
-        <div class="card-content">
-            <h3>Mike Johnson</h3>
-            <p>Position: Technician</p>
-            <p>Contact: mike.johnson@example.com</p>
-        </div>
-    </div>
-    <div class="card">
-        <img src="path_to_image4.jpg" alt="Anna Brown">
-        <div class="card-content">
-            <h3>Anna Brown</h3>
-            <p>Position: Designer</p>
-            <p>Contact: anna.brown@example.com</p>
-        </div>
-    </div>
-</div>
 
+    <script>
+        function toggleSidePanel() {
+            const sidePanel = document.getElementById('sidePanel');
+            sidePanel.classList.toggle('active');
+        }
+
+        function closeSidePanel() {
+            const sidePanel = document.getElementById('sidePanel');
+            sidePanel.classList.remove('active');
+        }
+
+        function loadContent(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidePanelContent').innerHTML = data;
+                    toggleSidePanel();
+                })
+                .catch(error => {
+                    console.error('Error loading content:', error);
+                    document.getElementById('sidePanelContent').innerHTML = '<p>Sorry, an error occurred while loading the content.</p>';
+                });
+        }
+
+        document.addEventListener('click', function(event) {
+            const sidePanel = document.getElementById('sidePanel');
+            const toggleBtn = document.querySelector('.toggle-btn');
+            const closeBtn = document.querySelector('.close-btn');
+            const isClickInsideSidePanel = sidePanel.contains(event.target);
+            const isClickOnToggleBtn = toggleBtn.contains(event.target);
+            const isClickOnCloseBtn = closeBtn.contains(event.target);
+
+            if (!isClickInsideSidePanel && !isClickOnToggleBtn && !isClickOnCloseBtn) {
+                closeSidePanel();
+            }
+        });
+    </script>
 </body>
 </html>
