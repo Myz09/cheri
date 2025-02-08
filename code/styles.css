@@ -69,33 +69,7 @@ h1{
 .space{
     padding-bottom:3cm;
 }
+/* ^ is a little unnecessary */
 p{
     font-family:'DM Sans';
-}
-.acth2{
-    list-style: none;
-    justify-content: space-between;
-    display: flex;
-    margin-right: 45%;
-    margin-left:5%;
-    font-size:30px;
-    font-family:'DM Sans';
-    font-weight:bold;
-}
-.actbox{
-        width:20%;
-        display:flex;
-        justify-content:center;
-        background-color:#e4b5c2;
-        cursor:pointer;
-        transition:all 0.3s ease 0s;
-        text-decoration:none;
-        /* border:5px solid #657264; */
-        /* padding:2%; */
-        /* text-decoration:none; */
-        /* flex-direction:column; */
-        :hover{
-            background-color:#e4b5c2
-
-        }
 }

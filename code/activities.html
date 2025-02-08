@@ -7,6 +7,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <style>
+    .acts{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:left;
+        gap: 1em;
+        padding:2em
+    }
+    .acth2{
+        list-style: none;
+        justify-content: space-between;
+        display: flex;
+        color:#657264;
+        margin-right: 45%;
+        margin-left:5%;
+        font-size:30px;
+        font-family:'DM Sans';
+        font-weight:bold;
+    }
+    .actbox{
+        background-color:aliceblue;
+        color:inherit;
+        width:40%;
+        padding:2%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        border: 1px solid black;
+        border-radius:5px;
+        cursor:pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .actbox:hover{
+        transform: translateY(-5px);
+        box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+    .col{
+        flex: 1;
+        padding: 10px;
+        border: 1px 
+    }
+    .colright{
+        margin-left:-7%;
+    }
+
+    </style>
 <!--nav bar-->
 <header>
     <a href = "home.html"><img class="logo" src="Screenshot 2024-12-14 120813.png" alt =" logo" width = 100px> </a>    <nav>
@@ -26,17 +72,21 @@
 </header>
 
 <h1 style="text-align:center;margin-bottom:2%;">Activities</h1> 
-<!-- <h1 style="text-align:center">Activities</h1>  -->
-
-<ul class = "acth2">
-    <li>Upcoming</li>
-    <li>Past</li>
-    </ul>
-<div class = "actbox">
-    <a style="text-align:center;display:flex;" href = "actHOC.html">Coding Workshop<br>
+<div class = "acts">
+    <div class = "col">
+    <h2 class="acth2">Upcoming</h2>
+    <a class="actbox" style="text-align:center;display:flex;" href = "actHOC.html">Coding Workshop<br>
         Hour of Code <br>
         Date: TBD<br>
         Desc: in a collaboration with Pink Gap, we will be hosting a coding workshop for middle schoolers</a>
+    </div>
+    <div class = "col colright">
+        <h2 class="acth2 ">Past</h2>
+        <a class = "actbox" style = "text-align:center;display:flex;" href = "actMedCon.html">Medical Conference<br>
+            Medical Conference <br>
+            Date:Saturday 01/25/25 6:30PM <br>
+            Desc: Hosted by Pink Gap, Cherielle participated in a medical conference and presented about wearable medical devices</a>
+    </div>
 </div>
 
 </body>
