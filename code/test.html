@@ -13,7 +13,7 @@
         }
         .side-panel {
             position: fixed;
-            left: -250px;
+            left: -20%;
             width: 250px;
             height: 100%;
             background-color: #f4f4f4;
@@ -64,11 +64,11 @@
         <h1>Main Content</h1>
         <p>This is the main content area. Click a link to load content in the side panel.</p>
         <ul>
-            <li><a href="#" onclick="loadContent('home.html')">Home</a></li>
-            <li><a href="#" onclick="loadContent('about.html')">About</a></li>
-            <li><a href="#" onclick="loadContent('articles.html')">Contact</a></li>
+            <li class = "toggler"><a href="#home.html" onclick="loadContent('home.html')">Home</a></li>
+            <li class="toggler"><a href="#about.html" onclick="loadContent('about.html')">About</a></li>
+            <li class="toggler"><a href="#articles.html" onclick="loadContent('articles.html')">Contact</a></li>
         </ul>
-    </div>
+    </div>  
 
     <script>
         function toggleSidePanel() {

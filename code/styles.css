@@ -1,8 +1,16 @@
+/* variables */
+:root{
+    --lineColor: #d3d3d3
+}
 *{
     box-sizing:border-box;
     margin: 10px;
     padding: 0;
     background-color:#fdfef9
+}
+body{
+    min-height:100%;
+    flex-grow:1;
 }
 li, a, button{
     text-decoration: none;
@@ -72,4 +80,63 @@ h1{
 /* ^ is a little unnecessary */
 p{
     font-family:'DM Sans';
+}
+footer {
+    /* background-color: darkolivegreen; */
+    /* color: #fff; */
+    text-align: center;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+    flex:auto;
+    margin:0;
+    margin-top:10%;
+    width: 100%;
+
+}
+footer hr{
+    border-top:1px solid var(--lineColor);
+}
+footer a {
+    color: pink;
+    /* background-color:#657264 */
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer li{
+    list-style: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.foot-title{
+    font-size:larger;
+    color:rgb(60, 59, 59)
+}
+/* figure out how to change line color */
+.foot-line{
+    background-color: var(--lineColor);
+}
+.foot-bot{
+    color:#657264;
+}
+.foot-bot hr{
+    border-top:1px solid var(--lineColor);
+    max-width:50%;
+    margin:auto;
+}
+
+.foot-top{
+    display:flex;
+    justify-content:space-between;
+    margin-left:10%;
+    margin-right:10%;
+}
+.foot-item img{
+    max-width:40%;
+    min-width:10%;
+}
+.foot-line{
+    max-width:75%;
+    margin:auto;
 }
