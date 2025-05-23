@@ -1,6 +1,6 @@
 /* variables */
 :root{
-    --lineColor: #d3d3d3
+    --lineColor: #4c4c4c
 }
 *{
     box-sizing:border-box;
@@ -8,10 +8,10 @@
     padding: 0;
     background-color:#fdfef9
 }
-body{
+/* body{
     min-height:100%;
     flex-grow:1;
-}
+} */
 li, a, button{
     text-decoration: none;
     color:#657264;
@@ -31,10 +31,9 @@ header{
     box-shadow: 0px 3px 5px 0 rgba(0,0,0,0.1); */
     /* float: left; */
 	/* position: absolute; */
-	top: 100%;
+	/* top: 100%; */
 	/* left: -999em; */
-    width:100%;
-	/* z-index: 99999; */
+    /* width:100%; */
 }
 .logo{
     cursor:pointer;
@@ -71,11 +70,11 @@ button{
     }
 }
 .con{
-    cursor:pointer;
+    /* cursor:pointer;
     transition: all 0.3s ease 0s;
     :hover{
         width:30px;
-    }
+    } */
     img{
         color:#657264;
         width:30px;
@@ -94,7 +93,6 @@ p{
     font-family:'DM Sans';
 }
 footer {
-    /* background-color: darkolivegreen; */
     /* color: #fff; */
     text-align: center;
     padding: 20px;
@@ -112,7 +110,7 @@ footer hr{
 footer a {
     color: pink;
     /* background-color:#657264 */
-    text-decoration: none;
+    /* text-decoration: none; */
     margin: 0 10px;
 }
 footer li{
@@ -127,13 +125,11 @@ footer a:hover {
 }
 /* figure out how to change line color */
 .foot-line{
-    background-color: var(--lineColor);
 }
 .foot-bot{
     color:#657264;
 }
 .foot-bot hr{
-    border-top:1px solid var(--lineColor);
     max-width:50%;
     margin:auto;
 }
@@ -151,4 +147,14 @@ footer a:hover {
 .foot-line{
     max-width:75%;
     margin:auto;
+}
+.site{
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0,1fr);
+    :where(body){
+        hyphens: auto;
+        overflow-wrap:break-word;
+    }
 }
