@@ -1,4 +1,8 @@
 /* variables */
+@font-face {
+    font-family: "DM-Sans";
+    src: url('https://fonts.googleapis.com/css?family=DM Sans');
+}
 :root{
     --lineColor: #4c4c4c
 }
@@ -6,34 +10,22 @@
     box-sizing:border-box;
     margin: 10px;
     padding: 0;
-    background-color:#fdfef9
 }
-/* body{
-    min-height:100%;
-    flex-grow:1;
-} */
+body{
+    background-color:#fdfef9;
+    font-family:"DM-Sans","Arial",sans-serif
+}
 li, a, button{
     text-decoration: none;
     color:#657264;
 
 }
+
 header{
     display: flex;
     justify-content: space-between;
     align-items:center;
-    /* padding: 30px 10%; */
-    padding:0px;
-    /* margin-left:0px;
-    margin-right:0px; */
-	/* box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
-    -webkit-clip-path: inset(0px 0px 5px 0px); */
-    /* -webkit-box-shadow: 0px 3px 5px 0 rgba(0,0,0,0.1);
-    box-shadow: 0px 3px 5px 0 rgba(0,0,0,0.1); */
-    /* float: left; */
-	/* position: absolute; */
-	/* top: 100%; */
-	/* left: -999em; */
-    /* width:100%; */
+    padding:10px;
 }
 .logo{
     cursor:pointer;
@@ -93,22 +85,23 @@ p{
     font-family:'DM Sans';
 }
 footer {
-    /* color: #fff; */
     text-align: center;
     padding: 20px;
-    left: 0;
-    bottom: 0;
     flex:auto;
     margin:0;
     margin-top:10%;
-    width: 100%;
+    width: 100dvw;
 
 }
+.foot-sec{
+    display:none;
+}
 footer hr{
+    display:none;
     border-top:1px solid var(--lineColor);
 }
 footer a {
-    color: pink;
+    color: #657264;
     /* background-color:#657264 */
     /* text-decoration: none; */
     margin: 0 10px;
@@ -124,12 +117,11 @@ footer a:hover {
     color:rgb(60, 59, 59)
 }
 /* figure out how to change line color */
-.foot-line{
-}
 .foot-bot{
     color:#657264;
 }
 .foot-bot hr{
+    display:contents;
     max-width:50%;
     margin:auto;
 }
@@ -150,11 +142,4 @@ footer a:hover {
 }
 .site{
     min-height: 100dvh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: minmax(0,1fr);
-    :where(body){
-        hyphens: auto;
-        overflow-wrap:break-word;
-    }
 }
