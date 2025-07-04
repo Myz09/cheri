@@ -8,42 +8,39 @@
 </head>
 <body>
     <div class="site">
-        <header>
-            <a href = "index.html"><img class="logo" src="Screenshot 2024-12-14 120813.png" alt =" logo" width = 100px> </a>
-            <nav>
-                <ul CLASS="nav_links">
-                    <li><a href = "mission.html">Mission</a></li>
-                    <!-- <li><a href = "activities.html">Activities</a></li>
-                    <li><a href = "articles.html">Articles</a></li> -->
-                    <li><a href = "about.html">About</a></li>
-                </ul> 
-            </nav>  
-        <div>
-            <a class="con" href="mailto:cherielle.code@gmail.com" target ="_blank"><img src="envelope-line-icon.webp" alt="Email" width="50px"></a>
-            <a class="con" href="https://www.linkedin.com/company/cherielle" target = "_blank"><img src="linkedin-square-icon.webp", alt ="Linkedin" width = "50px"></a>
-            <a class="con" href="https://discord.gg/PVeGeKY6" target = "_blank"> <img src="discord-black-icon.webp", alt ="Discord" width = "50px"></a>    
-            <a class="con" href="https://www.instagram.com/cherielle.code/" target = "_blank"><img src="black-instagram-icon.webp", alt ="Instagram" width = "50px"></a>
-        </div>
-        </header>
+    <header>
+        <a href = "index.html"><img class="logo" src="Screenshot 2024-12-14 120813.png" alt =" logo" width = 100px> </a>    
+        <nav>
+            <ul CLASS="nav_links">
+                <li><a href = "mission.html">Mission</a></li>
+                <li><a href = "about.html">About</a></li>
+                <li><a href= "contact.html">Contact</a></li>
+            </ul> 
+        </nav>  
+    </header>
 
         <style>
-            body {
-                font-family: Arial, sans-serif;
-            }
             .directory {
                 display: flex;
                 flex-wrap: wrap;
+                align-self:center;
             }
+            
             .profile {
                 border: 1px solid #ddd;
                 padding: 10px;
                 margin-bottom: 10px;
                 border-radius: 5px;
-                width: calc(50% - 32px); /* Adjusting width for two cards per row */
+                width: 45dvw; 
                 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
                 box-sizing: border-box;
                 display: flex;
                 align-items: center;
+            }
+            @media(max-width:768px){
+            .profile{
+                width:100dvw;
+            }
             }
             .procont{
                 flex-direction: column;
@@ -58,6 +55,49 @@
             .profile h2 {
                 margin: 0 0 10px 0;
             }
+             /* .directory {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            padding: 0 16px;
+            justify-content: center;
+            }
+
+            .profile {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            box-sizing: border-box;
+            max-width: 100%;
+            }
+
+            .profile img {
+            margin-right: 16px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            }
+
+            .procont {
+            display: flex;
+            flex-direction: column;
+            }
+
+            .profile h2 {
+            margin: 0 0 8px 0;
+            font-size: 1.2rem;
+            }
+
+            .profile p {
+            margin: 4px 0;
+            line-height: 1.4;
+} */
         </style>
     <!--nav bar-->
 

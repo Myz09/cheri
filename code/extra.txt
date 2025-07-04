@@ -1,3 +1,26 @@
+NAV CONTACT
+ <!-- <div>
+        <a class="con" href="mailto:cherielle.code@gmail.com" target ="_blank"><img src="envelope-line-icon.webp" alt="Email" width="50px"></a>
+        <a class="con" href="https://www.linkedin.com/company/cherielle" target = "_blank"><img src="linkedin-square-icon.webp", alt ="Linkedin" width = "50px"></a>
+        <a class="con" href="https://discord.gg/PVeGeKY6" target = "_blank"> <img src="discord-black-icon.webp", alt ="Discord" width = "50px"></a>    
+        <a class="con" href="https://www.instagram.com/cherielle.code/" target = "_blank"><img src="black-instagram-icon.webp", alt ="Instagram" width = "50px"></a>
+    </div> -->
+
+
+old nav_links
+        <nav>
+            <ul CLASS="nav_links">
+                <li><a href = "mission.html">Mission</a></li>
+                <!-- <li><a href = "activities.html">Activities</a></li>
+                <li><a href = "articles.html">Articles</a></li> -->
+                <li><a href = "about.html">About</a></li>
+                <li><a href= "contact.html">Contact</a></li>
+            </ul> 
+        </nav> 
+
+
+
+Template html:
 <!DOCTYPE html>
 <html lang="en"></html>
 <html>
@@ -5,18 +28,7 @@
     <meta charset="UTF-8"/>
     <title>home</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="CHERIELLEE.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
 </head>
 <!--nav bar-->
 <body>
@@ -31,19 +43,8 @@
             </ul> 
         </nav>  
     </header>
-
-    <h1 style="text-align:center;font-family:'Marcellus',sans-serif;">cherielle</h1>
-    <h1 style="text-align:center;margin-bottom:7.5dvh;font-size:200%">girlhood & tech</h1>  
-    <div>
-        <h2 style="padding-bottom: 1%;">Bridging the Gender Gap</h2>
-        <p style="margin-bottom:15dvh;">A major focus of cherielle is bridging the Gender Gap. The gender gap in is real, not just in tech but in general as well. There have been many advancements to reduce this disparity, yet even today, there are always instances of girls feeling undermined in the classroom and unmotivated to pursue their dreams. In this initiative, we aim to create blossoms of impact starting from locally to out in the web. We’re the girl’s girl - by creating a safe, inclusive community bonded by computer science and girlhood, we have a space to connect, grow, and learn. </p>
     </div>
-    <div style="text-align:right;">
-        <h2>Tutoring</h2>
-        <p>Cherielle has a team dedicated to tutoring and providing resources for members to learn about computer science. We provide review materials for major tests like AP CSA, supplemental information about the computer science world, inform about the basics to the updates in tech, and constantly provide resources to stay involved in the growing field.</p>
-    </div>
-</div>
-    <footer>
+        <footer>
         <hr>
         <div class="foot-top">
             <div class = "foot-sec">
@@ -103,5 +104,4 @@
         </div>
     </footer>
 </body>
-
 </html>
