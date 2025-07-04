@@ -1,8 +1,7 @@
 /* variables */
-@font-face {
-    font-family: "DM-Sans";
-    src: url('https://fonts.googleapis.com/css?family=DM Sans');
-}
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM Sans');
+
 :root{
     --lineColor: #4c4c4c
 }
@@ -76,12 +75,9 @@ h1{
     color:#657264;
     font-family: 'DM Sans';
 }
-.space{
-    padding-bottom:3cm;
-}
-/* ^ is a little unnecessary */
 p{
     font-family:'DM Sans';
+    font-size:120%;
 }
 footer {
     text-align: center;
