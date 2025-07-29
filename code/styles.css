@@ -24,6 +24,8 @@ header{
     justify-content: space-between;
     align-items:center;
     padding:2dvh;
+    padding-left:0px;
+    background-color:#fdfef9;
 }
 .nav_links{
     align-self:center;
@@ -84,8 +86,7 @@ footer {
     padding: 2dvw;
     flex:auto;
     margin:0;
-    margin-top:10%;
-    width: 100dvw;
+    /* margin-top:10%; */
 
 }
 .foot-sec{
