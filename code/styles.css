@@ -1,16 +1,18 @@
 /* variables */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM Sans');
+
 :root{
-    --lineColor: #d3d3d3
+    --lineColor: #4c4c4c
 }
 *{
     box-sizing:border-box;
     margin: 10px;
     padding: 0;
-    background-color:#fdfef9
 }
 body{
-    min-height:100%;
-    flex-grow:1;
+    background-color:#fdfef9;
+    font-family:"DM-Sans","Arial",sans-serif
 }
 li, a, button{
     text-decoration: none;
@@ -21,37 +23,17 @@ header{
     display: flex;
     justify-content: space-between;
     align-items:center;
-<<<<<<< Updated upstream
-    /* padding: 30px 10%; */
-    padding:0px;
-    /* margin-left:0px;
-    margin-right:0px; */
-	/* box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
-    -webkit-clip-path: inset(0px 0px 5px 0px); */
-    -webkit-box-shadow: 0px 3px 5px 0 rgba(0,0,0,0.1);
-    box-shadow: 0px 3px 5px 0 rgba(0,0,0,0.1);
-    /* float: left; */
-	/* position: absolute; */
-	top: 100%;
-	/* left: -999em; */
-    width:100%;
-	/* z-index: 99999; */
-}
-.logo{
-    cursor:pointer;
-=======
     padding:2dvh;
     height:10dvh;
->>>>>>> Stashed changes
 }
 .nav_links{
+    align-self:center;
     list-style:none;
     li{
         display:inline-block;
-        padding:0px 20px;
+        padding:0px .6dvw;
     }
     li a{
-        transition: all 0.3s ease 0s;
         text-decoration:none;
         font-size: 24px;
         font-family: 'DM Sans';
@@ -60,9 +42,12 @@ header{
 
     }
     li a:hover{
+        transition: all 0.3s ease 0s;
         color:#e4b5c2;
     }
 }
+
+
 button{
     padding: 9px 25px;
     color:#657264;
@@ -70,17 +55,17 @@ button{
     border:none;
     border-radius:50px;
     cursor:pointer;
-    transition: all 0.3s ease 0s;
     :hover{
+        transition: all 0.3s ease 0s;
         background-color:rgba(174, 205, 171,.8);
     }
 }
 .con{
-    cursor:pointer;
+    /* cursor:pointer;
     transition: all 0.3s ease 0s;
     :hover{
         width:30px;
-    }
+    } */
     img{
         color:#657264;
         width:30px;
@@ -89,36 +74,33 @@ button{
 h1{
     font-size:60px;
     color:#657264;
-    font-family: 'DM Sans';
+    font-family: 'Marcellus','DM Sans', arial;
 }
-.space{
-    padding-bottom:3cm;
-}
-/* ^ is a little unnecessary */
 p{
     font-family:'DM Sans';
+    font-size:120%;
 }
 footer {
-    /* background-color: darkolivegreen; */
-    /* color: #fff; */
     text-align: center;
-    padding: 20px;
-    left: 0;
-    bottom: 0;
+    padding: 2dvw;
     flex:auto;
     margin:0;
     margin-top:10%;
-    width: 100%;
+    width: 100dvw;
 
 }
+.foot-sec{
+    display:none;
+}
 footer hr{
+    display:none;
     border-top:1px solid var(--lineColor);
 }
 footer a {
-    color: pink;
+    color: #657264;
     /* background-color:#657264 */
-    text-decoration: none;
-    margin: 0 10px;
+    /* text-decoration: none; */
+    margin: 0 10dvh;
 }
 footer li{
     list-style: none;
@@ -131,14 +113,11 @@ footer a:hover {
     color:rgb(60, 59, 59)
 }
 /* figure out how to change line color */
-.foot-line{
-    background-color: var(--lineColor);
-}
 .foot-bot{
     color:#657264;
 }
 .foot-bot hr{
-    border-top:1px solid var(--lineColor);
+    display:contents;
     max-width:50%;
     margin:auto;
 }
@@ -156,4 +135,7 @@ footer a:hover {
 .foot-line{
     max-width:75%;
     margin:auto;
+}
+.site{
+    min-height: 100dvh;
 }
