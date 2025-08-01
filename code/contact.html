@@ -3,11 +3,20 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>contact us</title>
     <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <title>contact us</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png" />
     <style>
         .contact-container {
         max-width: 600px;
@@ -57,49 +66,59 @@
     <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png" />
+    <style>
+        label p{
+            font-family:'Bitter';
+            color:#907f94;
+            font-weight:40  0;
+        }
+    </style>
 </head>
 <body>
     <div class="site">
-    <header>
-        <a href = "index.html"><img class="logo" src="Screenshot 2024-12-14 120813.png" alt =" logo" width = 100px> </a>    
-        <nav>
-            <ul CLASS="nav_links">
-                <li><a href = "mission.html">Mission</a></li>
-                <li><a href = "about.html">About</a></li>
-                <li><a href= "contact.html">Contact</a></li>
-            </ul> 
-        </nav>  
-    </header>
+        <header>
+            <a href = "index.html"><img class="logo" src="Screenshot 2024-12-14 120813.png" alt =" logo" width = 100px> </a>    
+            <nav>
+                <ul CLASS="nav_links">
+                    <li><a href = "mission.html">Mission</a></li>
+                    <li><a href = "about.html">About</a></li>
+                    <li><a href= "contact.html">Contact</a></li>
+                </ul> 
+            </nav>  
+        </header>
         <h1 style="text-align:center;">Contact Us</h1>
-        <h3 style="font-family:'DM Sans';padding-bottom:7.5dvh;text-align:center;">[Page is being developed]</h3>
-    <main>
-    <section class="contact-container">
-        <h1>Email Us</h1>
-      <form action="mailto:cherielle.code@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <h3 style="font-family:'DM Sans';padding-bottom:7.5dvh;text-align:center;"></h3>
+        <main>
+            <section class="contact-container">
+                <h1 style="font-family:'Bitter';font-weight:350;color:#907f94">Email Us</h1>
+                <form action="mailto:cherielle.code@gmail.com" method="post" enctype="text/plain">
+                    <label for="name"><p>Name:</p></label>
+                    <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+                    <label for="email"><p>Email:</p></label>
+                    <input type="email" id="email" name="email" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="message"><p>Message:</p></label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
+                    <button type="submit" style="font-family:Bitter;background-color:#907f94;">Send</button>
+                </form>
+            </section>
+        </main>
     </div>
-
-        <footer>
+    <!-- <div>
+        <h2>Join the Community</h2>
+        <ul>
+            <li>Discord</li>
+        </ul>
+    </div> -->
+    <footer>
         <hr>
         <div class="foot-top">
             <div class = "foot-sec">
                 <!-- contact -->
                 <ul>
                     <li class ="foot-title">
-                        Contact
                         <hr class="foot-line">
                     </li>
                     <li class = "foot-item">
@@ -132,7 +151,6 @@
             <div class="foot-sec">
                 <!-- links -->
                 <li class="foot-title">
-                    Links
                     <hr class="foot-line">
                 </li>
                 <li class="foot-item"><a href = "mission.html">Mission</a></li>

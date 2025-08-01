@@ -1,6 +1,8 @@
 /* variables */
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 @import url('https://fonts.googleapis.com/css?family=DM Sans');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Marcellus&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet');
 
 :root{
     --lineColor: #4c4c4c
@@ -23,9 +25,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items:center;
+    height:10dvh;
     padding:2dvh;
-    padding-left:0px;
     background-color:#fdfef9;
+}
+h2{
+    font-family:'PT-Serif';
 }
 .nav_links{
     align-self:center;
@@ -74,6 +79,7 @@ button{
 }
 h1{
     font-size:60px;
+    font-weight:200;
     color:#657264;
     font-family: 'Marcellus','DM Sans', arial;
 }
