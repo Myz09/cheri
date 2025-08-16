@@ -4,6 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Marcellus&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Marcellus&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet');
 
+/* colors:
+Dark green: #657264
+Lighter Green:#7A8f7b;
+Dark Purple: #907F94
+Lighter Purple: #Ab8cb2;
+Dark Pink: #e4b5c2;
+Lighter Pink:   #e8c7d0;
+Dark Tan: #BBB4A4
+Light Tan (bkg): #fdfef9 */
 :root{
     --lineColor: #4c4c4c
 }
@@ -14,13 +23,47 @@
 }
 body{
     background-color:#fdfef9;
-    font-family:"DM-Sans","Arial",sans-serif
+    font-family:"DM Sans","Arial",sans-serif
+}
+.site{
+    min-height: 100dvh;
+}
+
+h1{
+    font-size:60px;
+    font-weight:200;
+    color:#657264;
+    font-family: 'Marcellus','DM Sans', arial;
+}
+h2{
+    font-family:'PT-Serif';
+    color:#657264;
+}
+p{
+    font-family:'DM Sans';
+    font-size:120%;
 }
 li, a, button{
     text-decoration: none;
     color:#657264;
 
 }
+button{
+    padding: 9px 25px;
+    color:#657264;
+    background-color:rgba(174, 205, 171,1);
+    border:solid;
+    border-radius:50px;
+    border-color:#7a8f7b;
+    border-width:1px;
+    cursor:pointer;
+    :hover{
+        transition: all 0.3s ease 0s;
+        background-color:rgba(174, 205, 171,.8);
+    }
+}
+
+
 header{
     display: flex;
     justify-content: space-between;
@@ -28,9 +71,6 @@ header{
     height:10dvh;
     padding:2dvh;
     background-color:#fdfef9;
-}
-h2{
-    font-family:'PT-Serif';
 }
 .nav_links{
     align-self:center;
@@ -52,20 +92,6 @@ h2{
         color:#e4b5c2;
     }
 }
-
-
-button{
-    padding: 9px 25px;
-    color:#657264;
-    background-color:rgba(174, 205, 171,1);
-    border:none;
-    border-radius:50px;
-    cursor:pointer;
-    :hover{
-        transition: all 0.3s ease 0s;
-        background-color:rgba(174, 205, 171,.8);
-    }
-}
 .con{
     /* cursor:pointer;
     transition: all 0.3s ease 0s;
@@ -77,16 +103,8 @@ button{
         width:30px;
     }
 }
-h1{
-    font-size:60px;
-    font-weight:200;
-    color:#657264;
-    font-family: 'Marcellus','DM Sans', arial;
-}
-p{
-    font-family:'DM Sans';
-    font-size:120%;
-}
+
+
 footer {
     text-align: center;
     padding: 2dvw;
@@ -141,7 +159,4 @@ footer a:hover {
 .foot-line{
     max-width:75%;
     margin:auto;
-}
-.site{
-    min-height: 100dvh;
 }
