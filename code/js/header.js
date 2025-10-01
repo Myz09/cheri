@@ -1,29 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>pgHOC</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="CHERIELLEE.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div class="site">
-     <header>
-        <a href = "index.html"><img class="logo" src="Screenshot 2024-12-14 120813.png" alt =" logo" width = 100px> </a>    
-        <nav>
-            <ul CLASS="nav_links">
-                <li><a href = "mission.html">Mission</a></li>
-                <li><a href = "about.html">About</a></li>
-                <li><a href= "contact.html">Contact</a></li>
-            </ul> 
-        </nav>  
-    </header>
+console.log("test")
+header.innerHTML = `
+<header>
+<a href = "index.html"><img class="logo" src="Screenshot 2024-12-14 120813.png" alt =" logo" width = 100px> </a>    
+<nav>
+<ul CLASS="nav_links">
+<li><a href = "mission.html">Mission</a></li>
+<li><a href = "about.html">About</a></li>
+<li><a href= "contact.html">Contact</a></li>
+</ul> 
+</nav>  
+</header>
+`;
 
-        <h1 style="text-align:center;padding-bottom:3cm">Pink Gap Hour of Code</h1>  
-        <p>Stuff abt Hour of code and the raspberry pi</p>  
-</div>
-    <footer>
-        <hr>
+footer.innerHTML=`        <hr>
         <div class="foot-top">
             <div class = "foot-sec">
                 <!-- contact -->
@@ -80,7 +69,4 @@
             <hr>
             <p>&copy; 2025 Cherielle. All rights reserved.</p>
         </div>
-    </footer>
-    
-</body>
-</html>
+`;
