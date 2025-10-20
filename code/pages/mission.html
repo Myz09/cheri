@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>mission</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png" />
+    <script defer src="./js/header.js"></script>
+    <style>
+        .m-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-self:center;
+        }
+        
+        .m-sec {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            width: 38dvw; 
+            
+        }
+        .m-sec h2{
+            font-size:3em;
+            text-align:center;
+            padding-bottom: 1%;
+            color:#7A8f7b;
+            font-weight:525;
+        }
+        .m-sec p{
+            text-align:center;
+            color:#657264;
+        }
+        @media(max-width:768px){
+        .m-sec{
+            width:100dvw;
+        }
+        #m-sec-tut{
+            border:none;
+        }
+        .m-container{
+            display: None;
+        }
+
+        #m-sec-tut{
+            border-left: 1px solid #bdbbbb;
+            border-radius:0px;
+        }
+        }
+        .tut-button {
+            background: #aecdab;
+            color: #ffffff;
+            border: 0px solid #657264;
+            border-radius: 12px;
+            padding: 7px 20px;
+            font-weight: 500;
+            box-shadow: 0px 4px 4px #657264;
+            transition: all 200ms ease;
+            cursor: pointer;
+            outline: none;
+            margin-left:42.5%;
+            text-align:center;
+        }
+
+        .tut-button:hover {
+            background: #aecdab;
+            color: #ffffff;
+            border-color: #657264;
+            transform: scale(1.05);
+            box-shadow: 0px 6px 6px #657264;
+        }
+    </style>
+</head>
+<body>
+    <div class="site">
+    <!--nav bar-->
+        <header id= "header"></header>
+
+        <h1 style="text-align:center;padding-bottom:2.5dvh;">Mission</h1>
+        <p style="text-align:center;margin-bottom:7.5dvh;margin-left:10dvw;margin-right:10dvw;font-size:1.5em;color:#657264;" >Cherielle is a 501(c)(3) youth led nonprofit that strives to bridge the gender gap, empower girls in STEM, and have a connected, impactful community.</p>
+        <div class="m-container">    
+            <div class="m-sec" >
+                <div>
+                    <h2>Bridging the Gender Gap</h2>
+                    <p>The gender gap in is real, not just in tech but in general as well. There have been many advancements to reduce this disparity, yet even today, there are always instances of girls feeling undermined in the classroom and unmotivated to pursue their dreams. We aim to create blossoms of impact starting from locally to out in the web. We’re the girl’s girl - by creating a safe, inclusive community bonded by computer science and girlhood, we have a space to connect, grow, and learn. </p>
+                </div>
+            </div>
+            <div class="m-sec" style="border-left: 1px solid #bdbbbb;border-radius:0px;">
+                <div>
+                    <h2>Tutoring</h2>
+                    <p>Cherielle has a team dedicated to tutoring and providing resources for members to learn about computer science. We provide review materials for major tests like AP CSA, supplemental information about the computer science world, inform about the basics to the updates in tech, and constantly provide resources to stay involved in the growing field.</p>
+                    </div>
+                <button class="tut-button" href = "https://cherielle.notion.site/ap-csa-2025-1c66220bb815801faa56f68555ac7e30" target="_blank" ><p style="text-align:center;color:#ffffff;">csa notes</p></button>
+            </div>
+        </div>
+    </div>
+       <footer id="footer"></footer>
+</body>
+
+</html>
