@@ -81,6 +81,56 @@
             transform: scale(1.05);
             box-shadow: 0px 6px 6px #657264;
         }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 10px;
+            width: 80%;
+            margin: 40px auto;
+            }
+            .main-stat {
+            grid-column: 1 / span 3; /* spans all 3 columns */
+            background: #96ac94;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            /* font-weight: bold; */
+            font-family:'Bitter';
+            padding: 20px;
+            border-radius: 8px 8px 0 0; /* rounded top corners */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            }
+            .card {
+            background: white;
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em;
+            color: #2c3e50;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            }
+            .label {
+            font-size: 1em;
+            color: #555;
+            margin-top: 10px;
+            }
+        #m-stats{
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;  
+        }
+        #m-stats h2{
+            font-size:3em;
+            text-align:center;
+            padding-bottom: 1%;
+            color:#7A8f7b;
+            font-weight:525;
+        }
+        #m-stats p{
+            text-align:center;
+            color:#657264;
+        }
     </style>
 </head>
 <body>
@@ -91,7 +141,7 @@
         <h1 style="text-align:center;padding-bottom:2.5dvh;">Mission</h1>
         <p style="text-align:center;margin-bottom:7.5dvh;margin-left:10dvw;margin-right:10dvw;font-size:1.5em;color:#657264;" >Cherielle is a 501(c)(3) youth led nonprofit that strives to bridge the gender gap, empower girls in STEM, and have a connected, impactful community.</p>
         <div class="m-container">    
-            <div class="m-sec" >
+            <div class="m-sec">
                 <div>
                     <h2>Bridging the Gender Gap</h2>
                     <p>The gender gap in is real, not just in tech but in general as well. There have been many advancements to reduce this disparity, yet even today, there are always instances of girls feeling undermined in the classroom and unmotivated to pursue their dreams. We aim to create blossoms of impact starting from locally to out in the web. We’re the girl’s girl - by creating a safe, inclusive community bonded by computer science and girlhood, we have a space to connect, grow, and learn. </p>
@@ -105,6 +155,27 @@
                 <button class="tut-button" href = "https://cherielle.notion.site/ap-csa-2025-1c66220bb815801faa56f68555ac7e30" target="_blank" ><p style="text-align:center;color:#ffffff;">csa notes</p></button>
             </div>
         </div>
+        <h2 style="text-align:center;margin-left:10dvw;margin-right:10dvw;font-size:3.5em;font-weight:500;color:#7A8f7b;">Impact</h2>
+        <hr style="border-top:1px solid #bdbbbb;max-width:80dvw;margin: 0 auto;margin-top:5dvh;display:none;"> 
+         <div class="stats-grid">
+            <div class="main-stat" id="mainStat">
+            Total Accounts Reached: 54,656
+            </div>
+            <div class="card">
+            <div id="follows">3,036</div>
+            <div class="label">Number of Followers </div>
+            </div>
+            <div class="card">
+            <div id="sales">205,768 </div>
+            <div class="label">Total Views </div>
+            </div>
+            <div class="card">
+            <div id="team">104</div>
+            <div class="label">Total Team Members </div>
+            </div>
+        </div>  
+        
+            
     </div>
        <footer id="footer"></footer>
 </body>

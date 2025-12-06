@@ -1,111 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Side Peek with Dynamic Content</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .main-content {
-            padding: 20px;
-        }
-        .side-panel {
-            position: fixed;
-            left: -20%;
-            width: 250px;
-            height: 100%;
-            background-color: #f4f4f4;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding: 20px;
-        }
-        .side-panel.active {
-            left: 0;
-        }
-        .toggle-btn {
-            position: fixed;
-            left: 0;
-            top: 50px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 5px 10px;
-            background-color: #ff0000;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Connected Statistics Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 10px;
+      width: 80%;
+      margin: 40px auto;
+    }
+    .main-stat {
+      grid-column: 1 / span 3; /* spans all 3 columns */
+      background: #3498db;
+      color: white;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      padding: 20px;
+      border-radius: 8px 8px 0 0; /* rounded top corners */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5em;
+      color: #2c3e50;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .label {
+      font-size: 1em;
+      color: #555;
+      margin-top: 10px;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 15px;
+      border: none;
+      background: #3498db;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+  </style>
 </head>
 <body>
-    <button class="toggle-btn" onclick="toggleSidePanel()">Toggle Side Peek</button>
+  <header>
+    <h1>Statistics Dashboard</h1>
+  </header>
 
-    <div class="side-panel" id="sidePanel">
-        <button class="close-btn" onclick="closeSidePanel()">Close</button>
-        <div id="sidePanelContent">
-            <h2>Side Panel</h2>
-            <p>This is the side panel content.</p>
-        </div>
+  <div class="stats-grid">
+    <!-- Top main statistic -->
+    <div class="main-stat" id="mainStat">
+      Total Performance: 0
     </div>
 
-    <div class="main-content">
-        <h1>Main Content</h1>
-        <p>This is the main content area. Click a link to load content in the side panel.</p>
-        <ul>
-            <li class = "toggler"><a href="#home.html" onclick="loadContent('home.html')">Home</a></li>
-            <li class="toggler"><a href="#about.html" onclick="loadContent('about.html')">About</a></li>
-            <li class="toggler"><a href="#articles.html" onclick="loadContent('articles.html')">Contact</a></li>
-        </ul>
-    </div>  
+    <!-- Three connected stats -->
+    <div class="card">
+      <div id="users">0</div>
+      <div class="label">Users</div>
+    </div>
+    <div class="card">
+      <div id="sales">0</div>
+      <div class="label">Sales</div>
+    </div>
+    <div class="card">
+      <div id="growth">0%</div>
+      <div class="label">Growth</div>
+    </div>
+  </div>
 
-    <script>
-        function toggleSidePanel() {
-            const sidePanel = document.getElementById('sidePanel');
-            sidePanel.classList.toggle('active');
-        }
+  <button onclick="updateStats()">Update Stats</button>
 
-        function closeSidePanel() {
-            const sidePanel = document.getElementById('sidePanel');
-            sidePanel.classList.remove('active');
-        }
+  <script>
+    function updateStats() {
+      const users = Math.floor(Math.random() * 1000);
+      const sales = Math.floor(Math.random() * 500);
+      const growth = Math.floor(Math.random() * 100);
 
-        function loadContent(url) {
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('sidePanelContent').innerHTML = data;
-                    toggleSidePanel();
-                })
-                .catch(error => {
-                    console.error('Error loading content:', error);
-                    document.getElementById('sidePanelContent').innerHTML = '<p>Sorry, an error occurred while loading the content.</p>';
-                });
-        }
+      document.getElementById("users").textContent = users;
+      document.getElementById("sales").textContent = sales;
+      document.getElementById("growth").textContent = growth + "%";
 
-        document.addEventListener('click', function(event) {
-            const sidePanel = document.getElementById('sidePanel');
-            const toggleBtn = document.querySelector('.toggle-btn');
-            const closeBtn = document.querySelector('.close-btn');
-            const isClickInsideSidePanel = sidePanel.contains(event.target);
-            const isClickOnToggleBtn = toggleBtn.contains(event.target);
-            const isClickOnCloseBtn = closeBtn.contains(event.target);
-
-            if (!isClickInsideSidePanel && !isClickOnToggleBtn && !isClickOnCloseBtn) {
-                closeSidePanel();
-            }
-        });
-    </script>
+      // Example main statistic: sum of users + sales
+      const totalPerformance = users + sales;
+      document.getElementById("mainStat").textContent = "Total Performance: " + totalPerformance;
+    }
+  </script>
 </body>
 </html>
