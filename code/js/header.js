@@ -12,7 +12,61 @@ header.innerHTML = `
 </header>
 `;
 
-footer.innerHTML=`        <hr>
+footer.innerHTML=`
+        <style>
+        footer {
+            text-align: center;
+            padding: 2dvw;
+            flex:auto;
+            margin:0;
+            display:none;
+        }  
+        footer hr{
+            border-top: 1px solid #96ac94;
+            }
+        footer a {
+            color: #d8e7d8ff;
+            /* background-color:#657264 */
+            /* text-decoration: none; */
+            margin: 0 10dvh;
+        }
+        footer li{
+            list-style: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .foot-title{
+            font-size:larger;
+            color:rgba(253, 250, 240, 1)
+        }
+        .foot-bot{
+            color:#657264;
+        }
+        .foot-bot hr{
+            display:contents;
+            max-width:50%;
+            margin:auto;
+        }
+
+        .foot-top{
+            display:flex;
+            justify-content:space-between;
+            margin-left:10%;
+            margin-right:10%;
+            background-color: #b8d3b5ff;
+        }
+        .foot-item img{
+            max-width:40%;
+            min-width:10%;
+        }
+        .foot-line{
+            max-width:75%;
+            margin:auto;
+        }
+
+        </style>
+        <hr>
         <div class="foot-top">
             <div class = "foot-sec">
                 <!-- contact -->
@@ -35,8 +89,7 @@ footer.innerHTML=`        <hr>
                     </li>
                 </ul>
             </div>
-            <div class="foot-sec">
-                <!-- partners -->
+            <!-- <div class="foot-sec">
                 <ul>
                     <li class="foot-title">
                         Sponsors
@@ -47,7 +100,7 @@ footer.innerHTML=`        <hr>
                             </a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <div class="foot-sec">
                 <!-- links -->
                 <li class="foot-title">
@@ -65,8 +118,8 @@ footer.innerHTML=`        <hr>
                 <a href="/contact">Contact Us</a>
             </p> -->
         </div>
-        <div class="foot-bot">
+        <!-- <div class="foot-bot">
             <hr>
             <p>&copy; 2025 Cherielle. All rights reserved.</p>
-        </div>
+        </div> -->
 `;
