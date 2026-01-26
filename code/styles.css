@@ -32,12 +32,11 @@ body{
 h1{
     font-size:60px;
     font-weight:200;
+    text-align:center;
     color:#657264;
     font-family: 'Marcellus','DM Sans', arial;
 }
-h2{
-    font-family:'PT-Serif';
-}
+
 p{
     font-family:'DM Sans';
     font-size:120%;
@@ -102,5 +101,13 @@ header{
         width:30px;
     }
 }
-
-
+        @media(max-width:768px){
+        header{
+            /* display: block; */
+            /* justify-content: space-between;
+            align-items:center; */
+            /* height:10dvh; */
+            padding:2dvh;
+            background-color:#fdfef9;
+        }
+        }

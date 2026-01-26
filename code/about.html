@@ -18,44 +18,55 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png" />
     <script defer src="./js/header.js"></script>
     <style>
-            .directory {
-                display: flex;
-                flex-wrap: wrap;
-                align-self:center;
+        .directory {
+            display: flex;
+            flex-wrap: wrap;
+            align-self:center;
+        }
+        
+        .profile {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            width: 45dvw; 
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+        }
+        .procont{
+            flex-direction: column;
+            display: flex;
+        }
+        .profile img {
+            margin-right: 16px;
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+        }
+        .profile h2 {
+            margin: 0 0 10px 0;
+            font-family:'Arial',sans-serif;
+        }
+        h2{
+            font-family:"DM-sans",sans-serif;   
+        }   
+        @media(max-width:768px){
+            body{
+                margin: 0 auto;
             }
-            
-            .profile {
-                border: 1px solid #ddd;
-                padding: 10px;
-                margin-bottom: 10px;
-                border-radius: 5px;
-                width: 45dvw; 
-                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
-            }
-            @media(max-width:768px){
             .profile{
-                width:100dvw;
+                width:80dvw;
                 font-family:"DM Sans","Arial",sans-serif;
             }
+            .directory{
+                margin:0 auto;
+                margin-bottom:10px;
+                display:block;
             }
-            .procont{
-                flex-direction: column;
-                display: flex;
-            }
-            .profile img {
-                margin-right: 16px;
-                width: 50px; 
-                height: 50px; 
-                border-radius: 50%; 
-            }
-            .profile h2 {
-                margin: 0 0 10px 0;
-                font-family:"Arial",sans-serif;   
-            }
-        </style>
+        }
+    </style>
 </head>
 <body>
     <div class="site">

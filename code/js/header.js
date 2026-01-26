@@ -1,12 +1,13 @@
-console.log("test")
 header.innerHTML = `
 <header>
 <a href = "index.html"><img class="logo" src="Screenshot 2024-12-14 120813.png" alt =" logo" width = 100px> </a>    
 <nav>
 <ul CLASS="nav_links">
 <li><a href = "mission.html">Mission</a></li>
+<li><a href= "events.html">Events</a></li>
 <li><a href = "about.html">About</a></li>
 <li><a href= "contact.html">Contact</a></li>
+
 </ul> 
 </nav>  
 </header>
