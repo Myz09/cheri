@@ -37,6 +37,22 @@
             border: solid black 1px;
             border-radius:10px;
             padding:3.5%;
+            cursor:pointer;
+        }
+        .before{
+            cursor:pointer;
+        }
+        .after{
+            display:none;
+        }
+        .event:hover .before{
+            transition: all 0.7s ease 1s;
+            display:none;
+        } 
+        
+        .event:hover .after{
+            transition: all 0.7s ease 1s;
+            display:contents;
         }
     </style>
     <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
