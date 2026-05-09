@@ -11,6 +11,7 @@ header.innerHTML = `
 <li><a href= "contact.html">Contact</a></li>
 </ul> 
 </nav>  
+<a href="https://linktr.ee/cherielle" id="linktree">Linktree</a>
 </header>
 `;
 
