@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
+    <title>events</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png" />
+    <script defer src="./js/header.js"></script>
+    <style>
+        .events-overview {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        .events-overview p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .events-category {
+            margin-bottom: 60px;
+        }
+
+        .events-category h2 {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #657264;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 1024px) {
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .event-card {
+            border: 2px solid #657264;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .event-card-image {
+            width: 100%;
+            height: 250px;
+            background-color: #e8c7d0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7a8f7b;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .event-card-info {
+            padding: 20px;
+            border-top: 2px solid #657264;
+        }
+
+        .event-card-date {
+            font-weight: bold;
+            color: #657264;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .event-card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #657264;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="site">
+        <header id="header"></header>
+
+        <h1 style="text-align: center; margin-bottom: 20px;">Events</h1>
+
+        <!-- Overview Section -->
+        <div class="events-overview">
+            <p>
+                Through workshops, hackathons, tutoring sessions, outreach events, and community initiatives, Cherielle transforms ideas into meaningful action. We create opportunities for girls to explore STEM, build confidence, strengthen technical skills, and connect with a supportive community. Each event reflects our mission of empowering future leaders while creating lasting impact both locally and beyond.
+            </p>
+        </div>
+
+        <!-- Workshops Section -->
+        <div class="events-category">
+            <h2>Workshops we hosted:</h2>
+            
+            <div class="events-grid">
+                
+                <div class="event-card">
+                    <div class="event-card-image">
+                        <img src="images/hackathon1.png" alt="Hackathon Event"> <!-- Supposed to be workshop... !-->
+                        </div>
+                        <div class="event-card-info">
+                            <h3 class="event-card-title">Empowering AI Workshop</h3>
+                        </div>
+                    </div>
+            
+                    <div class="event-card">
+                        <div class="event-card-image">
+                            <img src="images/workshop2.png" alt="Workshop Event">
+                        </div>
+                        <div class="event-card-info">
+                            <h3 class="event-card-title">Next Generation Workshop</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-card-image">
+                            <img src="images/workshop3.png" alt="Codeshield Workshop">
+                        </div>
+                        <div class="event-card-info">
+                            <h3 class="event-card-title">Codeshield Workshops</h3>
+                        </div>
+                    </div>
+                        
+                    </div>
+            </div>
+
+        <!-- Hackathons Section -->
+        <div class="events-category">
+            <h2>Hackathons we hosted:</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-card-image">Image Placeholder</div>
+                    <div class="event-card-info">
+                        <div class="event-card-date">1/1/2000</div>
+                        <h3 class="event-card-title">Hackathon Explanation</h3>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-card-image">Image Placeholder</div>
+                    <div class="event-card-info">
+                        <div class="event-card-date">1/1/2000</div>
+                        <h3 class="event-card-title">Hackathon Explanation</h3>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-card-image">Image Placeholder</div>
+                    <div class="event-card-info">
+                        <div class="event-card-date">1/1/2000</div>
+                        <h3 class="event-card-title">Hackathon Explanation</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

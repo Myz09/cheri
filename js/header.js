@@ -7,9 +7,11 @@ header.innerHTML = `
 <ul CLASS="nav_links">
 <li><a href = "mission.html">Mission</a></li>
 <li><a href = "about.html">About</a></li>
+<li><a href = "events.html">Events</a></li>
 <li><a href= "contact.html">Contact</a></li>
 </ul> 
 </nav>  
+<a href="https://linktr.ee/cherielle" id="linktree">Linktree</a>
 </header>
 `;
 

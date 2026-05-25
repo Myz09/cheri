@@ -64,9 +64,10 @@ button{
 
 
 header{
+    width:100%;
     display: flex;
-    justify-content: space-between;
     align-items:center;
+    justify-content: flex-start;
     height:10dvh;
     padding:2dvh;
     background-color:#fdfef9;
@@ -91,6 +92,18 @@ header{
         color:#e4b5c2;
     }
 }
+
+#linktree{
+    margin-left:auto;
+    margin-right:5dvw;     
+    text-decoration:none;
+    font-size: 24px;
+    font-family: 'DM Sans';
+}
+#linktree a:hover{
+        transition: all 0.3s ease 0s;
+        color:#e4b5c2;
+}
 .con{
     /* cursor:pointer;
     transition: all 0.3s ease 0s;
@@ -103,45 +116,4 @@ header{
     }
 }
 
-/* FAQ styles */
-.faq-section{
-    max-width:800px;
-    margin:40px auto;
-    padding:20px;
-}
-.faq-title{
-    font-family:'Bitter','Marcellus';
-    font-size:clamp(20px,3.2vw,32px);
-    margin-bottom:10px;
-    color:#907F94;
-}
-.faq-list .faq-item{
-    background:#fff;
-    border:1px solid #e8e0e5;
-    border-radius:8px;
-    margin:10px 0;
-    padding:12px 16px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.03);
-}
-.faq-item summary{
-    list-style:none;
-    cursor:pointer;
-    font-weight:600;
-    color:#657264;
-    font-family:'DM Sans';
-    outline:none;
-    font-size:18px;
-}
-.faq-item summary::-webkit-details-marker{display:none;}
-.faq-answer{
-    margin-top:8px;
-    color:#657264;
-    font-family:'DM Sans','Arial',sans-serif;
-    font-size:16px;
-    line-height:1.6;
-    letter-spacing:0.1px;
-    font-weight:600;
-}
-.faq-item[open]{
-    border-color:#907F94;
-}
+
