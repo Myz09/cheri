@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
+    <title>blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png" />
+    <script defer src="./js/header.js"></script>
+    <style>
+        .blog-overview {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+
+        .blog-overview p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .blog-category {
+            margin-bottom: 60px;
+        }
+
+        .blog-category h2 {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #657264;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .blog-card {
+            border: 2px solid #657264;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 250px;
+            display: block;
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .blog-card-info {
+            padding: 20px;
+            border-top: 2px solid #657264;
+        }
+
+        .blog-card-date {
+            font-weight: bold;
+            color: #657264;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .blog-card-author {
+            font-size: 14px;
+            color: #657264;
+            margin-bottom: 10px;
+        }
+
+        .blog-card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #657264;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="site">
+        <header id="header"></header>
+
+        <h1 style="text-align: center; margin-bottom: 20px;">Blog</h1>
+
+        <!-- Overview Section -->
+        <div class="blog-overview">
+            <p>
+                Explore stories, insights, and updates from the Cherielle community. From personal experiences in STEM to practical tech tips, our blog showcases the voices and perspectives of those passionate about empowering girls in technology. Discover inspiring narratives, reflections, and knowledge shared by our volunteers, participants, and team members.
+            </p>
+        </div>
+
+        <!-- Volunteer Blogs Section -->
+        <div class="blog-category">
+            <h2>Volunteer Blogs:</h2>
+
+            <div class="blog-grid">
+                
+                <div class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="images/blog-placeholder.png" alt="Volunteer Blog Post">
+                    </div>
+                    <div class="blog-card-info">
+                        <p class="blog-card-author">Author: [Author Name]</p>
+                        <h3 class="blog-card-title">[Blog Title]</h3>
+                        <p class="blog-card-date">[MM/DD/YYYY]</p>
+                    </div>
+                </div>
+            
+                <div class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="images/blog-placeholder.png" alt="Volunteer Blog Post">
+                    </div>
+                    <div class="blog-card-info">
+                        <p class="blog-card-author">Author: [Author Name]</p>
+                        <h3 class="blog-card-title">[Blog Title]</h3>
+                        <p class="blog-card-date">[MM/DD/YYYY]</p>
+                    </div>
+                </div>
+            
+                <div class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="images/blog-placeholder.png" alt="Volunteer Blog Post">
+                    </div>
+                    <div class="blog-card-info">
+                        <p class="blog-card-author">Author: [Author Name]</p>
+                        <h3 class="blog-card-title">[Blog Title]</h3>
+                        <p class="blog-card-date">[MM/DD/YYYY]</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+        <!-- Daily News Section -->
+        <div class="blog-category">
+            <h2>Daily News:</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-card-image">Image Placeholder</div>
+                    <div class="blog-card-info">
+                        <p class="blog-card-author">Author: [Author Name]</p>
+                        <h3 class="blog-card-title">[News Title]</h3>
+                        <p class="blog-card-date">[MM/DD/YYYY]</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-card-image">Image Placeholder</div>
+                    <div class="blog-card-info">
+                        <p class="blog-card-author">Author: [Author Name]</p>
+                        <h3 class="blog-card-title">[News Title]</h3>
+                        <p class="blog-card-date">[MM/DD/YYYY]</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-card-image">Image Placeholder</div>
+                    <div class="blog-card-info">
+                        <p class="blog-card-author">Author: [Author Name]</p>
+                        <h3 class="blog-card-title">[News Title]</h3>
+                        <p class="blog-card-date">[MM/DD/YYYY]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Stories Section -->
+        <div class="blog-category">
+            <h2>Featured Stories:</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-card-image">Image Placeholder</div>
+                    <div class="blog-card-info">
+                        <p class="blog-card-author">Author: [Author Name]</p>
+                        <h3 class="blog-card-title">[Story Title]</h3>
+                        <p class="blog-card-date">[MM/DD/YYYY]</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-card-image">Image Placeholder</div>
+                    <div class="blog-card-info">
+                        <p class="blog-card-author">Author: [Author Name]</p>
+                        <h3 class="blog-card-title">[Story Title]</h3>
+                        <p class="blog-card-date">[MM/DD/YYYY]</p>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-card-image">Image Placeholder</div>
+                    <div class="blog-card-info">
+                        <p class="blog-card-author">Author: [Author Name]</p>
+                        <h3 class="blog-card-title">[Story Title]</h3>
+                        <p class="blog-card-date">[MM/DD/YYYY]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
