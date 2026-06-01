@@ -9,7 +9,9 @@ header.innerHTML = `
 <li><a href = "about.html">About</a></li>
 <li><a href = "events.html">Events</a></li>
 <li><a href = "blog.html">Blog</a></li>
+<li><a href= "tutoring.html">Tutoring</a></li>
 <li><a href= "contact.html">Contact</a></li>
+
 </ul> 
 </nav>  
 <a href="https://linktr.ee/cherielle" id="linktree">Linktree</a>
