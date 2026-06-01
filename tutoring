@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
+    <title>tutoring</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png" />
+    <script defer src="./js/header.js"></script>
+    <style>
+        .tutoring-hero {
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 60px;
+        }
+
+        .tutoring-hero h1 {
+            font-size: 48px;
+            color: #657264;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .tutoring-hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .tutoring-cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tutoring-btn {
+            padding: 15px 40px;
+            border: 2px solid #657264;
+            border-radius: 8px;
+            background-color: #657264;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tutoring-btn:hover {
+            background-color: transparent;
+            color: #657264;
+        }
+
+        .tutoring-btn-secondary {
+            background-color: transparent;
+            color: #657264;
+        }
+
+        .tutoring-btn-secondary:hover {
+            background-color: #657264;
+            color: white;
+        }
+
+        .tutoring-divider {
+            text-align: center;
+            margin: 60px 0;
+            color: #657264;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        .tutoring-section {
+            margin-bottom: 80px;
+            padding: 0 20px;
+        }
+
+        .tutoring-section h2 {
+            font-size: 32px;
+            color: #657264;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .tutoring-section p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .tutoring-offering {
+            background-color: #f5f5f5;
+            border: 2px solid #657264;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .tutoring-offering h3 {
+            font-size: 22px;
+            color: #657264;
+            margin-bottom: 15px;
+        }
+
+        .tutoring-offering ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .tutoring-offering li {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tutoring-offering li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #657264;
+            font-weight: bold;
+        }
+
+        .tutoring-offering-cta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tutoring-offering-cta a {
+            padding: 10px 20px;
+            border: 2px solid #657264;
+            border-radius: 6px;
+            background-color: transparent;
+            color: #657264;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tutoring-offering-cta a:hover {
+            background-color: #657264;
+            color: white;
+        }
+
+        .tutoring-form-section {
+            background-color: #f5f5f5;
+            border: 2px solid #657264;
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .tutoring-form-section h3 {
+            font-size: 24px;
+            color: #657264;
+            margin-bottom: 20px;
+        }
+
+        .tutoring-form-section p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .tutoring-form-section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .tutoring-form-section li {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tutoring-form-section li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #657264;
+            font-weight: bold;
+        }
+
+        .tutoring-form-btn {
+            padding: 15px 40px;
+            border: 2px solid #657264;
+            border-radius: 8px;
+            background-color: #657264;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .tutoring-form-btn:hover {
+            background-color: transparent;
+            color: #657264;
+        }
+
+        .tutoring-resource-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 1024px) {
+            .tutoring-resource-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tutoring-resource-card {
+            border: 2px solid #657264;
+            border-radius: 8px;
+            padding: 30px;
+            background-color: #f5f5f5;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tutoring-resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .tutoring-resource-card h4 {
+            font-size: 20px;
+            color: #657264;
+            margin-bottom: 15px;
+        }
+
+        .tutoring-resource-card p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .tutoring-faq {
+            max-width: 800px;
+        }
+
+        .tutoring-faq-item {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #657264;
+            padding-bottom: 20px;
+        }
+
+        .tutoring-faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .tutoring-faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            color: #657264;
+            margin-bottom: 10px;
+        }
+
+        .tutoring-faq-answer {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .tutoring-hero h1 {
+                font-size: 36px;
+            }
+
+            .tutoring-hero p {
+                font-size: 16px;
+            }
+
+            .tutoring-section h2 {
+                font-size: 24px;
+            }
+
+            .tutoring-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tutoring-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site">
+        <header id="header"></header>
+
+        <!-- Hero Section -->
+        <div class="tutoring-hero">
+            <h1>Learn Computer Science With Cherielle 🌸</h1>
+            <p>
+                Whether you're studying for AP CSA, exploring computer science for the first time, or looking for extra support, our tutoring initiative provides free resources, review sessions, and opportunities to stay involved in tech.
+            </p>
+            <div class="tutoring-cta-buttons">
+                <a href="link" class="tutoring-btn">Get Started</a>
+                <a href="link" class="tutoring-btn tutoring-btn-secondary">Browse Resources</a>
+            </div>
+        </div>
+
+        <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
+
+        <!-- Section 1: Current Offerings -->
+        <div class="tutoring-section">
+            <h2>📚 Current Offerings</h2>
+            
+            <div class="tutoring-offering">
+                <h3>AP Computer Science A</h3>
+                <p>Review materials, notes, and upcoming review opportunities.</p>
+                
+                <p style="font-weight: 600; margin-bottom: 10px;">Includes:</p>
+                <ul>
+                    <li>AP CSA Notes (2025 archive)</li>
+                    <li>2026 curriculum updates</li>
+                    <li>Review sessions</li>
+                    <li>Practice resources</li>
+                </ul>
+                
+                <div class="tutoring-offering-cta">
+                    <!-- LINK: Replace with AP CSA Notes link -->
+                    <a href="link">View Notes</a>
+                    <!-- LINK: Replace with Interest Form link -->
+                    <a href="link">Join Interest List</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
+
+        <!-- Section 2: Join 2026 Cohort -->
+        <div class="tutoring-section">
+            <h2>Join Our 2026 Cohort</h2>
+            
+            <div class="tutoring-form-section">
+                <h3>Interested in tutoring resources?</h3>
+                <p>
+                    We're currently revising our curriculum for 2026 to help students prepare for the AP CSA exam.
+                </p>
+                
+                <p style="font-weight: 600; margin-top: 20px; margin-bottom: 10px;">Sign up to:</p>
+                <ul>
+                    <li>Receive free resources</li>
+                    <li>Get notified about review sessions</li>
+                    <li>Hear when curriculum is finalized</li>
+                </ul>
+
+                <p style="font-size: 14px; color: #657264; margin-bottom: 15px; font-style: italic;">
+                    hello! we're in the process of revising our curriculum for 2026 for you in order to pass your ap csa exam 🤯!! this form is to get a gauge on how many people are interested in our FREE resources (including coming to our review sessions). we will email you sometime very soon when we have finalized everything :-)  if you have any concerns, don't hesitate to dm via instagram or email us!
+                </p>
+
+                <!-- LINK: Replace with Interest Form link -->
+                <a href="link" class="tutoring-form-btn">Interest Form</a>
+            </div>
+        </div>
+
+        <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
+
+        <!-- Section 3: Resource Library -->
+        <div class="tutoring-section">
+            <h2>Resource Library</h2>
+            <p>Browse resources outside of tutoring.</p>
+
+            <div class="tutoring-resource-grid">
+                <div class="tutoring-resource-card">
+                    <h4>☕ Beginner CS</h4>
+                    <p>Start your computer science journey with foundational concepts and beginner-friendly guides to get you comfortable with coding.</p>
+                    <!-- LINK: Replace with Coding Resources link -->
+                    <a href="link" class="tutoring-form-btn">Explore</a>
+                </div>
+
+                <div class="tutoring-resource-card">
+                    <h4>💻 Java & AP CSA</h4>
+                    <p>Dive deeper into Java programming and AP Computer Science A concepts with comprehensive materials and practice problems.</p>
+                    <!-- LINK: Replace with AP CSA Resources link -->
+                    <a href="link" class="tutoring-form-btn">Explore</a>
+                </div>
+
+                <div class="tutoring-resource-card">
+                    <h4>🧠 Study Techniques</h4>
+                    <p>Learn effective study strategies and tips to maximize your learning and prepare for exams with confidence.</p>
+                    <!-- LINK: Replace with Study Techniques Resources link -->
+                    <a href="link" class="tutoring-form-btn">Explore</a>
+                </div>
+
+                <div class="tutoring-resource-card">
+                    <h4>🌐 Explore Tech</h4>
+                    <p>Stay updated with the latest in technology and discover resources to keep you engaged in the evolving tech world.</p>
+                    <!-- LINK: Replace with Tech Resources link -->
+                    <a href="link" class="tutoring-form-btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
+
+        <!-- Section 4: How We Teach -->
+        <div class="tutoring-section">
+            <h2>How We Teach</h2>
+            <p>Our tutoring focuses on:</p>
+            
+            <div class="tutoring-offering">
+                <ul>
+                    <li>Building confidence</li>
+                    <li>Understanding concepts</li>
+                    <li>Staying curious</li>
+                    <li>Making STEM accessible</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
+
+        <!-- Section 5: FAQ -->
+        <div class="tutoring-section">
+            <h2>FAQ</h2>
+
+            <div class="tutoring-faq">
+                <div class="tutoring-faq-item">
+                    <div class="tutoring-faq-question">Do I need prior coding experience?</div>
+                    <div class="tutoring-faq-answer">No. Our resources are designed for all levels, from complete beginners to those with programming experience.</div>
+                </div>
+
+                <div class="tutoring-faq-item">
+                    <div class="tutoring-faq-question">Does tutoring cost money?</div>
+                    <div class="tutoring-faq-answer">All resources are free. Cherielle is dedicated to making computer science education accessible to everyone.</div>
+                </div>
+
+                <div class="tutoring-faq-item">
+                    <div class="tutoring-faq-question">Can non-AP students join?</div>
+                    <div class="tutoring-faq-answer">Yes. While our focus is on AP CSA preparation, we welcome anyone interested in learning computer science and exploring tech resources.</div>
+                </div>
+
+                <div class="tutoring-faq-item">
+                    <div class="tutoring-faq-question">When will review sessions begin?</div>
+                    <div class="tutoring-faq-answer">Announcements will be shared after curriculum finalization. Sign up for the interest list to stay notified of updates.</div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
