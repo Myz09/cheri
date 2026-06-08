@@ -262,6 +262,50 @@
             margin-bottom: 20px;
         }
 
+        .tutoring-importance-section {
+            background-color: #f5f5f5;
+            border: 2px solid #657264;
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .tutoring-importance-section h3 {
+            font-size: 24px;
+            color: #657264;
+            margin-bottom: 20px;
+        }
+
+        .tutoring-importance-section p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .tutoring-importance-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .tutoring-importance-list li {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tutoring-importance-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #657264;
+            font-weight: bold;
+        }
+
         .tutoring-faq {
             max-width: 800px;
         }
@@ -332,7 +376,35 @@
 
         <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
 
-        <!-- Section 1: Current Offerings -->
+        <!-- Section 1: Why Computer Science Matters -->
+        <div class="tutoring-section">
+            <h2>Why Computer Science Matters</h2>
+            
+            <div class="tutoring-importance-section">
+                <h3>The Importance of Computer Science in Everyday Life</h3>
+                <p>
+                    Computer science is no longer just for tech professionals—it's woven into nearly every aspect of our daily lives. From the apps on your phone to the algorithms that recommend your favorite content, understanding computer science helps you navigate, innovate, and thrive in our digital world.
+                </p>
+                
+                <p style="font-weight: 600; margin-top: 20px; margin-bottom: 10px;">Computer science impacts:</p>
+                <ul class="tutoring-importance-list">
+                    <li><strong>Communication:</strong> Email, messaging apps, and social media rely on fundamental CS principles</li>
+                    <li><strong>Healthcare:</strong> Medical devices, diagnostics, and patient data systems depend on software</li>
+                    <li><strong>Entertainment:</strong> Streaming services, gaming, and content creation use advanced algorithms</li>
+                    <li><strong>Finance:</strong> Banking, investments, and digital payments are powered by secure coding</li>
+                    <li><strong>Transportation:</strong> From GPS navigation to autonomous vehicles, CS enables modern mobility</li>
+                    <li><strong>Problem-solving:</strong> Learning to code teaches critical thinking and logical reasoning skills valuable in any career</li>
+                </ul>
+                
+                <p>
+                    By learning computer science today, you're not just preparing for a tech career—you're developing skills that will make you a better problem-solver, communicator, and innovator in whatever path you choose.
+                </p>
+            </div>
+        </div>
+
+        <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
+
+        <!-- Section 2: Current Offerings -->
         <div class="tutoring-section">
             <h2>Current Offerings</h2>
             
@@ -348,9 +420,11 @@
                     <li>Practice resources</li>
                 </ul>
                 
+                <p style="font-size: 14px; color: #657264; margin: 15px 0 10px; font-style: italic;">Coming soon: Python and other curricula!</p>
+                
                 <div class="tutoring-offering-cta">
-                    <!--AP CSA Notes link -->
-                    <a href="https://cherielle.notion.site/apcsa26">View Notes</a>
+                    <!--AP CSA Notes link with Notion notes -->
+                    <a href="https://cherielle.notion.site/csigcse">View Notes</a>
                     <!--Interest Form link -->
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5dr6WarUi8UjA_d95LiYrZ8tWxNfnhW2iSQN2CAnBbyaafA/viewform">Join Interest List</a>
                 </div>
@@ -359,14 +433,14 @@
 
         <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
 
-        <!-- Section 2: Join 2026 Cohort -->
+        <!-- Section 3: Join 2026 Cohort -->
         <div class="tutoring-section">
             <h2>Join Our 2026 Cohort</h2>
             
             <div class="tutoring-form-section">
                 <h3>Interested in tutoring resources?</h3>
                 <p>
-                    We're currently revising our curriculum for 2026 to help students prepare for the AP CSA exam.
+                    We're currently revising our curriculum for 2026 to help students prepare for the AP CSA exam and explore other programming languages like Python.
                 </p>
                 
                 <p style="font-weight: 600; margin-top: 20px; margin-bottom: 10px;">Sign up to:</p>
@@ -387,7 +461,7 @@
 
         <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
 
-        <!-- Section 3: Resource Library -->
+        <!-- Section 4: Resource Library -->
         <div class="tutoring-section" id="resources">
             <h2>Resource Library</h2>
             <p>Browse resources outside of tutoring.</p>
