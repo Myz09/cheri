@@ -24,17 +24,18 @@ Light Tan (bkg): #fdfef9 */
 body{
     background-color:#fdfef9;
     font-family:"DM Sans","Arial",sans-serif;
-    height:100dvh;
-    overflow:hidden;
-    overscroll-behavior:none;
     margin:0;
 }
 .site{
     min-height: 100dvh;
 }
 
-/* Ensure html also doesn't scroll */
-html{height:100dvh;overflow:hidden}
+/* Disable scrolling only when body has .home-no-scroll (used on index.html) */
+body.home-no-scroll{
+    height:100dvh;
+    overflow:hidden;
+    overscroll-behavior:none;
+}
 
 /* Hero layout: titles left, image right */
 .hero{
