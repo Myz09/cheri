@@ -18,15 +18,27 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png" />
     <script defer src="./js/header.js"></script>
     <style>
+        :root {
+            --primary-pink: #FFB6D9;
+            --lavender: #D4B5F5;
+            --light-blue: #B8E0F0;
+            --cream: #FFF8F0;
+            --pale-yellow: #FFF9D6;
+            --sage-green: #657264;
+        }
+
         .tutoring-hero {
             text-align: center;
             padding: 60px 20px;
             margin-bottom: 60px;
+            background: linear-gradient(135deg, rgba(255, 182, 217, 0.1) 0%, rgba(212, 181, 245, 0.1) 100%);
+            border-radius: 20px;
+            margin: 40px 20px;
         }
 
         .tutoring-hero h1 {
             font-size: 48px;
-            color: #657264;
+            color: var(--sage-green);
             margin-bottom: 20px;
             font-weight: 600;
         }
@@ -48,9 +60,9 @@
 
         .tutoring-btn {
             padding: 15px 40px;
-            border: 2px solid #657264;
-            border-radius: 8px;
-            background-color: #657264;
+            border: 2px solid var(--primary-pink);
+            border-radius: 12px;
+            background-color: var(--primary-pink);
             color: white;
             font-size: 16px;
             font-weight: 600;
@@ -60,26 +72,36 @@
         }
 
         .tutoring-btn:hover {
-            background-color: transparent;
-            color: #657264;
+            background-color: var(--lavender);
+            border-color: var(--lavender);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 181, 245, 0.3);
         }
 
         .tutoring-btn-secondary {
             background-color: transparent;
-            color: #657264;
+            color: var(--primary-pink);
+            border-color: var(--primary-pink);
         }
 
         .tutoring-btn-secondary:hover {
-            background-color: #657264;
-            color: white;
+            background-color: var(--cream);
+            color: var(--primary-pink);
+            border-color: var(--primary-pink);
         }
 
         .tutoring-divider {
             text-align: center;
             margin: 60px 0;
-            color: #657264;
             font-size: 24px;
             letter-spacing: 2px;
+            color: var(--primary-pink);
+            opacity: 0.6;
+        }
+
+        .tutoring-divider::before {
+            content: "~ ✧ ~ ✧ ~ ✧ ~";
+            display: block;
         }
 
         .tutoring-section {
@@ -89,7 +111,7 @@
 
         .tutoring-section h2 {
             font-size: 32px;
-            color: #657264;
+            color: var(--sage-green);
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -102,18 +124,36 @@
             margin-bottom: 20px;
         }
 
+        .tutoring-two-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 1024px) {
+            .tutoring-two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .tutoring-offering {
-            background-color: #f5f5f5;
-            border: 2px solid #657264;
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(255, 182, 217, 0.15) 0%, rgba(255, 255, 255, 0.5) 100%);
+            border: 2px solid var(--primary-pink);
+            border-radius: 16px;
             padding: 30px;
             margin-bottom: 30px;
-            max-width: 600px;
+            transition: all 0.3s ease;
+        }
+
+        .tutoring-offering:hover {
+            box-shadow: 0 8px 20px rgba(255, 182, 217, 0.2);
+            transform: translateY(-4px);
         }
 
         .tutoring-offering h3 {
             font-size: 22px;
-            color: #657264;
+            color: var(--sage-green);
             margin-bottom: 15px;
         }
 
@@ -132,10 +172,10 @@
         }
 
         .tutoring-offering li:before {
-            content: "•";
+            content: "✧";
             position: absolute;
             left: 0;
-            color: #657264;
+            color: var(--primary-pink);
             font-weight: bold;
         }
 
@@ -147,32 +187,38 @@
 
         .tutoring-offering-cta a {
             padding: 10px 20px;
-            border: 2px solid #657264;
-            border-radius: 6px;
+            border: 2px solid var(--primary-pink);
+            border-radius: 10px;
             background-color: transparent;
-            color: #657264;
+            color: var(--primary-pink);
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
         }
 
         .tutoring-offering-cta a:hover {
-            background-color: #657264;
+            background-color: var(--primary-pink);
             color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 182, 217, 0.3);
         }
 
         .tutoring-form-section {
-            background-color: #f5f5f5;
-            border: 2px solid #657264;
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(212, 181, 245, 0.15) 0%, rgba(255, 255, 255, 0.5) 100%);
+            border: 2px solid var(--lavender);
+            border-radius: 16px;
             padding: 40px;
-            max-width: 700px;
             margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .tutoring-form-section:hover {
+            box-shadow: 0 8px 20px rgba(212, 181, 245, 0.2);
         }
 
         .tutoring-form-section h3 {
             font-size: 24px;
-            color: #657264;
+            color: var(--sage-green);
             margin-bottom: 20px;
         }
 
@@ -201,15 +247,15 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #657264;
+            color: var(--lavender);
             font-weight: bold;
         }
 
         .tutoring-form-btn {
             padding: 15px 40px;
-            border: 2px solid #657264;
-            border-radius: 8px;
-            background-color: #657264;
+            border: 2px solid var(--lavender);
+            border-radius: 12px;
+            background-color: var(--lavender);
             color: white;
             font-size: 16px;
             font-weight: 600;
@@ -219,8 +265,10 @@
         }
 
         .tutoring-form-btn:hover {
-            background-color: transparent;
-            color: #657264;
+            background-color: var(--light-blue);
+            border-color: var(--light-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(184, 224, 240, 0.3);
         }
 
         .tutoring-resource-grid {
@@ -237,21 +285,22 @@
         }
 
         .tutoring-resource-card {
-            border: 2px solid #657264;
-            border-radius: 8px;
+            border: 2px solid var(--light-blue);
+            border-radius: 16px;
             padding: 30px;
-            background-color: #f5f5f5;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(135deg, rgba(184, 224, 240, 0.15) 0%, rgba(255, 255, 255, 0.5) 100%);
+            transition: all 0.3s ease;
         }
 
         .tutoring-resource-card:hover {
             transform: translateY(-5px);
-            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 20px rgba(184, 224, 240, 0.25);
+            border-color: var(--light-blue);
         }
 
         .tutoring-resource-card h4 {
             font-size: 20px;
-            color: #657264;
+            color: var(--sage-green);
             margin-bottom: 15px;
         }
 
@@ -262,13 +311,56 @@
             margin-bottom: 20px;
         }
 
+        .tutoring-importance-section {
+            background: linear-gradient(135deg, rgba(255, 249, 214, 0.3) 0%, rgba(255, 255, 255, 0.5) 100%);
+            border: 2px solid var(--pale-yellow);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .tutoring-importance-section h3 {
+            font-size: 24px;
+            color: var(--sage-green);
+            margin-bottom: 20px;
+        }
+
+        .tutoring-importance-section p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .tutoring-importance-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .tutoring-importance-list li {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tutoring-importance-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--pale-yellow);
+            font-weight: bold;
+        }
+
         .tutoring-faq {
             max-width: 800px;
         }
 
         .tutoring-faq-item {
             margin-bottom: 30px;
-            border-bottom: 1px solid #657264;
+            border-bottom: 2px solid var(--cream);
             padding-bottom: 20px;
         }
 
@@ -279,7 +371,7 @@
         .tutoring-faq-question {
             font-size: 18px;
             font-weight: 600;
-            color: #657264;
+            color: var(--sage-green);
             margin-bottom: 10px;
         }
 
@@ -330,62 +422,95 @@
             </div>
         </div>
 
-        <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
+        <div class="tutoring-divider"></div>
 
-        <!-- Section 1: Current Offerings -->
+        <!-- Section 1: Current Offerings & Incoming (Side by side) -->
         <div class="tutoring-section">
-            <h2>Current Offerings</h2>
-            
-            <div class="tutoring-offering">
-                <h3>AP Computer Science A</h3>
-                <p>Review materials, notes, and upcoming review opportunities.</p>
+            <div class="tutoring-two-column">
                 
-                <p style="font-weight: 600; margin-bottom: 10px;">Includes:</p>
-                <ul>
-                    <li>AP CSA Notes (2025 archive)</li>
-                    <li>2026 curriculum updates</li>
-                    <li>Review sessions</li>
-                    <li>Practice resources</li>
-                </ul>
-                
-                <div class="tutoring-offering-cta">
-                    <!--AP CSA Notes link -->
-                    <a href="https://cherielle.notion.site/apcsa26">View Notes</a>
-                    <!--Interest Form link -->
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5dr6WarUi8UjA_d95LiYrZ8tWxNfnhW2iSQN2CAnBbyaafA/viewform">Join Interest List</a>
+                <!-- Current Offerings -->
+                <div>
+                    <h2 style="margin-bottom: 20px; margin-top: 0;">Current Offerings</h2>
+                    <div class="tutoring-offering">
+                        <h3>AP Computer Science A</h3>
+                        <p>Review materials, notes, and upcoming review opportunities.</p>
+                        
+                        <p style="font-weight: 600; margin-bottom: 10px;">Includes:</p>
+                        <ul>
+                            <li>AP CSA Notes (2025 archive)</li>
+                            <li>2026 curriculum updates</li>
+                            <li>Review sessions</li>
+                            <li>Practice resources</li>
+                        </ul>
+                        
+                        
+                        
+                        <div class="tutoring-offering-cta">
+                            <!--AP CSA Notes link with Notion notes -->
+                            <a href="https://cherielle.notion.site/csigcse">View Notes</a>
+                            <!--Interest Form link -->
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5dr6WarUi8UjA_d95LiYrZ8tWxNfnhW2iSQN2CAnBbyaafA/viewform">Join Interest List</a>
+                        </div>
+                    </div>
                 </div>
+
+                 <!-- Incoming: Python -->
+                <div>
+                    <h2 style="margin-bottom: 20px; margin-top: 0;">Incoming</h2>
+                    <div class="tutoring-offering">
+                        <h3>Python (coming soon)</h3>
+                        <p>Review materials, notes, and upcoming review opportunities.</p>
+                        
+                        <p style="font-weight: 600; margin-bottom: 10px;">Includes:</p>
+                        <ul>
+                            <li>Python Fundamentals Guide</li>
+                            <li>Interactive coding tutorials</li>
+                            <li>Review sessions</li>
+                            <li>Practice Resources</li>
+                        </ul>
+                        
+                        <div class="tutoring-offering-cta">
+                            <!--Python Notes link -->
+                            <a href="" style="opacity: 0.5; cursor: not-allowed;">Notes </a>
+                            <!--Interest Form link -->
+                            <a href="" style="opacity: 0.5; cursor: not-allowed;">Interest List </a>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
 
-        <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
+        <div class="tutoring-divider"></div>
 
-        <!-- Section 2: Join 2026 Cohort -->
+        <!-- Section 2: Why Computer Science Matters -->
         <div class="tutoring-section">
-            <h2>Join Our 2026 Cohort</h2>
+            <h2>Why Computer Science Matters</h2>
             
-            <div class="tutoring-form-section">
-                <h3>Interested in tutoring resources?</h3>
+            <div class="tutoring-importance-section">
+                <h3>The Importance of Computer Science in Everyday Life</h3>
                 <p>
-                    We're currently revising our curriculum for 2026 to help students prepare for the AP CSA exam.
+                    Computer science is no longer just for tech professionals— it's woven into nearly every aspect of our daily lives. From the apps on your phone to the algorithms that recommend your favorite content, understanding computer science helps you navigate, innovate, and thrive in our digital world. But more importantly, tech shapes the future, and that future should include all of us—especially the voices and perspectives of girls and women who've been historically left out of the conversation.
                 </p>
                 
-                <p style="font-weight: 600; margin-top: 20px; margin-bottom: 10px;">Sign up to:</p>
-                <ul>
-                    <li>Receive free resources</li>
-                    <li>Get notified about review sessions</li>
-                    <li>Hear when curriculum is finalized</li>
+                <p style="font-weight: 600; margin-top: 20px; margin-bottom: 10px;">Computer science impacts:</p>
+                <ul class="tutoring-importance-list">
+                    <li><strong>Communication:</strong> Email, messaging apps, and social media rely on fundamental CS principles</li>
+                    <li><strong>Healthcare:</strong> Medical devices, diagnostics, and patient data systems depend on software</li>
+                    <li><strong>Entertainment:</strong> Streaming services, gaming, and content creation use advanced algorithms</li>
+                    <li><strong>Finance:</strong> Banking, investments, and digital payments are powered by secure coding</li>
+                    <li><strong>Transportation:</strong> From GPS navigation to autonomous vehicles, CS enables modern mobility</li>
+                    <li><strong>Problem-solving:</strong> Learning to code teaches critical thinking and logical reasoning skills valuable in any career</li>
                 </ul>
-
-                <p style="font-size: 14px; color: #657264; margin-bottom: 15px; font-style: italic;">
-                    hello! we're in the process of revising our curriculum for 2026 for you in order to pass your ap csa exam 🤯!! this form is to get a gauge on how many people are interested in our FREE resources (including coming to our review sessions). we will email you sometime very soon when we have finalized everything :-)  if you have any concerns, don't hesitate to dm via instagram or email us!
+                
+                <p>
+                    By learning computer science today, you're not just preparing for a tech career—you're developing skills that will make you a better problem-solver, communicator, and innovator. You're also joining a community that believes girls deserve a seat at the table in tech. At Cherielle, we're committed to creating a safe, inclusive space where you can learn, grow, and build confidence in your abilities without feeling undermined or alone. Your perspective matters, and we're here to make sure you know it.
                 </p>
-
-                <!-- LINK: Replace with Interest Form link -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5dr6WarUi8UjA_d95LiYrZ8tWxNfnhW2iSQN2CAnBbyaafA/viewform" class="tutoring-form-btn">Interest Form</a>
             </div>
         </div>
 
-        <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
+        <div class="tutoring-divider"></div>
 
         <!-- Section 3: Resource Library -->
         <div class="tutoring-section" id="resources">
@@ -403,15 +528,24 @@
                 <div class="tutoring-resource-card">
                     <h4>Java & AP CSA</h4>
                     <p>Dive deeper into Java programming and AP Computer Science A concepts with comprehensive materials and practice problems.</p>
-                    <!-- LINK: Replace with AP CSA Resources link -->
+                    <!-- AP CSA Resources link -->
                     <a href="https://cherielle.notion.site/apcsa26" class="tutoring-form-btn">Explore</a>
                 </div>
+
+                 <div class="tutoring-resource-card">
+                    <h4>IGCSE Computer Science (Edexcel)</h4>
+                    <p>Comprehensive study materials, exam guides, and practice resources specifically tailored for the 2026 Edexcel Computer Science IGCSE exam.</p>
+                    <!-- IGCSE Resources link -->
+                    <a href="https://cherielle.notion.site/csigcse" class="tutoring-form-btn">Explore</a>
+                </div>
+
+                
             </div>
         </div>
 
-        <div class="tutoring-divider">━━━━━━━━━━━━━━</div>
+        <div class="tutoring-divider"></div>
 
-        <!-- Section 5: FAQ -->
+        <!-- Section 4: FAQ -->
         <div class="tutoring-section">
             <h2>FAQ</h2>
 
