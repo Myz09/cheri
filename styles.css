@@ -233,7 +233,7 @@ details[open] summary::after{
 
 /* Tutoring page images */
 
-.hero-image {
+.tutoring-hero .hero-image {
     max-width: 200px;
     width: 100%;
     height: auto;
@@ -246,7 +246,7 @@ details[open] summary::after{
 }
 
 @media (max-width: 768px) {
-    .hero-image {
+    .tutoring-hero .hero-image {
         max-width: 150px;
     }
 }
