@@ -30,7 +30,6 @@
             margin-bottom: 10px;
             border-radius: 5px;
             width: 45dvw; 
-            
         }
         .m-sec h2{
             font-size:3em;
@@ -114,6 +113,15 @@
             color: #555;
             margin-top: 10px;
             }
+
+        /* features grid - restyled to match site pastel aesthetic */
+        .features-section{background:transparent;padding:2.25rem 1.25rem;border-radius:8px;margin:2.5rem auto;max-width:1200px}
+        .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+        .feature-card{background:#ffffff;color:#333;padding:1.5rem;border-radius:12px;border:1px solid rgba(172,204,167,0.45);box-shadow:0 8px 20px rgba(18,18,18,0.04);min-height:170px;display:flex;flex-direction:column;justify-content:center}
+        .feature-card h3{margin:0 0 0.5rem 0;font-size:1.15rem;color:#2b2b2b;font-weight:700}
+        .feature-card p{margin:0 0 1rem 0;color:#657264;font-size:0.95rem}
+        .feature-card .btn{background:#aecdab;color:#ffffff;padding:0.55rem 0.9rem;border-radius:999px;text-decoration:none;display:inline-block;margin-top:auto;align-self:center;border:none}
+        @media(max-width:900px){.features-grid{grid-template-columns:repeat(1,1fr)}.m-sec{width:100dvw}}
     </style>
 </head>
 <body>
@@ -130,37 +138,83 @@
                     <p>The gender gap in is real, not just in tech but in general as well. There have been many advancements to reduce this disparity, yet even today, there are always instances of girls feeling undermined in the classroom and unmotivated to pursue their dreams. We aim to create blossoms of impact starting from locally to out in the web. We’re the girl’s girl - by creating a safe, inclusive community bonded by computer science and girlhood, we have a space to connect, grow, and learn. </p>
                 </div>
             </div>
-            <div class="m-sec" style="border-left: 1px solid #bdbbbb;border-radius:0px;">
+            <div class="m-sec" style="border-left: 1px solid #bdbbbb;border-radius:0px;" id="m-sec-tut">
                 <div>
                     <h2>Tutoring</h2>
                     <p>Cherielle has a team dedicated to tutoring and providing resources for members to learn about computer science. We provide review materials for major tests like AP CSA, supplemental information about the computer science world, inform about the basics to the updates in tech, and constantly provide resources to stay involved in the growing field.</p>
                     </div>
-                <a href="https://cherielle.notion.site/ap-csa-2025-1c66220bb815801faa56f68555ac7e30" target="_blank" ><button class="tut-button"><p style="text-align:center;color:#ffffff;">csa notes</p></button></a>
+                <a href="https://cherielle.notion.site/ap-csa-2025-1c66220bb815801faa56f68555ac7e30" target="_blank" ><button class="tut-button"><p style="text-align:center;color:#ffffff;margin:0">csa notes</p></button></a>
             </div>
         </div>
         <h2 style="text-align:center;margin-left:10dvw;margin-right:10dvw;font-size:3.5em;font-weight:500;color:#7A8f7b;">Impact</h2>
-        <hr style="border-top:1px solid #bdbbbb;max-width:80dvw;margin: 0 auto;margin-top:5dvh;display:none;"> 
          <div class="stats-grid">
             <div class="main-stat" id="mainStat">
-            Total Accounts Reached: 54,656
+            Total Accounts Reached: <span id="total" data-target="54656">0</span>
             </div>
             <div class="card">
-            <div id="follows">3,724</div>
+            <div id="follows" data-target="3724">0</div>
             <div class="label">Number of Followers </div>
             </div>
             <div class="card">
-            <div id="views">205,768 </div>
+            <div id="views" data-target="205768">0</div>
             <div class="label">Total Views </div>
             </div>
             <div class="card">
-            <div id="team">104</div>
+            <div id="team" data-target="104">0</div>
             <div class="label">Total Team Members </div>
             </div>
-        </div>  
+        </div>
+
+        <!-- features grid -->
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Blog</h3>
+                    <p>Read articles, tutorials, and stories to help build confidence and learn about tech.</p>
+                    <a class="btn" href="https://cherielle.org/blog.html" target="_blank" rel="noopener">Read now</a>
+                </div>
+                <div class="feature-card">
+                    <h3>Community Discord</h3>
+                    <p>Join our safe, inclusive Discord where members ask questions, share resources, and grow together.</p>
+                    <a class="btn" href="https://discord.gg/njTFVETq" target="_blank" rel="noopener">Join Discord</a>
+                </div>
+                <div class="feature-card">
+                    <h3>Volunteer Opportunities</h3>
+                    <p>Explore ways to volunteer with us and make a meaningful impact in your community.</p>
+                    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfpg1Fq99qMXTOhNSfkXwSBMqroHC_-HYy6wSlsD4ZT651OAg/viewform" target="_blank" rel="noopener">Volunteer</a>
+                </div>
+            </div>
+        </section>
         
             
     </div>
        <footer id="footer"></footer>
+
+    <script>
+        // simple count-up animation for elements with data-target
+        function animateCount(id, duration){
+            const el = document.getElementById(id);
+            if(!el) return;
+            const target = parseInt(el.getAttribute('data-target') || el.textContent.replace(/,/g,''), 10) || 0;
+            const start = 0;
+            const startTime = performance.now();
+            function step(now){
+                const progress = Math.min((now - startTime) / duration, 1);
+                const value = Math.floor(progress * (target - start) + start);
+                el.textContent = value.toLocaleString();
+                if(progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        document.addEventListener('DOMContentLoaded', function(){
+            animateCount('total', 1800);
+            animateCount('follows', 1400);
+            animateCount('views', 2000);
+            animateCount('team', 1200);
+        });
+    </script>
+
 </body>
 
 </html>
