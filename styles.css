@@ -230,3 +230,21 @@ details[open] summary::after{
     .faq-item summary{font-size:16px}
     .faq-answer{font-size:15px}
 }
+
+.hero-image {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-image-left,
+.hero-image-right {
+    max-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        max-width: 150px;
+    }
+}
