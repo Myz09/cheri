@@ -19,19 +19,20 @@
     <script defer src="./js/header.js"></script>
     <style>
         :root {
-            --primary-pink: #FFB6D9;
-            --lavender: #D4B5F5;
-            --light-blue: #B8E0F0;
-            --cream: #FFF8F0;
-            --pale-yellow: #FFF9D6;
+            --primary-green: #A8D5A2;
+            --green-light: #C5E8C1;
+            --green-pale: #EEF7ED;
+            --green-border: #7AB876;
+            --green-text: #3A6B37;
             --sage-green: #657264;
         }
 
+        /* Overview hero — matches tutoring spacing exactly */
         .blog-overview {
             text-align: center;
             padding: 60px 20px;
             margin: 40px 20px;
-            background: linear-gradient(135deg, rgba(255, 182, 217, 0.1) 0%, rgba(212, 181, 245, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(168, 213, 162, 0.14) 0%, rgba(197, 232, 193, 0.1) 100%);
             border-radius: 20px;
         }
 
@@ -60,10 +61,10 @@
 
         .filter-btn {
             padding: 12px 24px;
-            border: 2px solid var(--primary-pink);
+            border: 2px solid var(--primary-green);
             border-radius: 25px;
             background-color: transparent;
-            color: var(--primary-pink);
+            color: var(--green-text);
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
@@ -71,26 +72,20 @@
         }
 
         .filter-btn:hover {
-            background-color: var(--primary-pink);
+            background-color: var(--primary-green);
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 182, 217, 0.3);
+            box-shadow: 0 4px 12px rgba(168, 213, 162, 0.35);
         }
 
         .filter-btn.active {
-            background-color: var(--primary-pink);
+            background-color: var(--primary-green);
             color: white;
         }
 
         @media (max-width: 768px) {
-            .blog-filters {
-                gap: 10px;
-            }
-
-            .filter-btn {
-                padding: 10px 18px;
-                font-size: 14px;
-            }
+            .blog-filters { gap: 10px; }
+            .filter-btn { padding: 10px 18px; font-size: 14px; }
         }
 
         /* Category sections */
@@ -116,7 +111,7 @@
             bottom: 0;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, var(--primary-pink), var(--lavender));
+            background: linear-gradient(90deg, var(--primary-green), var(--green-light));
             border-radius: 2px;
         }
 
@@ -128,44 +123,34 @@
             margin-bottom: 40px;
         }
 
-        @media (max-width: 1024px) {
-            .blog-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
 
         /* Blog cards */
         .blog-card {
-            border: 2px solid var(--primary-pink);
+            border: 2px solid var(--primary-green);
             border-radius: 16px;
             overflow: hidden;
-            background: linear-gradient(135deg, rgba(255, 182, 217, 0.1) 0%, rgba(255, 255, 255, 0.6) 100%);
-            box-shadow: 2px 2px 8px rgba(255, 182, 217, 0.15);
+            background: linear-gradient(135deg, rgba(168, 213, 162, 0.1) 0%, rgba(255, 255, 255, 0.6) 100%);
+            box-shadow: 2px 2px 8px rgba(168, 213, 162, 0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .blog-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(255, 182, 217, 0.25);
-            border-color: var(--lavender);
+            box-shadow: 0 8px 20px rgba(168, 213, 162, 0.28);
+            border-color: var(--green-border);
         }
 
         .blog-card-image {
             width: 100%;
             height: 250px;
-            display: block;
-            overflow: hidden;
-            background: linear-gradient(135deg, rgba(255, 182, 217, 0.2) 0%, rgba(212, 181, 245, 0.2) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-pink);
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(168, 213, 162, 0.18) 0%, rgba(197, 232, 193, 0.18) 100%);
+            color: var(--green-text);
             font-size: 14px;
         }
 
@@ -178,19 +163,19 @@
 
         .blog-card-info {
             padding: 20px;
-            border-top: 2px solid var(--primary-pink);
+            border-top: 2px solid var(--primary-green);
         }
 
         .blog-card-date {
             font-weight: bold;
-            color: var(--lavender);
+            color: var(--green-border);
             margin-bottom: 8px;
             font-size: 14px;
         }
 
         .blog-card-author {
             font-size: 14px;
-            color: var(--primary-pink);
+            color: var(--primary-green);
             margin-bottom: 10px;
         }
 
@@ -201,13 +186,13 @@
             margin: 0;
         }
 
-        /* Divider — matches tutoring.html */
+        /* Divider */
         .blog-divider {
             text-align: center;
             margin: 40px 0;
             font-size: 24px;
             letter-spacing: 2px;
-            color: var(--primary-pink);
+            color: var(--primary-green);
             opacity: 0.6;
         }
 
@@ -216,9 +201,7 @@
             display: block;
         }
 
-        .hidden {
-            display: none;
-        }
+        .hidden { display: none; }
     </style>
 </head>
 <body>
@@ -258,7 +241,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">
                         <img src="images/blog-placeholder.png" alt="Blog Post">
@@ -269,7 +251,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">
                         <img src="images/blog-placeholder.png" alt="Blog Post">
@@ -297,7 +278,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">Image Placeholder</div>
                     <div class="blog-card-info">
@@ -306,7 +286,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">Image Placeholder</div>
                     <div class="blog-card-info">
@@ -332,7 +311,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">Image Placeholder</div>
                     <div class="blog-card-info">
@@ -341,7 +319,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">Image Placeholder</div>
                     <div class="blog-card-info">
@@ -367,7 +344,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">Image Placeholder</div>
                     <div class="blog-card-info">
@@ -376,7 +352,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">Image Placeholder</div>
                     <div class="blog-card-info">
@@ -402,7 +377,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">Image Placeholder</div>
                     <div class="blog-card-info">
@@ -411,7 +385,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">Image Placeholder</div>
                     <div class="blog-card-info">
@@ -437,7 +410,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">Image Placeholder</div>
                     <div class="blog-card-info">
@@ -446,7 +418,6 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-
                 <div class="blog-card">
                     <div class="blog-card-image">Image Placeholder</div>
                     <div class="blog-card-info">
@@ -462,7 +433,6 @@
     </div>
 
     <script>
-        // Filter functionality
         const filterBtns = document.querySelectorAll('.filter-btn');
         const categories = document.querySelectorAll('.blog-category');
         const dividers = document.querySelectorAll('.blog-divider');
@@ -473,9 +443,6 @@
                 btn.classList.add('active');
 
                 const filterValue = btn.getAttribute('data-filter');
-
-                // Track visible categories to manage dividers
-                let visibleCount = 0;
                 const visibleCategories = [];
 
                 categories.forEach(category => {
@@ -493,7 +460,6 @@
                     }
                 });
 
-                // Hide all dividers first, then show only between visible categories
                 dividers.forEach(d => d.classList.add('hidden'));
                 if (filterValue === 'all') {
                     dividers.forEach(d => d.classList.remove('hidden'));
