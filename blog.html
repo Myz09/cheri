@@ -18,10 +18,28 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png" />
     <script defer src="./js/header.js"></script>
     <style>
+        :root {
+            --primary-pink: #FFB6D9;
+            --lavender: #D4B5F5;
+            --light-blue: #B8E0F0;
+            --cream: #FFF8F0;
+            --pale-yellow: #FFF9D6;
+            --sage-green: #657264;
+        }
+
         .blog-overview {
             text-align: center;
-            padding: 40px 20px;
-            margin-bottom: 40px;
+            padding: 60px 20px;
+            margin: 40px 20px;
+            background: linear-gradient(135deg, rgba(255, 182, 217, 0.1) 0%, rgba(212, 181, 245, 0.1) 100%);
+            border-radius: 20px;
+        }
+
+        .blog-overview h1 {
+            font-size: 48px;
+            color: var(--sage-green);
+            margin-bottom: 20px;
+            font-weight: 600;
         }
 
         .blog-overview p {
@@ -30,6 +48,7 @@
             line-height: 1.6;
         }
 
+        /* Filter Buttons */
         .blog-filters {
             display: flex;
             flex-wrap: wrap;
@@ -41,10 +60,10 @@
 
         .filter-btn {
             padding: 12px 24px;
-            border: 2px solid #657264;
+            border: 2px solid var(--primary-pink);
             border-radius: 25px;
             background-color: transparent;
-            color: #657264;
+            color: var(--primary-pink);
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
@@ -52,12 +71,14 @@
         }
 
         .filter-btn:hover {
-            background-color: #657264;
+            background-color: var(--primary-pink);
             color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 182, 217, 0.3);
         }
 
         .filter-btn.active {
-            background-color: #657264;
+            background-color: var(--primary-pink);
             color: white;
         }
 
@@ -72,17 +93,34 @@
             }
         }
 
+        /* Category sections */
         .blog-category {
-            margin-bottom: 60px;
+            margin-bottom: 20px;
+            padding: 0 20px;
         }
 
         .blog-category h2 {
             text-align: left;
             margin-bottom: 30px;
             font-size: 28px;
-            color: #657264;
+            color: var(--sage-green);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
         }
 
+        .blog-category h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-pink), var(--lavender));
+            border-radius: 2px;
+        }
+
+        /* Blog grid */
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -102,17 +140,20 @@
             }
         }
 
+        /* Blog cards */
         .blog-card {
-            border: 2px solid #657264;
-            border-radius: 8px;
+            border: 2px solid var(--primary-pink);
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, rgba(255, 182, 217, 0.1) 0%, rgba(255, 255, 255, 0.6) 100%);
+            box-shadow: 2px 2px 8px rgba(255, 182, 217, 0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .blog-card:hover {
             transform: translateY(-5px);
-            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 20px rgba(255, 182, 217, 0.25);
+            border-color: var(--lavender);
         }
 
         .blog-card-image {
@@ -120,6 +161,12 @@
             height: 250px;
             display: block;
             overflow: hidden;
+            background: linear-gradient(135deg, rgba(255, 182, 217, 0.2) 0%, rgba(212, 181, 245, 0.2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-pink);
+            font-size: 14px;
         }
 
         .blog-card-image img {
@@ -131,27 +178,42 @@
 
         .blog-card-info {
             padding: 20px;
-            border-top: 2px solid #657264;
+            border-top: 2px solid var(--primary-pink);
         }
 
         .blog-card-date {
             font-weight: bold;
-            color: #657264;
+            color: var(--lavender);
             margin-bottom: 8px;
             font-size: 14px;
         }
 
         .blog-card-author {
             font-size: 14px;
-            color: #657264;
+            color: var(--primary-pink);
             margin-bottom: 10px;
         }
 
         .blog-card-title {
             font-size: 18px;
             font-weight: 600;
-            color: #657264;
+            color: var(--sage-green);
             margin: 0;
+        }
+
+        /* Divider — matches tutoring.html */
+        .blog-divider {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 24px;
+            letter-spacing: 2px;
+            color: var(--primary-pink);
+            opacity: 0.6;
+        }
+
+        .blog-divider::before {
+            content: "~ ✧ ~ ✧ ~ ✧ ~";
+            display: block;
         }
 
         .hidden {
@@ -163,12 +225,11 @@
     <div class="site">
         <header id="header"></header>
 
-        <h1 style="text-align: center; margin-bottom: 20px;">Blog</h1>
-
         <!-- Overview Section -->
         <div class="blog-overview">
+            <h1>Blog</h1>
             <p>
-                Explore stories, insights, and updates from the Cherielle community. From personal experiences in STEM to practical tech tips, our blog showcases the voices and perspectives of those passionate about empowering girls in technology. Discover inspiring narratives, reflections, and knowledge shared by our volunteers, participants, and team members.
+                Explore stories, insights, and updates from the Cherielle community. From personal experiences in STEM to practical tech tips, our blog showcases the voices and perspectives of those passionate about empowering girls in technology!
             </p>
         </div>
 
@@ -186,9 +247,7 @@
         <!-- Learn Section -->
         <div class="blog-category" data-category="learn">
             <h2>Learn</h2>
-
             <div class="blog-grid">
-                
                 <div class="blog-card">
                     <div class="blog-card-image">
                         <img src="images/blog-placeholder.png" alt="Blog Post">
@@ -199,7 +258,7 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-            
+
                 <div class="blog-card">
                     <div class="blog-card-image">
                         <img src="images/blog-placeholder.png" alt="Blog Post">
@@ -210,7 +269,7 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-            
+
                 <div class="blog-card">
                     <div class="blog-card-image">
                         <img src="images/blog-placeholder.png" alt="Blog Post">
@@ -221,9 +280,10 @@
                         <p class="blog-card-date">[MM/DD/YYYY]</p>
                     </div>
                 </div>
-            
             </div>
         </div>
+
+        <div class="blog-divider"></div>
 
         <!-- Women in STEM Section -->
         <div class="blog-category" data-category="women-stem">
@@ -258,6 +318,8 @@
             </div>
         </div>
 
+        <div class="blog-divider"></div>
+
         <!-- Creative Section -->
         <div class="blog-category" data-category="creative">
             <h2>Creative</h2>
@@ -290,6 +352,8 @@
                 </div>
             </div>
         </div>
+
+        <div class="blog-divider"></div>
 
         <!-- Girlhood Section -->
         <div class="blog-category" data-category="girlhood">
@@ -324,6 +388,8 @@
             </div>
         </div>
 
+        <div class="blog-divider"></div>
+
         <!-- Ethics Section -->
         <div class="blog-category" data-category="ethics">
             <h2>Ethics</h2>
@@ -356,6 +422,8 @@
                 </div>
             </div>
         </div>
+
+        <div class="blog-divider"></div>
 
         <!-- Resources Section -->
         <div class="blog-category" data-category="resources">
@@ -397,31 +465,39 @@
         // Filter functionality
         const filterBtns = document.querySelectorAll('.filter-btn');
         const categories = document.querySelectorAll('.blog-category');
+        const dividers = document.querySelectorAll('.blog-divider');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active class from all buttons
                 filterBtns.forEach(b => b.classList.remove('active'));
-                
-                // Add active class to clicked button
                 btn.classList.add('active');
 
-                // Get the filter value
                 const filterValue = btn.getAttribute('data-filter');
 
-                // Show/hide categories
+                // Track visible categories to manage dividers
+                let visibleCount = 0;
+                const visibleCategories = [];
+
                 categories.forEach(category => {
                     if (filterValue === 'all') {
                         category.classList.remove('hidden');
+                        visibleCategories.push(category);
                     } else {
                         const categoryValue = category.getAttribute('data-category');
                         if (categoryValue === filterValue) {
                             category.classList.remove('hidden');
+                            visibleCategories.push(category);
                         } else {
                             category.classList.add('hidden');
                         }
                     }
                 });
+
+                // Hide all dividers first, then show only between visible categories
+                dividers.forEach(d => d.classList.add('hidden'));
+                if (filterValue === 'all') {
+                    dividers.forEach(d => d.classList.remove('hidden'));
+                }
             });
         });
     </script>
