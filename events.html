@@ -19,11 +19,11 @@
     <script defer src="./js/header.js"></script>
     <style>
         :root {
-            --primary-blue: #B8E0F0;
-            --blue-mid: #82C8E6;
-            --blue-border: #5AAED4;
-            --blue-text: #2A6F8A;
-            --blue-dark: #1E5570;
+            --primary-blue: #F0B8D4;
+            --blue-mid: #E682B4;
+            --blue-border: #D45A8E;
+            --blue-text: #8A2A5A;
+            --blue-dark: #701E45;
             --sage-green: #657264;
         }
 
@@ -32,7 +32,7 @@
             text-align: center;
             padding: 60px 20px;
             margin: 40px 20px;
-            background: linear-gradient(135deg, rgba(184, 224, 240, 0.15) 0%, rgba(130, 200, 230, 0.08) 100%);
+            background: linear-gradient(135deg, rgba(240, 184, 212, 0.15) 0%, rgba(230, 130, 180, 0.08) 100%);
             border-radius: 20px;
         }
 
@@ -98,19 +98,19 @@
         @media (max-width: 1024px) { .events-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) { .events-grid { grid-template-columns: 1fr; } }
 
-        /* Event cards — blue theme */
+        /* Event cards — pink theme */
         .event-card {
             border: 2px solid var(--blue-border);
             border-radius: 12px;
             overflow: hidden;
-            background: linear-gradient(135deg, rgba(184, 224, 240, 0.12) 0%, rgba(255, 255, 255, 0.6) 100%);
-            box-shadow: 2px 2px 8px rgba(184, 224, 240, 0.2);
+            background: linear-gradient(135deg, rgba(240, 184, 212, 0.12) 0%, rgba(255, 255, 255, 0.6) 100%);
+            box-shadow: 2px 2px 8px rgba(240, 184, 212, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .event-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(130, 200, 230, 0.25);
+            box-shadow: 0 8px 20px rgba(230, 130, 180, 0.25);
         }
 
         .event-card-image { width: 100%; height: 250px; display: block; overflow: hidden; }
@@ -136,16 +136,16 @@
             border-radius: 12px;
             display: block;
             margin: 0 auto 18px auto;
-            box-shadow: 4px 6px 18px rgba(42, 111, 138, 0.12);
+            box-shadow: 4px 6px 18px rgba(138, 42, 90, 0.12);
         }
 
         .hackathon-desc {
-            background: linear-gradient(135deg, rgba(184, 224, 240, 0.18) 0%, rgba(255, 255, 255, 0.6) 100%);
+            background: linear-gradient(135deg, rgba(240, 184, 212, 0.18) 0%, rgba(255, 255, 255, 0.6) 100%);
             padding: 18px 22px;
             border-radius: 12px;
             color: var(--blue-dark);
             margin-bottom: 18px;
-            border: 1px solid rgba(130, 200, 230, 0.3);
+            border: 1px solid rgba(230, 130, 180, 0.3);
         }
 
         .hackathon-desc .lead {
@@ -173,7 +173,7 @@
         .project-card {
             display: block;
             background: #fff;
-            border: 1px solid rgba(184, 224, 240, 0.5);
+            border: 1px solid rgba(240, 184, 212, 0.5);
             border-radius: 10px;
             overflow: hidden;
             text-decoration: none;
@@ -198,12 +198,12 @@
         .proj-body p { margin: 8px 0 0 0; color: #6b7b72; font-size: 14px; }
         .proj-body strong { display: block; font-size: 16px; color: var(--blue-dark); margin: 0; }
 
-        /* Ribbon — blue toned */
+        /* Ribbon — pink toned */
         .ribbon {
             position: absolute;
             left: 8px;
             top: 8px;
-            background: rgba(184, 224, 240, 0.55);
+            background: rgba(240, 184, 212, 0.55);
             color: var(--blue-dark);
             font-weight: 700;
             padding: 4px 8px;
@@ -214,14 +214,14 @@
 
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(42, 111, 138, 0.1);
+            box-shadow: 0 8px 20px rgba(138, 42, 90, 0.1);
         }
 
         /* Sponsors */
         .sponsors {
             margin: 28px 0 0 0;
             padding: 18px 0 6px 0;
-            border-top: 1px dashed rgba(130, 200, 230, 0.35);
+            border-top: 1px dashed rgba(230, 130, 180, 0.35);
             text-align: center;
         }
 
