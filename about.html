@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset ="UTF-8"/>
+    <meta charset="UTF-8"/>
     <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
     <title>about</title>
@@ -18,67 +18,145 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png" />
     <script defer src="./js/header.js"></script>
     <style>
-            .directory {
-                display: flex;
-                flex-wrap: wrap;
-                align-self:center;
-            }
-            
+        :root {
+        --primary-yellow: #B89FD8;
+        --yellow-light: #D4BEF0;
+        --yellow-pale: #F3EEFF;
+        --yellow-border: #9B7DC4;
+        --yellow-text: #5B3F8A;
+        --sage-green: #6B5F7A;
+    }
+
+        /* Page hero — matches tutoring spacing */
+        .about-hero {
+            text-align: center;
+            padding: 60px 20px;
+            margin: 40px 20px;
+            background: linear-gradient(135deg, rgba(180, 150, 220, 0.12) 0%, rgba(210, 185, 240, 0.1) 100%);
+            border-radius: 20px;
+        }
+
+        .about-hero h1 {
+            font-size: 48px;
+            color: var(--sage-green);
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-family: 'Marcellus', sans-serif;
+        }
+
+        .about-hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #6B5F7A;
+        }
+
+        /* Team section headings */
+        .team-heading {
+            text-align: center;
+            width: 100%;
+            margin: 30px 0 10px;
+            font-size: 1.6em;
+            color: var(--yellow-text);
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Wrapper to center the underlined heading */
+        .team-heading-wrap {
+            text-align: center;
+            margin: 30px 0 10px;
+        }
+
+        .team-heading-wrap h2 {
+            display: inline-block;
+            font-size: 1.6em;
+            color: var(--yellow-text);
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--primary-yellow);
+        }
+
+        /* Profile cards */
+        .directory {
+            display: flex;
+            flex-wrap: wrap;
+            align-self: center;
+        }
+
+        .profile {
+            border: 1px solid rgba(180, 150, 220, 0.45);
+            background: linear-gradient(135deg, rgba(180, 150, 220, 0.07) 0%, rgba(255, 255, 255, 0.6) 100%);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            width: 45dvw;
+            box-shadow: 2px 2px 8px rgba(180, 150, 220, 0.12);
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .profile:hover {
+            box-shadow: 0 6px 18px rgba(180, 150, 220, 0.22);
+            transform: translateY(-3px);
+        }
+
+        @media(max-width: 768px) {
             .profile {
-                border: 1px solid #ddd;
-                padding: 10px;
-                margin-bottom: 10px;
-                border-radius: 5px;
-                width: 45dvw; 
-                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
+                width: 100dvw;
+                font-family: "DM Sans", "Arial", sans-serif;
             }
-            @media(max-width:768px){
-            .profile{
-                width:100dvw;
-                font-family:"DM Sans","Arial",sans-serif;
-            }
-            }
-            .procont{
-                flex-direction: column;
-                display: flex;
-                align-items: center;
-                text-align: center;
-            }
-            .profile img {
-                margin-right: 16px;
-                width: 280px; 
-                height: 280px; 
-                border-radius: 0; 
-            }
-            .team-heading {
-                text-align: center;
-                width: 100%;
-                margin: 20px 0 10px;
-            }
-            .profile h2 {
-                margin: 0 0 10px 0;
-                font-family:"Arial",sans-serif;   
-            }
-        </style>
+        }
+
+        .procont {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile img {
+            margin-right: 16px;
+            width: 280px;
+            height: 280px;
+            border-radius: 0;
+        }
+
+        .profile h2 {
+            margin: 0 0 10px 0;
+            font-family: "Arial", sans-serif;
+        }
+
+        /* Position labels get a subtle yellow pill */
+        .profile .procont p:first-of-type {
+            display: inline-block;
+            background: rgba(180, 150, 220, 0.2);
+            color: var(--yellow-text);
+            border-radius: 999px;
+            padding: 2px 12px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+    </style>
 </head>
 <body>
     <div class="site">
-        <header id="header"> 
-        </header>
+        <header id="header"></header>
 
-        <h1 style="text-align:center">About</h1>
-
-        <p style="text-align:center;padding-bottom:5%">Meet the executive team</p>
+        <!-- Hero with buffer -->
+        <div class="about-hero">
+            <h1>About</h1>
+            <p>Behind Cherielle is a group of girls who just really, really care. Come meet the team!</p>
+        </div>
 
         <!-- FOUNDERS -->
-        <h2 class="team-heading">Founders</h2>
+        <div class="team-heading-wrap"><h2>Founders</h2></div>
         <div class="directory">
             <div class="profile">
                 <img src="images/logo.png" alt="Reanna Jin">
-                    <div class="procont">
+                <div class="procont">
                     <h2>Reanna Jin</h2>
                     <p>Co-Founder</p>
                     <p>I started cherielle as a way for women and non-binaries in STEM to find a safe place for resources and a community of helpful and amazing people of all backgrounds, something I wish I had.</p>
@@ -89,200 +167,171 @@
                 <div class="procont">
                     <h2>Qwyen Le</h2>
                     <p>Co-Founder</p>
-                    <p>Hi, my name is Qwyen (pronounced like “quinn”) and I’m an incoming freshman at UC Berkeley for EECS! I co-founded cherielle because I wanted to inspire more girls to join computer science after learning about the gender gap. At cherielle, I love helping out with graphic design, using Notion, and creating reels for social media, but you can find me listening to kpop/pop/indie or junk journaling in my free time.</p>
+                    <p>Hi, my name is Qwyen (pronounced like "quinn") and I'm an incoming freshman at UC Berkeley for EECS! I co-founded cherielle because I wanted to inspire more girls to join computer science after learning about the gender gap. At cherielle, I love helping out with graphic design, using Notion, and creating reels for social media, but you can find me listening to kpop/pop/indie or junk journaling in my free time.</p>
                 </div>
             </div>
         </div>
 
-        <!-- OPERATIONS TEAM (Secretary, Webmaster, Head Tutor)-->
-        <h2 class="team-heading">Operations Team</h2>
+        <!-- OPERATIONS TEAM -->
+        <div class="team-heading-wrap"><h2>Operations Team</h2></div>
         <div class="directory">
-
             <div class="profile">
                 <img src="images/mabel.png" alt="Mabel Zheng">
-                    <div class="procont">
-                    <h2>Mabel Zheng</h2> <!-- NAME -->
-                    <p>Executive Director + Fundraising and Event Coordinator </p> <!-- POSITION -->
-                    <p>Hi, I'm Mabel! I’ve always been interested in what goes into keeping our digital lives secure, and with Cherielle, I hope we can turn that interest into a real possibility for girls everywhere. I’m a firm believer that a willingness to learn is what matters most in cybersecurity; you just need to be relentlessly curious. Let's work together to make a future in cybersecurity accessible to everyone!</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Mabel Zheng</h2>
+                    <p>Executive Director + Fundraising and Event Coordinator</p>
+                    <p>Hi, I'm Mabel! I've always been interested in what goes into keeping our digital lives secure, and with Cherielle, I hope we can turn that interest into a real possibility for girls everywhere. I'm a firm believer that a willingness to learn is what matters most in cybersecurity; you just need to be relentlessly curious. Let's work together to make a future in cybersecurity accessible to everyone!</p>
                 </div>
             </div>
-            
             <div class="profile">
                 <img src="images/alexa.png" alt="Alexa Santos">
-                    <div class="procont">
-                    <h2>Alexa Santos</h2> <!-- NAME -->
-                    <p>Secretary</p> <!-- POSITION -->
-                    <p>Hiii, I'm Alexa! I am interested in studying computer engineering and passionate about building supportive communities where girls can thrive in tech. As one of the only girls in my computer science class, I joined Cherielle to dive deeper into the industry whilst connecting with people who share similar challenges and ambitions. Outside of endless code, I love getting lost in a good book, playing football and swimming. I’m excited to meet and work with everyone to make STEM more inclusive for all! :) </p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Alexa Santos</h2>
+                    <p>Secretary</p>
+                    <p>Hiii, I'm Alexa! I am interested in studying computer engineering and passionate about building supportive communities where girls can thrive in tech. As one of the only girls in my computer science class, I joined Cherielle to dive deeper into the industry whilst connecting with people who share similar challenges and ambitions. Outside of endless code, I love getting lost in a good book, playing football and swimming. I'm excited to meet and work with everyone to make STEM more inclusive for all! :)</p>
                 </div>
             </div>
-            
             <div class="profile">
                 <img src="images/saanvi.png" alt="Saanvi Saxena">
-                    <div class="procont">
-                    <h2>Saanvi Saxena</h2> <!-- NAME -->
-                    <p>Head Tutor</p> <!-- POSITION -->
-                    <p>Hi, my name is Saanvi! I’m a sophomore in Texas and the head tutor for Cherielle. I love learning different coding concepts and languages and am passionate about empowering women in the CS field. In my free time, I enjoy playing tennis, baking, and listening to music. 
-</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Saanvi Saxena</h2>
+                    <p>Head Tutor</p>
+                    <p>Hi, my name is Saanvi! I'm a sophomore in Texas and the head tutor for Cherielle. I love learning different coding concepts and languages and am passionate about empowering women in the CS field. In my free time, I enjoy playing tennis, baking, and listening to music.</p>
                 </div>
             </div>
-
             <div class="profile">
                 <img src="images/elroi.png" alt="Elroi Eskndir">
-                    <div class="procont">
-                    <h2>Elroi Eskndir</h2> <!-- NAME -->
-                    <p>Head Tutor</p> <!-- POSITION -->
-                    <p>My name is Elroi and I am a junior in high school based in Maryland. As part of Cherielle, I assist with assigning tasks to tutors and creating lesson plans. Outside of coding, I enjoy making music, writing, and dancing!
-</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Elroi Eskndir</h2>
+                    <p>Head Tutor</p>
+                    <p>My name is Elroi and I am a junior in high school based in Maryland. As part of Cherielle, I assist with assigning tasks to tutors and creating lesson plans. Outside of coding, I enjoy making music, writing, and dancing!</p>
                 </div>
             </div>
-            
             <div class="profile">
                 <img src="images/sahasra.png" alt="Sahasra Vemuri">
-                    <div class="procont">
-                    <h2>Sahasra Vemuri</h2> <!-- NAME -->
-                    <p>Webmaster</p> <!-- POSITION -->
-                    <p>Hi, my name is Sahasra! I'm a junior in Texas with a strong passion for computational biology, computer science, and machine learning. I love learning new coding concepts and aspire to see more girls represented in engineering fields. In my free time, I love sketching, gaming, and listening to music!</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Sahasra Vemuri</h2>
+                    <p>Webmaster</p>
+                    <p>Hi, my name is Sahasra! I'm a junior in Texas with a strong passion for computational biology, computer science, and machine learning. I love learning new coding concepts and aspire to see more girls represented in engineering fields. In my free time, I love sketching, gaming, and listening to music!</p>
                 </div>
             </div>
-
-             <div class="profile">
+            <div class="profile">
                 <img src="images/omya.png" alt="Omya Tomar">
-                    <div class="procont">
-                    <h2>Omya Tomar</h2> <!-- NAME -->
-                    <p>Webmaster</p> <!-- POSITION -->
-                    <p>Hi! My name is Omya, and I'm currently a junior in Texas. I find computer science fascinating, and I've recently been focusing in on cybersecurity. I'm so excited to be working in Cherielle to represent my STEM girlies! Some of my hobbies are crocheting, and watching shows! </p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Omya Tomar</h2>
+                    <p>Webmaster</p>
+                    <p>Hi! My name is Omya, and I'm currently a junior in Texas. I find computer science fascinating, and I've recently been focusing in on cybersecurity. I'm so excited to be working in Cherielle to represent my STEM girlies! Some of my hobbies are crocheting, and watching shows!</p>
                 </div>
             </div>
-
             <div class="profile">
                 <img src="images/logo.png" alt="Maggie Zhou">
-                    <div class="procont">
-                    <h2>Maggie Zhou</h2> <!-- NAME -->
-                    <p>Webmaster</p> <!-- POSITION -->
-                    <p>Hello, My name is Maggie. I'm currently a senior in Maryland. I am interested in biology, computational biology and bioinformatics, computer science, and cybersecurity.</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Maggie Zhou</h2>
+                    <p>Webmaster</p>
+                    <p>Hello, My name is Maggie. I'm currently a senior in Maryland. I am interested in biology, computational biology and bioinformatics, computer science, and cybersecurity.</p>
                 </div>
             </div>
-            
         </div>
 
-        <!-- CREATIVE & BRANDING TEAM (Design Lead, Content Creator, Social Media Manager) -->
-        <h2 class="team-heading">Creative & Branding Team</h2>
+        <!-- CREATIVE & BRANDING TEAM -->
+        <div class="team-heading-wrap"><h2>Creative &amp; Branding Team</h2></div>
         <div class="directory">
             <div class="profile">
                 <img src="images/angelina.png" alt="Angelina Herrera">
-                    <div class="procont">
-                    <h2>Angelina Herrera</h2> <!-- NAME -->
-                    <p>Content Director</p> <!-- POSITION -->
-                    <p>Hello! My name is Angelina, and I am honored to serve as the Executive Content Director for Chrielle. As a dedicated junior, I am passionate about creating impactful and engaging content that reflects both creativity and purpose. Looking ahead, I aspire to pursue a career in cybersecurity law, where I can combine my interests in computer science, ethics, and writing to help protect individuals and organizations!!
-</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Angelina Herrera</h2>
+                    <p>Content Director</p>
+                    <p>Hello! My name is Angelina, and I am honored to serve as the Executive Content Director for Cherielle. As a dedicated junior, I am passionate about creating impactful and engaging content that reflects both creativity and purpose. Looking ahead, I aspire to pursue a career in cybersecurity law, where I can combine my interests in computer science, ethics, and writing to help protect individuals and organizations!!</p>
                 </div>
             </div>
-
             <div class="profile">
                 <img src="images/siya.png" alt="Siya Sharma">
-                    <div class="procont">
-                    <h2>Siya Sharma</h2> <!-- NAME -->
-                    <p>Content Director</p> <!-- POSITION -->
-                    <p>Hi, my name is Siya and I'm from Maryland! I am extremely passionate about computer science and especially about machine learning. I love to tutor, bake, and dance in my free time. I am very excited to be a part of Cherielle this year!
-</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Siya Sharma</h2>
+                    <p>Content Director</p>
+                    <p>Hi, my name is Siya and I'm from Maryland! I am extremely passionate about computer science and especially about machine learning. I love to tutor, bake, and dance in my free time. I am very excited to be a part of Cherielle this year!</p>
                 </div>
             </div>
-
             <div class="profile">
                 <img src="images/christine.png" alt="Christine Le">
-                    <div class="procont">
-                    <h2>Christine Le</h2> <!-- NAME -->
-                    <p>Content Director</p> <!-- POSITION -->
-                    <p>Hello, my name is Christine! I have always loved the intersection of art and engineering; whether its creating a prototype from scratch, or reverse engineering how it works. Creativity as means to communicate ideas is my forte, especially in nonconventional ways. Here at cherielle, I strive for diversity in male-dominated fields; and show that individuality has a place in STEM too.</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Christine Le</h2>
+                    <p>Content Director</p>
+                    <p>Hello, my name is Christine! I have always loved the intersection of art and engineering; whether its creating a prototype from scratch, or reverse engineering how it works. Creativity as means to communicate ideas is my forte, especially in nonconventional ways. Here at cherielle, I strive for diversity in male-dominated fields; and show that individuality has a place in STEM too.</p>
                 </div>
             </div>
-
             <div class="profile">
                 <img src="images/jesse.png" alt="Jessica Le">
-                    <div class="procont">
-                    <h2>Jessica Le</h2> <!-- NAME -->
-                    <p>Design lead</p> <!-- POSITION -->
-                    <p>Hi, my name is Jessica, but call me Jesse! When my nose isn’t in a book or I’m not busy designing my next project, I’m exploring a plethora of STEM fields. Here at Cherielle, I hope to expand its whimsical and cute aesthetic through my design skills, helping make STEM more welcoming and inclusive for everyone. </p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Jessica Le</h2>
+                    <p>Design Lead</p>
+                    <p>Hi, my name is Jessica, but call me Jesse! When my nose isn't in a book or I'm not busy designing my next project, I'm exploring a plethora of STEM fields. Here at Cherielle, I hope to expand its whimsical and cute aesthetic through my design skills, helping make STEM more welcoming and inclusive for everyone.</p>
                 </div>
             </div>
-
             <div class="profile">
                 <img src="images/logo.png" alt="Temi">
-                    <div class="procont">
-                    <h2>Temi</h2> <!-- NAME -->
-                    <p>Design lead</p> <!-- POSITION -->
-                    <p></p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Temi</h2>
+                    <p>Design Lead</p>
+                    <p></p>
                 </div>
             </div>
-
             <div class="profile">
                 <img src="images/logo.png" alt="Vivian Cai">
-                    <div class="procont">
-                    <h2>Vivian Cai</h2> <!-- NAME -->
-                    <p>Social media manager</p> <!-- POSITION -->
-                    <p>I'm a high school junior from the United States passionate about computer science, particularly AI/ML! Some of my hobbies include coding, listening to music, and spending time with friends!</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Vivian Cai</h2>
+                    <p>Social Media Manager</p>
+                    <p>I'm a high school junior from the United States passionate about computer science, particularly AI/ML! Some of my hobbies include coding, listening to music, and spending time with friends!</p>
                 </div>
             </div>
-
-             <div class="profile">
+            <div class="profile">
                 <img src="images/annabelle.png" alt="Annabelle Hui">
-                    <div class="procont">
-                    <h2>Annabelle Hui</h2> <!-- NAME -->
-                    <p>Social media manager</p> <!-- POSITION -->
-                    <p> Hi! I’m Annabelle, and I’m one of Cherielle’s social media managers! I love graphic design, data analysis, and intend on majoring in marketing or business.I love collecting trinkets (especially Smiskis) and reading web novels.</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Annabelle Hui</h2>
+                    <p>Social Media Manager</p>
+                    <p>Hi! I'm Annabelle, and I'm one of Cherielle's social media managers! I love graphic design, data analysis, and intend on majoring in marketing or business. I love collecting trinkets (especially Smiskis) and reading web novels.</p>
                 </div>
             </div>
         </div>
 
-        <!-- EXTERNAL RELATIONS TEAM (Communications Director, Fundraising & Events Coordinator) -->
-        <h2 class="team-heading">External Relations Team</h2>
+        <!-- EXTERNAL RELATIONS TEAM -->
+        <div class="team-heading-wrap"><h2>External Relations Team</h2></div>
         <div class="directory">
-             <div class="profile">
+            <div class="profile">
                 <img src="images/deryn.png" alt="Deryn Theone Hipe">
-                    <div class="procont">
-                    <h2>Deryn Theone Hipe</h2> <!-- NAME -->
-                    <p>Fundraising and Event Coordinator</p> <!-- POSITION -->
-                    <p> Hi! I'm Deryn, an incoming high school junior from the Philippines who loves taking on new challenges and projects. I am passionate about all things STEM and literature, and I wish to work in cybersecurity someday!
-</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Deryn Theone Hipe</h2>
+                    <p>Fundraising and Event Coordinator</p>
+                    <p>Hi! I'm Deryn, an incoming high school junior from the Philippines who loves taking on new challenges and projects. I am passionate about all things STEM and literature, and I wish to work in cybersecurity someday!</p>
                 </div>
             </div>
-
-             <div class="profile">
+            <div class="profile">
                 <img src="images/shanie.png" alt="Shanie Tsuei">
-                    <div class="procont">
-                    <h2>Shanie Tsuei</h2> <!-- NAME -->
-                    <p>Fundraising and Event Coordinator</p> <!-- POSITION -->
-                    <p>My name is Shanie and I'm one of the fundraising and events coordinators at cherielle! I have a strong passion for computer science and engineering and aspire to see girls represented in a stronger manner, which is why I joined cherielle! In my free time, I love to watch movies, tv-shows, and musicals :)
-</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Shanie Tsuei</h2>
+                    <p>Fundraising and Event Coordinator</p>
+                    <p>My name is Shanie and I'm one of the fundraising and events coordinators at cherielle! I have a strong passion for computer science and engineering and aspire to see girls represented in a stronger manner, which is why I joined cherielle! In my free time, I love to watch movies, tv-shows, and musicals :)</p>
                 </div>
             </div>
-
-             <div class="profile">
+            <div class="profile">
                 <img src="images/ruushita.png" alt="Ruushita Doddi">
-                    <div class="procont">
-                    <h2>Ruushita Doddi </h2> <!-- NAME -->
-                    <p>Communications director</p> <!-- POSITION -->
-                    <p>Hi! I'm Ruushita and I am a communications director at Cherielle. I love being able to be a part of Cherielle and help make computer science more welcoming and inclusive. I also enjoy crocheting and reading in my spare time.
-</p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Ruushita Doddi</h2>
+                    <p>Communications Director</p>
+                    <p>Hi! I'm Ruushita and I am a communications director at Cherielle. I love being able to be a part of Cherielle and help make computer science more welcoming and inclusive. I also enjoy crocheting and reading in my spare time.</p>
                 </div>
             </div>
-
-             <div class="profile">
+            <div class="profile">
                 <img src="images/logo.png" alt="Krisha">
-                    <div class="procont">
-                    <h2>Krisha</h2> <!-- NAME -->
-                    <p>Communications director</p> <!-- POSITION -->
-                    <p></p> <!-- DESCRIPTION -->
+                <div class="procont">
+                    <h2>Krisha</h2>
+                    <p>Communications Director</p>
+                    <p></p>
                 </div>
             </div>
-     
         </div>
-            
-    
-        <footer id="footer"></footer>
 
+        <footer id="footer"></footer>
     </div>
 </body>
-
 </html>
-

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
 <html>
 <head>
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
     <meta charset="UTF-8"/>
     <title>mission</title>
     <link rel="stylesheet" href="styles.css">
@@ -19,45 +19,89 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png" />
     <script defer src="./js/header.js"></script>
     <style>
+        :root {
+            --primary-pink: #FFB6D9;
+            --pink-light: #F4C0D1;
+            --pink-pale: #FFF0F5;
+            --sage-green: #657264;
+        }
+
+        /* Page hero — matches tutoring spacing */
+        .mission-hero {
+            text-align: center;
+            padding: 60px 20px;
+            margin: 40px 20px;
+            background: linear-gradient(135deg, rgba(255, 182, 217, 0.1) 0%, rgba(244, 192, 209, 0.08) 100%);
+            border-radius: 20px;
+        }
+
+        .mission-hero h1 {
+            font-size: 48px;
+            color: var(--sage-green);
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-family: 'Marcellus', sans-serif;
+        }
+
+        .mission-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-size: 1.2em;
+            color: #657264;
+        }
+
+        /* Mission divider */
+        .mission-divider {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 24px;
+            letter-spacing: 2px;
+            color: var(--primary-pink);
+            opacity: 0.6;
+        }
+
+        .mission-divider::before {
+            content: "~ ✧ ~ ✧ ~ ✧ ~";
+            display: block;
+        }
+
         .m-container {
             display: flex;
             flex-wrap: wrap;
-            align-self:center;
+            align-self: center;
         }
-        
+
         .m-sec {
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
-            width: 45dvw; 
-        }
-        .m-sec h2{
-            font-size:3em;
-            text-align:center;
-            padding-bottom: 1%;
-            color:#7A8f7b;
-            font-weight:525;
-        }
-        .m-sec p{
-            text-align:center;
-            color:#657264;
-        }
-        @media(max-width:768px){
-        .m-sec{
-            width:100dvw;
-        }
-        #m-sec-tut{
-            border:none;
-        }
-        .m-container{
-            display: None;
+            width: 45dvw;
         }
 
-        #m-sec-tut{
-            border-left: 1px solid #bdbbbb;
-            border-radius:0px;
+        .m-sec h2 {
+            font-size: 3em;
+            text-align: center;
+            padding-bottom: 1%;
+            color: #7A8f7b;
+            font-weight: 525;
         }
+
+        .m-sec p {
+            text-align: center;
+            color: #657264;
         }
+
+        @media(max-width: 768px) {
+            .m-sec { width: 100dvw; }
+            #m-sec-tut { border: none; }
+            .m-container { display: none; }
+            #m-sec-tut {
+                border-left: 1px solid #bdbbbb;
+                border-radius: 0px;
+            }
+        }
+
         .tut-button {
             background: #aecdab;
             color: #ffffff;
@@ -69,8 +113,8 @@
             transition: all 200ms ease;
             cursor: pointer;
             outline: none;
-            margin-left:42.5%;
-            text-align:center;
+            margin-left: 42.5%;
+            text-align: center;
         }
 
         .tut-button:hover {
@@ -80,6 +124,8 @@
             transform: scale(1.05);
             box-shadow: 0px 6px 6px #657264;
         }
+
+        /* Stats — pink accent on main stat */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -87,85 +133,151 @@
             gap: 10px;
             width: 80%;
             margin: 40px auto;
-            }
-            .main-stat {
-            grid-column: 1 / span 3; 
-            background: #96ac94;
-            color: white;
+        }
+
+        .main-stat {
+            grid-column: 1 / span 3;
+            background: rgba(255, 182, 217, 0.35);
+            color: #7a3d5a;
             text-align: center;
             font-size: 2em;
-            font-family:'Bitter';
+            font-family: 'Bitter';
             padding: 20px;
-            border-radius: 8px 8px 0 0; 
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            }
-            .card {
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 2px 6px rgba(255, 182, 217, 0.2);
+        }
+
+        .card {
             background: white;
-            border: 1px solid #ddd;
+            border: 1px solid rgba(255, 182, 217, 0.3);
             text-align: center;
             padding: 20px;
             font-size: 1.5em;
             color: #2c3e50;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            }
-            .label {
+            box-shadow: 0 2px 6px rgba(255, 182, 217, 0.1);
+        }
+
+        .label {
             font-size: 1em;
             color: #555;
             margin-top: 10px;
-            }
+        }
 
-        /* features grid - restyled to match site pastel aesthetic */
-        .features-section{background:transparent;padding:2.25rem 1.25rem;border-radius:8px;margin:2.5rem auto;max-width:1200px}
-        .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-        .feature-card{background:#ffffff;color:#333;padding:1.5rem;border-radius:12px;border:1px solid rgba(172,204,167,0.45);box-shadow:0 8px 20px rgba(18,18,18,0.04);min-height:170px;display:flex;flex-direction:column;justify-content:center}
-        .feature-card h3{margin:0 0 0.5rem 0;font-size:1.15rem;color:#2b2b2b;font-weight:700}
-        .feature-card p{margin:0 0 1rem 0;color:#657264;font-size:0.95rem}
-        .feature-card .btn{background:#aecdab;color:#ffffff;padding:0.55rem 0.9rem;border-radius:999px;text-decoration:none;display:inline-block;margin-top:auto;align-self:center;border:none}
-        @media(max-width:900px){.features-grid{grid-template-columns:repeat(1,1fr)}.m-sec{width:100dvw}}
+        /* Features grid — pink accented */
+        .features-section {
+            background: transparent;
+            padding: 2.25rem 1.25rem;
+            border-radius: 8px;
+            margin: 2.5rem auto;
+            max-width: 1200px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            color: #333;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 182, 217, 0.45);
+            box-shadow: 0 8px 20px rgba(18, 18, 18, 0.04);
+            min-height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.15rem;
+            color: #2b2b2b;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            margin: 0 0 1rem 0;
+            color: #657264;
+            font-size: 0.95rem;
+        }
+
+        .feature-card .btn {
+            background: rgba(255, 182, 217, 0.55);
+            color: #7a3d5a;
+            padding: 0.55rem 0.9rem;
+            border-radius: 999px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: auto;
+            align-self: center;
+            border: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card .btn:hover {
+            background: rgba(255, 182, 217, 0.8);
+        }
+
+        @media(max-width: 900px) {
+            .features-grid { grid-template-columns: repeat(1, 1fr); }
+            .m-sec { width: 100dvw; }
+        }
     </style>
 </head>
 <body>
     <div class="site">
-    <!--nav bar-->
-        <header id= "header"></header>
+        <header id="header"></header>
 
-        <h1 style="text-align:center;padding-bottom:2.5dvh;">Mission</h1>
-        <p style="text-align:center;margin-bottom:7.5dvh;margin-left:10dvw;margin-right:10dvw;font-size:1.5em;color:#657264;" >Cherielle is a 501(c)(3) youth led nonprofit that strives to bridge the gender gap, empower girls in STEM, and have a connected, impactful community.</p>
-        <div class="m-container">    
+        <!-- Hero with buffer — matches tutoring style -->
+        <div class="mission-hero">
+            <h1>Mission</h1>
+            <p>Cherielle is a 501(c)(3) youth led nonprofit that strives to bridge the gender gap, empower girls in STEM, and have a connected, impactful community.</p>
+        </div>
+
+        <div class="m-container">
             <div class="m-sec">
                 <div>
                     <h2>Bridging the Gender Gap</h2>
-                    <p>The gender gap in is real, not just in tech but in general as well. There have been many advancements to reduce this disparity, yet even today, there are always instances of girls feeling undermined in the classroom and unmotivated to pursue their dreams. We aim to create blossoms of impact starting from locally to out in the web. We’re the girl’s girl - by creating a safe, inclusive community bonded by computer science and girlhood, we have a space to connect, grow, and learn. </p>
+                    <p>The gender gap in is real, not just in tech but in general as well. There have been many advancements to reduce this disparity, yet even today, there are always instances of girls feeling undermined in the classroom and unmotivated to pursue their dreams. We aim to create blossoms of impact starting from locally to out in the web. We're the girl's girl - by creating a safe, inclusive community bonded by computer science and girlhood, we have a space to connect, grow, and learn.</p>
                 </div>
             </div>
-            <div class="m-sec" style="border-left: 1px solid #bdbbbb;border-radius:0px;" id="m-sec-tut">
+            <div class="m-sec" style="border-left: 1px solid #bdbbbb; border-radius: 0px;" id="m-sec-tut">
                 <div>
                     <h2>Tutoring</h2>
                     <p>Cherielle has a team dedicated to tutoring and providing resources for members to learn about computer science. We provide review materials for major tests like AP CSA, supplemental information about the computer science world, inform about the basics to the updates in tech, and constantly provide resources to stay involved in the growing field.</p>
-                    </div>
-                <a href="https://cherielle.notion.site/ap-csa-2025-1c66220bb815801faa56f68555ac7e30" target="_blank" ><button class="tut-button"><p style="text-align:center;color:#ffffff;margin:0">csa notes</p></button></a>
+                </div>
+                <a href="https://cherielle.notion.site/ap-csa-2025-1c66220bb815801faa56f68555ac7e30" target="_blank">
+                    <button class="tut-button"><p style="text-align:center;color:#ffffff;margin:0">csa notes</p></button>
+                </a>
             </div>
         </div>
+
+        <div class="mission-divider"></div>
+
         <h2 style="text-align:center;margin-left:10dvw;margin-right:10dvw;font-size:3.5em;font-weight:500;color:#7A8f7b;">Impact</h2>
-         <div class="stats-grid">
+        <div class="stats-grid">
             <div class="main-stat" id="mainStat">
-            Total Accounts Reached: <span id="total" data-target="176610">0</span>
+            Total Accounts Reached: <span id="total" data-target="54656">0</span>
             </div>
             <div class="card">
-            <div id="follows" data-target="8473">0</div>
+            <div id="follows" data-target="3724">0</div>
             <div class="label">Number of Followers </div>
             </div>
             <div class="card">
-            <div id="views" data-target="394148">0</div>
+            <div id="views" data-target="205768">0</div>
             <div class="label">Total Views </div>
             </div>
             <div class="card">
-            <div id="team" data-target="148">0</div>
+            <div id="team" data-target="104">0</div>
             <div class="label">Total Team Members </div>
             </div>
         </div>
 
-        <!-- features grid -->
+        <!-- Features grid -->
         <section class="features-section">
             <div class="features-grid">
                 <div class="feature-card">
@@ -185,36 +297,31 @@
                 </div>
             </div>
         </section>
-        
-            
+
+        <footer id="footer"></footer>
     </div>
-       <footer id="footer"></footer>
 
     <script>
-        // simple count-up animation for elements with data-target
-        function animateCount(id, duration){
+        function animateCount(id, duration) {
             const el = document.getElementById(id);
-            if(!el) return;
-            const target = parseInt(el.getAttribute('data-target') || el.textContent.replace(/,/g,''), 10) || 0;
-            const start = 0;
+            if (!el) return;
+            const target = parseInt(el.getAttribute('data-target') || el.textContent.replace(/,/g, ''), 10) || 0;
             const startTime = performance.now();
-            function step(now){
+            function step(now) {
                 const progress = Math.min((now - startTime) / duration, 1);
-                const value = Math.floor(progress * (target - start) + start);
+                const value = Math.floor(progress * target);
                 el.textContent = value.toLocaleString();
-                if(progress < 1) requestAnimationFrame(step);
+                if (progress < 1) requestAnimationFrame(step);
             }
             requestAnimationFrame(step);
         }
 
-        document.addEventListener('DOMContentLoaded', function(){
+        document.addEventListener('DOMContentLoaded', function () {
             animateCount('total', 1800);
             animateCount('follows', 1400);
             animateCount('views', 2000);
             animateCount('team', 1200);
         });
     </script>
-
 </body>
-
 </html>
