@@ -10,6 +10,7 @@ header.innerHTML = `
 <li><a href = "events.html">Events</a></li>
 <li><a href = "blog.html">Blog</a></li>
 <li><a href= "tutoring.html">Tutoring</a></li>
+<li><a href= "mentorship.html">Mentorship</a></li>
 <li><a href= "contact.html">Contact</a></li>
 
 </ul> 

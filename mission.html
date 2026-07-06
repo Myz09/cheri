@@ -67,37 +67,57 @@
         }
 
         .m-container {
-            display: flex;
-            flex-wrap: wrap;
-            align-self: center;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            align-items: stretch;
+            width: min(1200px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 0 10px;
         }
 
         .m-sec {
-            padding: 10px;
+            padding: 24px 20px;
             margin-bottom: 10px;
-            border-radius: 5px;
-            width: 45dvw;
+            border-radius: 16px;
+            background: #ffffff;
+            border: 1px solid rgba(255, 182, 217, 0.35);
+            box-shadow: 0 8px 20px rgba(18, 18, 18, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100%;
         }
 
         .m-sec h2 {
-            font-size: 3em;
+            font-size: clamp(1.6rem, 2.2vw, 2.3rem);
             text-align: center;
-            padding-bottom: 1%;
+            margin-bottom: 12px;
             color: #7A8f7b;
-            font-weight: 525;
+            font-weight: 600;
         }
 
         .m-sec p {
-            text-align: center;
+            text-align: left;
             color: #657264;
+            line-height: 1.6;
+            margin: 0;
         }
 
-        @media(max-width: 768px) {
-            .m-sec { width: 100dvw; }
-            #m-sec-tut { border: none; }
-            .m-container { display: none; }
-            #m-sec-tut {
-                border-left: 1px solid #bdbbbb;
+        .button-wrap {
+            margin-top: 18px;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media(max-width: 900px) {
+            .m-container {
+                grid-template-columns: 1fr;
+            }
+
+            .m-sec {
+                width: 100%;
+                border-left: none;
                 border-radius: 0px;
             }
         }
@@ -113,12 +133,37 @@
             transition: all 200ms ease;
             cursor: pointer;
             outline: none;
-            margin-left: 42.5%;
+            margin: 0;
             text-align: center;
+            display: inline-block;
         }
 
         .tut-button:hover {
             background: #aecdab;
+            color: #ffffff;
+            border-color: #657264;
+            transform: scale(1.05);
+            box-shadow: 0px 6px 6px #657264;
+        }
+
+        .ment-button {
+            background: #b8ddeb;
+            color: #ffffff;
+            border: 0px solid #657264;
+            border-radius: 12px;
+            padding: 7px 20px;
+            font-weight: 500;
+            box-shadow: 0px 4px 4px #657264;
+            transition: all 200ms ease;
+            cursor: pointer;
+            outline: none;
+            margin: 0;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .ment-button:hover {
+            background: #a6d2e2;
             color: #ffffff;
             border-color: #657264;
             transform: scale(1.05);
@@ -250,9 +295,22 @@
                     <h2>Tutoring</h2>
                     <p>Cherielle has a team dedicated to tutoring and providing resources for members to learn about computer science. We provide review materials for major tests like AP CSA, supplemental information about the computer science world, inform about the basics to the updates in tech, and constantly provide resources to stay involved in the growing field.</p>
                 </div>
-                <a href="https://cherielle.notion.site/ap-csa-2025-1c66220bb815801faa56f68555ac7e30" target="_blank">
-                    <button class="tut-button"><p style="text-align:center;color:#ffffff;margin:0">csa notes</p></button>
-                </a>
+                <div class="button-wrap">
+                    <a href="https://cherielle.notion.site/ap-csa-2025-1c66220bb815801faa56f68555ac7e30" target="_blank">
+                        <button class="tut-button"><p style="text-align:center;color:#ffffff;margin:0">csa notes</p></button>
+                    </a>
+                </div>
+            </div>
+            <div class="m-sec" style="border-left: 1px solid #bdbbbb; border-radius: 0px;" id="m-sec-ment">
+                <div>
+                    <h2>Mentorship</h2>
+                    <p>Our virtual mentorship program connects female and gender-expansive students with supportive mentors in computer science for three months of guidance, encouragement, and career exploration.</p>
+                </div>
+                <div class="button-wrap">
+                    <a href="mentorship.html">
+                        <button class="ment-button"><p style="text-align:center;color:#ffffff;margin:0">learn more</p></button>
+                    </a>
+                </div>
             </div>
         </div>
 
