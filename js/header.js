@@ -1,23 +1,31 @@
-// sets the header to
+// sets the header
 
 header.innerHTML = `
 <header>
-<a href = "index.html"><img class="logo" src="images/logo.png" alt =" logo" width = 100px> </a>    
+<a href="index.html"><img class="logo" src="images/logo.png" alt="logo" width="100px"></a>
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 <nav>
-<ul CLASS="nav_links">
-<li><a href = "mission.html">Mission</a></li>
-<li><a href = "about.html">About</a></li>
-<li><a href = "events.html">Events</a></li>
-<li><a href = "blog.html">Blog</a></li>
-<li><a href= "tutoring.html">Tutoring</a></li>
-<li><a href= "mentorship.html">Mentorship</a></li>
-<li><a href= "contact.html">Contact</a></li>
-
-</ul> 
-</nav>  
-<a href="https://linktr.ee/cherielle" id="linktree">Linktree</a>
+<ul class="nav_links">
+<li><a href="mission.html">Mission</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="tutoring.html">Tutoring</a></li>
+<li><a href="mentorship.html">Mentorship</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="https://linktr.ee/cherielle" id="linktree">Linktree</a></li>
+</ul>
+</nav>
 </header>
 `;
+
+const toggle = header.querySelector('.nav-toggle');
+const nav = header.querySelector('header > nav');
+toggle.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(isOpen));
+});
+
 // Sets the footer (hidden display since not complete)
 
 footer.innerHTML=`
@@ -34,8 +42,6 @@ footer.innerHTML=`
             }
         footer a {
             color: #d8e7d8ff;
-            /* background-color:#657264 */
-            /* text-decoration: none; */
             margin: 0 10dvh;
         }
         footer li{
@@ -104,18 +110,7 @@ footer.innerHTML=`
                     <hr class="foot-line">
                 </li>
                 <li class="foot-item"><a href = "mission.html">Mission</a></li>
-                <!-- <li class="foot-item'"><a href = "activities.html">Activities</a></li>
-                <li class="foot-item"><a href = "articles.html">Articles</a></li> -->
                 <li class="foot-item"><a href = "about.html">About</a></li>
             </div>
-            <!-- <p>
-                <a href="/privacy">Privacy Policy</a> |
-                <a href="/terms">Terms of Service</a> |
-                <a href="/contact">Contact Us</a>
-            </p> -->
         </div>
-        <!-- <div class="foot-bot">
-            <hr>
-            <p>&copy; 2025 Cherielle. All rights reserved.</p>
-        </div> -->
 `;

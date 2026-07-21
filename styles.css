@@ -106,6 +106,7 @@ header{
     height:10dvh;
     padding:2dvh;
     background-color:#fdfef9;
+    flex-wrap:nowrap;
 }
 .nav_links{
     align-self:center;
@@ -129,15 +130,13 @@ header{
 }
 
 #linktree{
-    margin-left:auto;
-    margin-right:5dvw;     
     text-decoration:none;
     font-size: 24px;
     font-family: 'DM Sans';
 }
-#linktree a:hover{
-        transition: all 0.3s ease 0s;
-        color:#e4b5c2;
+#linktree:hover{
+    transition: all 0.3s ease 0s;
+    color:#e4b5c2;
 }
 .con{
     /* cursor:pointer;
@@ -266,4 +265,48 @@ details[open] summary::after{
 .tutoring-hero-text {
     flex: 1;
     text-align: center;
+}
+.nav-toggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:28px;
+    color:#657264;
+    cursor:pointer;
+    margin-left:auto;
+}
+
+@media (max-width:780px){
+    header{
+        flex-wrap:wrap;
+        height:auto;
+        position:relative;
+    }
+    .nav-toggle{display:block}
+    header > nav{
+        display:none;
+        width:100%;
+        order:3;
+    }
+    header > nav.open{display:block}
+    .nav_links{
+        flex-direction:column;
+        text-align:center;
+    }
+    .nav_links li{
+        display:block;
+        padding:10px 0;
+    }
+    #linktree{
+        display:block;
+        text-align:center;
+        margin:10px 0 0;
+    }
+}
+@media (max-width:768px){
+    .tutoring-hero{
+        flex-direction:column;
+        text-align:center;
+        padding:40px 16px;
+    }
 }
