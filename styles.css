@@ -1,8 +1,5 @@
 /* variables */
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-@import url('https://fonts.googleapis.com/css?family=DM Sans');
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Marcellus&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Marcellus&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 /* colors:
 Dark green: #657264
@@ -50,10 +47,10 @@ body.home-no-scroll{
 .hero-left{flex:1;min-width:220px}
 .hero-left{flex:1;min-width:220px;transform:translate(-1.6rem,-2.4rem)}
 .hero-right{display:flex;align-items:center;justify-content:center;flex:0 0 560px;transform:translateY(-1.2rem)}
-.site-title{font-family:'Marcellus',sans-serif;font-size:5.2rem;font-weight:210;color:#657264;margin:0;text-align:left}
-.site-title{font-family:'Marcellus',sans-serif;font-size:7.5rem;font-weight:210;color:#657264;margin:0;text-align:left;line-height:0.95}
-.site-subtitle{font-size:1.6rem;margin-top:0.6rem;color:#657264;font-weight:150;text-align:left}
-.site-subtitle{font-size:2.2rem;margin-top:0.6rem;color:#657264;font-weight:150;text-align:left}
+.site-title{font-family:'DM Sans',sans-serif;font-size:5.2rem;font-weight:700;color:#657264;margin:0;text-align:left}
+.site-title{font-family:'DM Sans',sans-serif;font-size:7.5rem;font-weight:700;color:#657264;margin:0;text-align:left;line-height:0.95}
+.site-subtitle{font-size:1.6rem;margin-top:0.6rem;color:#657264;font-weight:400;text-align:left}
+.site-subtitle{font-size:2.2rem;margin-top:0.6rem;color:#657264;font-weight:400;text-align:left}
 .hero-image{width:100%;height:auto;max-width:560px;display:block}
 
 @media (max-width:780px){
@@ -66,12 +63,13 @@ body.home-no-scroll{
 
 h1{
     font-size:60px;
-    font-weight:200;
+    font-weight:700;
     color:#657264;
-    font-family: 'Marcellus','DM Sans', arial;
+    font-family: 'DM Sans', Arial, sans-serif;
 }
 h2{
-    font-family:'PT-Serif';
+    font-family:'DM Sans', Arial, sans-serif;
+    font-weight:700;
 }
 p{
     font-family:'DM Sans';
@@ -170,7 +168,8 @@ header{
     padding:6px 18px 28px;
 }
 .faq-title{
-    font-family:'Bitter','Marcellus';
+    font-family:'DM Sans', Arial, sans-serif;
+    font-weight:700;
     font-size:clamp(20px,3vw,32px);
     margin-bottom:14px;
     color:#907F94;

@@ -128,18 +128,33 @@
 
         /* Blog cards */
         .blog-card {
+            display: block;
             border: 2px solid var(--primary-green);
             border-radius: 16px;
             overflow: hidden;
             background: linear-gradient(135deg, rgba(168, 213, 162, 0.1) 0%, rgba(255, 255, 255, 0.6) 100%);
             box-shadow: 2px 2px 8px rgba(168, 213, 162, 0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
         }
 
         .blog-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(168, 213, 162, 0.28);
             border-color: var(--green-border);
+        }
+
+        /* Cards without a real post behind them yet (placeholders) aren't clickable */
+        .blog-card.no-link {
+            cursor: default;
+        }
+
+        .blog-card.no-link:hover {
+            transform: none;
+            box-shadow: 2px 2px 8px rgba(168, 213, 162, 0.15);
+            border-color: var(--primary-green);
         }
 
         .blog-card-image {
@@ -166,24 +181,18 @@
             border-top: 2px solid var(--primary-green);
         }
 
-        .blog-card-date {
-            font-weight: bold;
-            color: var(--green-border);
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        .blog-card-author {
-            font-size: 14px;
-            color: var(--primary-green);
-            margin-bottom: 10px;
-        }
-
         .blog-card-title {
             font-size: 18px;
             font-weight: 600;
             color: var(--sage-green);
+            margin: 0 0 8px 0;
+        }
+
+        .blog-card-date {
+            font-weight: bold;
+            color: var(--green-border);
             margin: 0;
+            font-size: 14px;
         }
 
         /* Divider */
@@ -228,52 +237,61 @@
         </div>
 
         <!-- Learn Section -->
-        <div class="blog-category hidden" data-category="learn">
+        <div class="blog-category" data-category="learn">
             <h2>Learn</h2>
             <div class="blog-grid">
             </div>
         </div>
 
-        <div class="blog-divider hidden"></div>
+        <div class="blog-divider"></div>
 
         <!-- Women in STEM Section -->
-        <div class="blog-category hidden" data-category="women-stem">
+        <div class="blog-category" data-category="women-stem">
             <h2>Women in STEM</h2>
             <div class="blog-grid">
+                <a class="blog-card" href="blog-post-lynn-conway.html">
+                    <div class="blog-card-image">
+                        <img src="images/lynnconway.png" alt="Lynn Conway: The Revolutionizer of Microchips">
+                    </div>
+                    <div class="blog-card-info">
+                        <h3 class="blog-card-title">Lynn Conway: The Revolutionizer of Microchips</h3>
+                        <p class="blog-card-date">07/05/2026</p>
+                    </div>
+                </a>
             </div>
         </div>
 
-        <div class="blog-divider hidden"></div>
+        <div class="blog-divider"></div>
 
         <!-- Creative Section -->
-        <div class="blog-category hidden" data-category="creative">
+        <div class="blog-category" data-category="creative">
             <h2>Creative</h2>
             <div class="blog-grid">
             </div>
         </div>
 
-        <div class="blog-divider hidden"></div>
+        <div class="blog-divider"></div>
 
         <!-- Girlhood Section -->
-        <div class="blog-category hidden" data-category="girlhood">
+        <div class="blog-category" data-category="girlhood">
             <h2>Girlhood</h2>
             <div class="blog-grid">
             </div>
         </div>
 
-        <div class="blog-divider hidden"></div>
+        <div class="blog-divider"></div>
 
         <!-- Ethics Section -->
-        <div class="blog-category hidden" data-category="ethics">
+        <div class="blog-category" data-category="ethics">
             <h2>Ethics</h2>
             <div class="blog-grid">
             </div>
         </div>
 
-        <div class="blog-divider hidden"></div>
+        <div class="blog-divider"></div>
 
         <!-- Resources Section -->
-        <div class="blog-category hidden" data-category="resources">
+        <div class="blog-category" data-category="resources">
             <h2>Resources</h2>
             <div class="blog-grid">
             </div>
@@ -293,17 +311,14 @@
                 btn.classList.add('active');
 
                 const filterValue = btn.getAttribute('data-filter');
-                const visibleCategories = [];
 
                 categories.forEach(category => {
                     if (filterValue === 'all') {
                         category.classList.remove('hidden');
-                        visibleCategories.push(category);
                     } else {
                         const categoryValue = category.getAttribute('data-category');
                         if (categoryValue === filterValue) {
                             category.classList.remove('hidden');
-                            visibleCategories.push(category);
                         } else {
                             category.classList.add('hidden');
                         }
