@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
+    <title>Behind the Canvas: Hosting Our First Hackathon</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
+    <script defer src="./js/header.js"></script>
+    <style>
+        :root {
+            --primary-green: #A8D5A2;
+            --green-light: #C5E8C1;
+            --green-pale: #EEF7ED;
+            --green-border: #7AB876;
+            --green-text: #3A6B37;
+            --sage-green: #657264;
+        }
+
+        .post-wrap {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .post-back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--green-text);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .post-back-link:hover {
+            text-decoration: underline;
+        }
+
+        .post-category-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background-color: var(--green-pale);
+            border: 2px solid var(--primary-green);
+            color: var(--green-text);
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .post-title {
+            font-size: 40px;
+            color: var(--sage-green);
+            font-weight: 600;
+            margin: 0 0 16px 0;
+            line-height: 1.2;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+            color: var(--green-border);
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .post-meta .post-author {
+            color: var(--primary-green);
+        }
+
+        .post-cover-image {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 16px;
+            border: 2px solid var(--primary-green);
+            margin-bottom: 40px;
+            display: block;
+            background-color: #f6f7f4;
+        }
+
+        .post-body h2 {
+            font-size: 24px;
+            color: var(--sage-green);
+            margin: 36px 0 14px 0;
+        }
+
+        .post-body p {
+            line-height: 1.75;
+            color: #333;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="site">
+        <header id="header"></header>
+
+        <div class="post-wrap">
+            <a class="post-back-link" href="blog.html">&larr; Back to Blog</a>
+
+            <span class="post-category-tag">Creative</span>
+            <h1 class="post-title">Behind the Canvas: Hosting Our First Hackathon</h1>
+            <div class="post-meta">
+                <span class="post-author">By Cherielle Team</span>
+                <span>&bull;</span>
+                <span>08/07/2026</span>
+            </div>
+
+            <img class="post-cover-image" src="images/codeascanvasblogimage.webp" alt="Behind the Canvas: Hosting Our First Hackathon">
+
+            <div class="post-body">
+                <p>For most people, computer science is synonymous with long lines of code, complex procedures, and technical challenges. This is the assumption that we wanted to challenge with our hackathon, Code as a Canvas.</p>
+
+                <p>While it’s true that these factors certainly play a major role in the field, they are only one aspect when it comes to the vast world of code. At its core, computer science is meant to bring ideas to life by leveraging creativity and innovation to make a difference. That belief is what led us at Cherielle to collaborate with ByteJournal in order to create Code as a Canvas—we wanted beginners and veterans alike to be able to experiment and explore technology through creative and coding projects that reflected their own interests and passions.</p>
+
+                <p>Cherielle’s vision for Code as a Canvas has always been to create a space where people of all different coding backgrounds and experience levels could learn and create in an empowering environment that encouraged innovation and collaboration. The event was built around creating an opportunity for self-expression and building skills first, and a competition second.</p>
+
+                <p>One of the most rewarding aspects of the hackathon was the inclusive space that was fostered as a result. We aimed to create an initiative that helped participants step out of their comfort zone without fear of making mistakes, which was something critical that, for many of us on the executive team, had been missing from our own early experiences in the field.</p>
+
+                <p>For many participants, Code as a Canvas served as their first hackathon ever. We saw that people found themselves unsure of what to expect at first, which led us to establish a variety of workshops with experienced individuals in the field, who were more than happy to support us in our mission.</p>
+
+                <p>Monday kicked off with Momen’s “From Startup Idea to MVP,” a walkthrough that taught beginners how to create a project from scratch while making the entire process seem less daunting. Later the same day Rachel, a Software Engineer at Hewlett Packard Enterprise, hosted a session on visual layout and interfaces called “Blending Creativity with Practical User Experiences.” This was followed by a session led by Praneetha, a Lead Robotic Process Automation Developer at ERP Smartlabs, on Tuesday. She discussed translating industrial automation into beginner-friendly workflows in her presentation, “Introduction to Robotic Process Automation (RPA) – Automating Everyday Tasks.” On Wednesday we flipped the switch and shifted the focus to executing the code with Julianne, a recent graduate from the University of Central Florida with Computer Science B.S. She hosted a hands-on workshop called “Creating Your To-Do List with Frontend Development” that helped beginners by showing them exactly how to build a practical tool. As the workshop was drawing closer to its end on Thursday, we decided to spend some time discussing a topic of extreme importance to Cherielle, the gender gap barrier of the industry. Sreya, a Software Engineer at Northwestern Mutual, led a deeply resonant workshop titled “How to Stay YOU in CS (When Everyone Else Looks Different),” where she addressed the challenges faced by women and also provided deeply insightful advice on helping preserve your own unique voice and personality in a space where women are so heavily underrepresented. Finally, as the workshop segment was wrapping up, on Friday, Niyati, a Senior Consulting Analyst at Marsh, hosted the workshop “Staying True to Your Path When Everyone Else Looks Different.” She isn’t in the computer science space like the rest of our speakers, but her journey illustrated how she managed to build something impressive on her own terms and she spoke about her experiences to inspire others, emphasizing how there is no one correct path to take in life. Lastly, we concluded with a presentation on “Finding Your Space in Tech,” led by Akhila, an AI & Software Engineer at Morgan Stanley, where she discussed the complex realities of working in the tech industry and provided a clear roadmap for how young women can improve their skills to feel more comfortable in their own skin in the tech space.</p>
+
+                <p>In addition to all this, we created a channel in our Discord server as a hub for community support. This space served as a casual “Q&A” hotspot where participants could communicate with each other, as well as with more experienced mentors, to share ideas and concerns. As a result of these resources, we found that participants were able to grow in terms of confidence and skill.</p>
+
+                <p>Our main priority with this program was to encourage approaching challenges with certainty and to help those who felt intimidated and underrepresented in the field acquire a sense of belonging. For many individuals, Code as a Canvas was their first introduction to a computer science environment that promoted community and inclusivity. We recognized how essential it was to their perception of computer science as a whole, and we sought to help participants understand that they brought value and important contributions to computer science, which is an industry that can seem rather daunting at times, especially to the female audience that we cater to.</p>
+
+                <p>However, the growth that we saw in participants wasn’t restricted to coding and software skills. Attendees also gained knowledge on how to collaborate effectively in teams, communicate on new ideas, and think creatively when it came to solving unique problems. These skills have just as much value as technical knowledge and their contribution to future academic and professional endeavors can be immeasurable. By the time the hackathon had officially concluded, many participants had not only gained a plethora of new skills, both technical and social, but they had also achieved a newfound confidence in their own abilities.</p>
+
+                <p>Another defining outcome of Code as a Canvas was the sense of community and camaraderie that emerged during the event. We were happy to see people hailing from many different and unique areas, backgrounds, and experiences, who were all brought together under the umbrella of community and creativity that we knit together, and united by a shared interest in computer science. It was a joy to see that so many people were able to walk away from the event with close bonds and friendships, things that we hope they will be able to carry for many years to come.</p>
+
+                <p>As we heavily encouraged collaboration and open conversation between participants, attendees had the opportunity to make meaningful connections with people that they otherwise would never have had the chance to meet. Even though the Code as a Canvas hackathon has concluded, the relationships built during the event will continue to exist. For many participants, the event evolved to become a place where they found a sense of belonging, of a home among peers who shared their interests and enthusiasm, where they were able to meet friendly faces that bolstered their growth and development.</p>
+
+                <p>The success behind the entire event was also reflected in the numbers. Code as a Canvas welcomed 93 participants through Devpost registrations and 69 participants through sign-up forms for a total of 162 people who joined the event, showing that there was strong interest in the event from a wide audience of creators and innovators. Out of these participants, 30 teams and individuals successfully submitted completed projects to the competition, all of which showcased a talented and impressive range of creativity and skill. Beyond the event itself, there was tremendous engagement from our online community. Our hackathon announcement post on Instagram generated 1,387 likes alone, while other posts about workshops, sponsors, and other content also received much attention. The immense response we got on social media only solidified our belief that people want to see more of these creative and inclusive opportunities like Code as a Canvas in the world of computer science.</p>
+
+                <p>Of course, this event was only made possible thanks to the support and generosity of our wonderful sponsors. Their important contributions were what allowed us to host the event in the first place. Art of Problem Solving and Brilliant supported participants by offering high-quality STEM education resources while Figma and Featherless AI supplied the event with cutting-edge design tools. Additional sponsors such as Gen.xyz, Interview Cake, Crackd, CollegeAppAssist, and Momen offered participants important resources and together, these organizations helped ensure that people left the event not only with projects but also tools that would help their future growth and endeavors beyond the hackathon. We feel incredibly fortunate to have had their support, something that has definitely fueled our drive behind this initiative.</p>
+
+                <p>Reflecting on the entire event, the success of Code as a Canvas isn’t defined by registration numbers or our social media engagement. Ultimately, the real meaning and impact is measured by how the participants grew, the communities that were fostered, and the creativity that we saw. In every project that was submitted, we saw a deeper story, whether it was growth, connection, or innovation. Technology continues to shape our world today, and a future where creating spaces for people to feel welcomed and encouraged to learn and create to an even greater extent becomes more and more essential with each passing day, and Code as a Canvas originated as a way to do just that.</p>
+
+                <p>We are so proud of this initiative, both with what our participants accomplished and of the effort that the team and everyone else put in to make this event possible. From the judges to the sponsors to the community, every person played a role in bringing Code as a Canvas to life and making it a memorable experience for everyone involved. The hackathon may have come to an end, but the moments and memories created will stay with us for a lifetime.</p>
+            </div>
+        </div>
+
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
