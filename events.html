@@ -283,11 +283,11 @@
             min-width: 100%;
             width: 100%;
             flex: 0 0 100%;
-            padding: 40px 30px;
+            padding: 40px 100px;
             display: flex;
             flex-direction: column;
             box-sizing: border-box;
-            text-align: center;
+            text-align: left;
             max-height: 600px;
             overflow-y: auto;
         }
@@ -295,7 +295,7 @@
         .slide-date {
             font-weight: 700;
             color: var(--blue-border);
-            font-size: 14px;
+            font-size: 12px;
             margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -304,7 +304,7 @@
         }
 
         .slide-title {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 600;
             color: var(--blue-dark);
             margin-bottom: 16px;
@@ -314,12 +314,32 @@
         }
 
         .slide-content {
-            font-size: 16px;
+            font-size: 14px;
             color: #444;
             line-height: 1.8;
             margin-bottom: 0;
             word-wrap: break-word;
             overflow-wrap: break-word;
+        }
+
+        .carousel-slide:nth-child(2) {
+            padding: 40px 200px 40px 30px;
+        }
+
+        .carousel-slide:nth-child(3) {
+            padding: 40px 200px 40px 30px;
+        }
+
+        .carousel-slide:nth-child(4) {
+            padding: 40px 200px 40px 30px;
+        }
+
+        .carousel-slide:nth-child(5) {
+            padding: 40px 200px 40px 30px;
+        }
+
+        .carousel-slide:last-child {
+            padding: 40px 200px 40px 30px;
         }
 
         .carousel-controls {
