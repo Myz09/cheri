@@ -315,3 +315,15 @@ details[open] summary::after{
         padding:40px 16px;
     }
 }
+
+@media(max-width: 900px) {
+    .m-sec {
+        width: 100%;
+        border: 1px solid rgba(255, 182, 217, 0.35);
+        border-radius: 16px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
