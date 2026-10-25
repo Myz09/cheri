@@ -277,16 +277,17 @@
             display: flex;
             transition: transform 0.5s ease;
             width: 100%;
+            margin:0;
         }
 
         .carousel-slide {
+            margin:20px 0;
             min-width: 100%;
             width: 100%;
             flex: 0 0 100%;
-            padding: 40px 100px;
+            padding: 40px 90px;
             display: flex;
             flex-direction: column;
-            box-sizing: border-box;
             text-align: left;
             max-height: 600px;
             overflow-y: auto;
@@ -320,26 +321,6 @@
             margin-bottom: 0;
             word-wrap: break-word;
             overflow-wrap: break-word;
-        }
-
-        .carousel-slide:nth-child(2) {
-            padding: 40px 200px 40px 30px;
-        }
-
-        .carousel-slide:nth-child(3) {
-            padding: 40px 200px 40px 30px;
-        }
-
-        .carousel-slide:nth-child(4) {
-            padding: 40px 200px 40px 30px;
-        }
-
-        .carousel-slide:nth-child(5) {
-            padding: 40px 200px 40px 30px;
-        }
-
-        .carousel-slide:last-child {
-            padding: 40px 200px 40px 30px;
         }
 
         .carousel-controls {
@@ -516,6 +497,12 @@
             <div class="carousel-container">
                 <div class="carousel-wrapper" id="carouselWrapper">
                     <div class="carousel-slide">
+                        <div class="slide-date">August 2026</div>
+                        <div class="slide-title">Writing Competition: Critical converstations in STEM with Shewireswords</div>
+                        <div class="slide-content">In August 2026, we partnered with Shewireswords to host an essay competition about conversations often overlooked in STEM. We received twenty-six entries based on one of two prompts: whether curiosity or intelligence matters more in a STEM career, and what AI means for women's opportunities. We judged each piece on originality, depth of thinking, use of evidence, and clarity, and we're grateful to the panel of women in STEM who evaluated each entry: Divyansha Nashine, Dory Meng, and Sreya Sarathy. To us, the range of perspectives across the entries was a reminder that these conversations are better when more voices are part of them, which speaks directly to our mission to make sure that girls and non-binary members of our community are given equal opportunities in the field of science and technology.</div>
+                    </div>
+
+                    <div class="carousel-slide">
                         <div class="slide-date">October 2025</div>
                         <div class="slide-title">Codeshield Workshop with Medisec</div>
                         <div class="slide-content">In October of 2025, Cherielle collaborated with Medisec to host a workshop focused on the intersection of cybersecurity and healthcare with 30+ participants over the span of two weekends. Cherielle's team organised and managed workshop logistics effectively in order to conduct multiple coding activities and interactive investigations. Through these activities, participants gained useful coding and problem solving skills. Participants also learned important information about the role of cybersecurity in healthcare. Through this event both Cherielle and Medisec received strong online engagement with the shared Instagram post reaching 100+ likes and through this we increased awareness about cybersecurity issues particularly relating to healthcare systems.</div>
@@ -553,9 +540,9 @@
                 </div>
 
                 <div class="carousel-controls">
-                    <button class="carousel-btn" id="prevBtn" onclick="prevSlide()">‹</button>
+                    <button class="carousel-btn" id="prevBtn" onclick="prevSlide()">&lt;</button>
                     <div class="carousel-indicators" id="indicators"></div>
-                    <button class="carousel-btn" id="nextBtn" onclick="nextSlide()">›</button>
+                    <button class="carousel-btn" id="nextBtn" onclick="nextSlide()">&gt;</button>
                 </div>
             </div>
         </div>
