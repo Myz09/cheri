@@ -112,19 +112,7 @@
             display: flex;
             justify-content: center;
         }
-
-        @media(max-width: 900px) {
-            .m-container {
-                grid-template-columns: 1fr;
-            }
-
-            .m-sec {
-                width: 100%;
-                border-left: none;
-                border-radius: 0px;
-            }
-        }
-
+        
         .tut-button {
             background: #aecdab;
             color: #ffffff;
@@ -272,9 +260,14 @@
             background: rgba(255, 182, 217, 0.8);
         }
 
-        @media(max-width: 900px) {
-            .features-grid { grid-template-columns: repeat(1, 1fr); }
-            .m-sec { width: 100dvw; }
+        @media (max-width: 900px) {
+            .m-container {
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0;
+            }
         }
     </style>
 </head>
@@ -295,7 +288,7 @@
                     <p>The gender gap in is real, not just in tech but in general as well. There have been many advancements to reduce this disparity, yet even today, there are always instances of girls feeling undermined in the classroom and unmotivated to pursue their dreams. We aim to create blossoms of impact starting from locally to out in the web. We're the girl's girl - by creating a safe, inclusive community bonded by computer science and girlhood, we have a space to connect, grow, and learn.</p>
                 </div>
             </div>
-            <div class="m-sec" style="border-left: 1px solid #bdbbbb; border-radius: 0px;" id="m-sec-tut">
+            <div class="m-sec" id="m-sec-tut">
                 <div>
                     <h2>Tutoring</h2>
                     <p>Cherielle has a team dedicated to tutoring and providing resources for members to learn about computer science. We provide review materials for major tests like AP CSA, supplemental information about the computer science world, inform about the basics to the updates in tech, and constantly provide resources to stay involved in the growing field.</p>
@@ -306,7 +299,7 @@
                     </a>
                 </div>
             </div>
-            <div class="m-sec" style="border-left: 1px solid #bdbbbb; border-radius: 0px;" id="m-sec-ment">
+            <div class="m-sec" id="m-sec-ment">
                 <div>
                     <h2>Mentorship</h2>
                     <p>Our virtual mentorship program connects female and gender-expansive students with supportive mentors in computer science for three months of guidance, encouragement, and career exploration.</p>
