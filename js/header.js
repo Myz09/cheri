@@ -1,11 +1,11 @@
 // sets the header
 
-const headerElement = document.getElementById('header');
-headerElement.innerHTML = `
+header.innerHTML = `
+<header>
 <a href="index.html"><img class="logo" src="images/logo.png" alt="logo" width="100px"></a>
 <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 <nav>
-<ul>
+<ul class="nav_links">
 <li><a href="mission.html">Mission</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="events.html">Events</a></li>
@@ -13,13 +13,14 @@ headerElement.innerHTML = `
 <li><a href="tutoring.html">Tutoring</a></li>
 <li><a href="mentorship.html">Mentorship</a></li>
 <li><a href="contact.html">Contact</a></li>
-<li><a href="https://linktr.ee/cherielle">Linktree</a></li>
+<li><a href="https://linktr.ee/cherielle" id="linktree">Linktree</a></li>
 </ul>
 </nav>
+</header>
 `;
 
-const toggle = headerElement.querySelector('.nav-toggle');
-const nav = headerElement.querySelector('nav');
+const toggle = header.querySelector('.nav-toggle');
+const nav = header.querySelector('header > nav');
 toggle.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
   toggle.setAttribute('aria-expanded', String(isOpen));
