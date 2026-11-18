@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css">
     <title>contact us</title>
     <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
@@ -19,69 +20,151 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png" />
     <style>
         .contact-container {
-        max-width: 1000px;
-        margin: 50px auto;
-        background-color: #fff;
-        padding: 30px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .contact-container h1 {
-        margin-bottom: 20px;
-        text-align: center;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         form label {
-        display: block;
-        margin-top: 15px;
-        font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
         }
 
         form input,
         form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #aaa;
-        border-radius: 5px;
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
         }
 
         button {
-        margin-top: 20px;
-        padding: 10px 15px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
         /* layout: center the contact box; place image to the left without affecting centering */
-        :root{--contact-box-w:640px;--contact-img-w:360px;--img-gap:24px;--img-offset:120px;--img-offset-right:-48px}
-        .contact-row{position:relative;max-width:1200px;margin:50px auto;padding:0 1rem}
-        .contact-row .contact-container{width:var(--contact-box-w);margin:0 auto}
-        .contact-row .place-image{position:absolute;top:calc(50% + var(--img-offset));transform:translateY(-50%);left:calc(50% - (var(--contact-box-w)/2) - var(--contact-img-w) - var(--img-gap));}
-        .contact-row .place-image img{width:var(--contact-img-w);border-radius:12px;object-fit:cover;box-shadow:none;border:none;display:block}
-        .contact-row .place-image-right{position:absolute;top:calc(50% + var(--img-offset-right));transform:translateY(-50%);left:calc(50% + (var(--contact-box-w)/2) + var(--img-gap));}
-        .contact-row .place-image-right img{width:var(--contact-img-w);border-radius:12px;object-fit:cover;box-shadow:none;border:none;display:block}
-
-        @media(max-width:1000px){
-            :root{--contact-img-w:320px}
-            .contact-row .place-image{left:calc(50% - (var(--contact-box-w)/2) - var(--contact-img-w) - var(--img-gap));}
-            .contact-row .place-image-right{left:calc(50% + (var(--contact-box-w)/2) + var(--img-gap));}
+        :root {
+            --contact-box-w: 640px;
+            --contact-img-w: 360px;
+            --img-gap: 24px;
+            --img-offset: 120px;
+            --img-offset-right: -48px
         }
 
-        @media(max-width:800px){
-            :root{--img-offset:0px}
-            .contact-row{padding:0 1rem}
-            :root{--img-offset-right:0px}
-            .contact-row .place-image{position:static;transform:none;margin-bottom:1rem;left:auto}
-            .contact-row .place-image img{width:100%;max-width:100%}
-            .contact-row .place-image-right{position:static;transform:none;margin-top:1rem;left:auto}
-            .contact-row .place-image-right img{width:100%;max-width:100%}
-            .contact-row .contact-container{width:100%}
+        .contact-row {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 1rem
         }
 
+        .contact-row .contact-container {
+            width: var(--contact-box-w);
+            margin: 0 auto
+        }
+
+        .contact-row .place-image {
+            position: absolute;
+            top: calc(50% + var(--img-offset));
+            transform: translateY(-50%);
+            left: calc(50% - (var(--contact-box-w)/2) - var(--contact-img-w) - var(--img-gap));
+        }
+
+        .contact-row .place-image img {
+            width: var(--contact-img-w);
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: none;
+            border: none;
+            display: block
+        }
+
+        .contact-row .place-image-right {
+            position: absolute;
+            top: calc(50% + var(--img-offset-right));
+            transform: translateY(-50%);
+            left: calc(50% + (var(--contact-box-w)/2) + var(--img-gap));
+        }
+
+        .contact-row .place-image-right img {
+            width: var(--contact-img-w);
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: none;
+            border: none;
+            display: block
+        }
+
+        @media(max-width:1000px) {
+            :root {
+                --contact-img-w: 320px
+            }
+
+            .contact-row .place-image {
+                left: calc(50% - (var(--contact-box-w)/2) - var(--contact-img-w) - var(--img-gap));
+            }
+
+            .contact-row .place-image-right {
+                left: calc(50% + (var(--contact-box-w)/2) + var(--img-gap));
+            }
+        }
+
+        @media(max-width:800px) {
+            :root {
+                --img-offset: 0px
+            }
+
+            .contact-row {
+                padding: 0 1rem
+            }
+
+            :root {
+                --img-offset-right: 0px
+            }
+
+            .contact-row .place-image {
+                position: static;
+                transform: none;
+                margin-bottom: 1rem;
+                left: auto
+            }
+
+            .contact-row .place-image img {
+                width: 100%;
+                max-width: 100%
+            }
+
+            .contact-row .place-image-right {
+                position: static;
+                transform: none;
+                margin-top: 1rem;
+                left: auto
+            }
+
+            .contact-row .place-image-right img {
+                width: 100%;
+                max-width: 100%
+            }
+
+            .contact-row .contact-container {
+                width: 100%
+            }
+        }
     </style>
     <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png" />
@@ -94,13 +177,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png" />
     <script defer src="./js/header.js"></script>
     <style>
-        label p{
-            font-family:'Bitter';
-            color:#907f94;
-            font-weight:40  0;
+        label p {
+            font-family: 'Bitter';
+            color: #907f94;
+            font-weight: 40 0;
         }
     </style>
 </head>
+
 <body>
     <div class="site">
         <header id="header"></header>
@@ -112,13 +196,19 @@
                 <section class="contact-container">
                     <h1 style="font-family:'Bitter';font-weight:350;color:#907f94;">Email Us</h1>
                     <form action="mailto:cherielle.code@gmail.com" method="post" enctype="text/plain">
-                        <label for="name"><p>Name:</p></label>
+                        <label for="name">
+                            <p>Name:</p>
+                        </label>
                         <input type="text" id="name" name="name" required>
 
-                        <label for="email"><p>Email:</p></label>
+                        <label for="email">
+                            <p>Email:</p>
+                        </label>
                         <input type="email" id="email" name="email" required>
 
-                        <label for="message"><p>Message:</p></label>
+                        <label for="message">
+                            <p>Message:</p>
+                        </label>
                         <textarea id="message" name="message" rows="5" required></textarea>
 
                         <button type="submit" style="font-family:Bitter;background-color:#907f94;">Send</button>
@@ -127,19 +217,29 @@
                 <div class="place-image-right"><img src="images/contact%20image%20(1).png" alt="contact right" /></div>
             </div>
             <section class="faq-section">
-                <h2 class="faq-title" style="font-family:'Bitter';color:#907f94;text-align:center;">Frequently Asked Questions</h2>
+                <h2 class="faq-title" style="font-family:'Bitter';color:#907f94;text-align:center;">Frequently Asked
+                    Questions</h2>
                 <div class="faq-list">
                     <details class="faq-item">
                         <summary>How long will it take to get a reply?</summary>
-                        <div class="faq-answer"><p>We typically respond within 3–5 business days. For urgent matters, please put "URGENT" in the subject line.</p></div>
+                        <div class="faq-answer">
+                            <p>We typically respond within 3–5 business days. For urgent matters, please put "URGENT" in
+                                the subject line.</p>
+                        </div>
                     </details>
                     <details class="faq-item">
                         <summary>Can I collaborate or contribute?</summary>
-                        <div class="faq-answer"><p>Yes — we welcome collaborations. Please tell us more using this contact form and include links to your work.</p></div>
+                        <div class="faq-answer">
+                            <p>Yes — we welcome collaborations. Please tell us more using this contact form and include
+                                links to your work.</p>
+                        </div>
                     </details>
                     <details class="faq-item">
                         <summary>Where are you based?</summary>
-                        <div class="faq-answer"><p>We're primarily online and accept remote collaborations. If a physical address is required, we'll provide it privately.</p></div>
+                        <div class="faq-answer">
+                            <p>We're primarily online and accept remote collaborations. If a physical address is
+                                required, we'll provide it privately.</p>
+                        </div>
                     </details>
                 </div>
             </section>
@@ -151,7 +251,8 @@
             <li>Discord</li>
         </ul>
     </div> -->
-       <footer id="footer"></footer>
+    <footer id="footer"></footer>
 
 </body>
+
 </html>

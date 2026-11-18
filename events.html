@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
     <title>events</title>
@@ -95,8 +96,17 @@
             margin-bottom: 40px;
         }
 
-        @media (max-width: 1024px) { .events-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .events-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 1024px) {
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
         /* Event cards — pink theme */
         .event-card {
@@ -113,11 +123,38 @@
             box-shadow: 0 8px 20px rgba(230, 130, 180, 0.25);
         }
 
-        .event-card-image { width: 100%; height: 250px; display: block; overflow: hidden; }
-        .event-card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .event-card-info { padding: 20px; border-top: 2px solid var(--primary-blue); }
-        .event-card-date { font-weight: bold; color: var(--blue-border); margin-bottom: 8px; font-size: 14px; }
-        .event-card-title { font-size: 18px; font-weight: 600; color: var(--sage-green); margin: 0; }
+        .event-card-image {
+            width: 100%;
+            height: 250px;
+            display: block;
+            overflow: hidden;
+        }
+
+        .event-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .event-card-info {
+            padding: 20px;
+            border-top: 2px solid var(--primary-blue);
+        }
+
+        .event-card-date {
+            font-weight: bold;
+            color: var(--blue-border);
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .event-card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--sage-green);
+            margin: 0;
+        }
 
         /* Hackathon section */
         .hackathon-section {
@@ -156,7 +193,10 @@
         }
 
         /* Project gallery */
-        .project-gallery { text-align: left; margin-top: 10px; }
+        .project-gallery {
+            text-align: left;
+            margin-top: 10px;
+        }
 
         .project-grid {
             display: grid;
@@ -166,9 +206,23 @@
             width: 100%;
         }
 
-        @media (max-width: 1400px) { .project-grid { grid-template-columns: repeat(3, minmax(280px, 1fr)); } }
-        @media (max-width: 1100px) { .project-grid { grid-template-columns: repeat(2, minmax(260px, 1fr)); } }
-        @media (max-width: 700px) { .project-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 1400px) {
+            .project-grid {
+                grid-template-columns: repeat(3, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(260px, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
         .project-card {
             display: block;
@@ -190,13 +244,40 @@
             padding: 18px;
         }
 
-        .project-card.see-all .proj-body { padding: 0; text-align: center; }
-        .project-card.see-all .proj-body p { margin: 6px 0 0 0; }
+        .project-card.see-all .proj-body {
+            padding: 0;
+            text-align: center;
+        }
 
-        .proj-thumb { width: 100%; height: 150px; object-fit: cover; display: block; object-position: 50% 50%; margin: 0 auto; }
-        .proj-body { padding: 14px 14px 18px 0; }
-        .proj-body p { margin: 8px 0 0 0; color: #6b7b72; font-size: 14px; }
-        .proj-body strong { display: block; font-size: 16px; color: var(--blue-dark); margin: 0; }
+        .project-card.see-all .proj-body p {
+            margin: 6px 0 0 0;
+        }
+
+        .proj-thumb {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+            object-position: 50% 50%;
+            margin: 0 auto;
+        }
+
+        .proj-body {
+            padding: 14px 14px 18px 0;
+        }
+
+        .proj-body p {
+            margin: 8px 0 0 0;
+            color: #6b7b72;
+            font-size: 14px;
+        }
+
+        .proj-body strong {
+            display: block;
+            font-size: 16px;
+            color: var(--blue-dark);
+            margin: 0;
+        }
 
         /* Ribbon — pink toned */
         .ribbon {
@@ -277,11 +358,11 @@
             display: flex;
             transition: transform 0.5s ease;
             width: 100%;
-            margin:0;
+            margin: 0;
         }
 
         .carousel-slide {
-            margin:20px 0;
+            margin: 20px 0;
             min-width: 100%;
             width: 100%;
             flex: 0 0 100%;
@@ -390,6 +471,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="site">
         <header id="header"></header>
@@ -398,7 +480,10 @@
         <div class="events-hero">
             <h1>Events</h1>
             <p>
-                Through workshops, hackathons, tutoring sessions, outreach events, and community initiatives, Cherielle transforms ideas into meaningful action. We create opportunities for girls to explore STEM, build confidence, strengthen technical skills, and connect with a supportive community. Each event reflects our mission of empowering future leaders while creating lasting impact both locally and beyond.
+                Through workshops, hackathons, tutoring sessions, outreach events, and community initiatives, Cherielle
+                transforms ideas into meaningful action. We create opportunities for girls to explore STEM, build
+                confidence, strengthen technical skills, and connect with a supportive community. Each event reflects
+                our mission of empowering future leaders while creating lasting impact both locally and beyond.
             </p>
         </div>
 
@@ -411,7 +496,8 @@
                 <div class="project-gallery">
                     <h3>Winning projects</h3>
                     <div class="project-grid">
-                        <a class="project-card" href="https://devpost.com/software/mix-match" target="_blank" rel="noopener">
+                        <a class="project-card" href="https://devpost.com/software/mix-match" target="_blank"
+                            rel="noopener">
                             <div class="ribbon">WINNER</div>
                             <img class="proj-thumb" src="images/mix&match.png" alt="Mix&Match">
                             <div class="proj-body">
@@ -420,7 +506,8 @@
                             </div>
                         </a>
 
-                        <a class="project-card" href="https://devpost.com/software/mira-diaries" target="_blank" rel="noopener">
+                        <a class="project-card" href="https://devpost.com/software/mira-diaries" target="_blank"
+                            rel="noopener">
                             <div class="ribbon">WINNER</div>
                             <img class="proj-thumb" src="images/miradiaries.png" alt="Mira Diaries">
                             <div class="proj-body">
@@ -429,7 +516,9 @@
                             </div>
                         </a>
 
-                        <a class="project-card" href="https://devpost.com/software/moodrobe-digital-closet-sets-with-your-mood" target="_blank" rel="noopener">
+                        <a class="project-card"
+                            href="https://devpost.com/software/moodrobe-digital-closet-sets-with-your-mood"
+                            target="_blank" rel="noopener">
                             <div class="ribbon">WINNER</div>
                             <img class="proj-thumb" src="images/moodrobe.png" alt="Moodrobe">
                             <div class="proj-body">
@@ -438,7 +527,8 @@
                             </div>
                         </a>
 
-                        <a class="project-card" href="https://devpost.com/software/dream-sky" target="_blank" rel="noopener">
+                        <a class="project-card" href="https://devpost.com/software/dream-sky" target="_blank"
+                            rel="noopener">
                             <div class="ribbon">WINNER</div>
                             <img class="proj-thumb" src="images/mydreamsky.png" alt="Dream Sky">
                             <div class="proj-body">
@@ -447,7 +537,8 @@
                             </div>
                         </a>
 
-                        <a class="project-card" href="https://devpost.com/software/a-day-in-stem" target="_blank" rel="noopener">
+                        <a class="project-card" href="https://devpost.com/software/a-day-in-stem" target="_blank"
+                            rel="noopener">
                             <div class="ribbon">WINNER</div>
                             <img class="proj-thumb" src="images/adayinstem.png" alt="A Day in STEM">
                             <div class="proj-body">
@@ -456,7 +547,8 @@
                             </div>
                         </a>
 
-                        <a class="project-card" href="https://devpost.com/software/computer-vision-jkdw02" target="_blank" rel="noopener">
+                        <a class="project-card" href="https://devpost.com/software/computer-vision-jkdw02"
+                            target="_blank" rel="noopener">
                             <div class="ribbon">WINNER</div>
                             <img class="proj-thumb" src="images/computervision.png" alt="Computer Vision">
                             <div class="proj-body">
@@ -465,7 +557,8 @@
                             </div>
                         </a>
 
-                        <a class="project-card" href="https://devpost.com/software/vibe-mapping" target="_blank" rel="noopener">
+                        <a class="project-card" href="https://devpost.com/software/vibe-mapping" target="_blank"
+                            rel="noopener">
                             <div class="ribbon">WINNER</div>
                             <img class="proj-thumb" src="images/vibemapping.png" alt="Vibe Mapping">
                             <div class="proj-body">
@@ -474,7 +567,8 @@
                             </div>
                         </a>
 
-                        <a class="project-card see-all" href="https://code-as-a-canvas.devpost.com/project-gallery" target="_blank" rel="noopener">
+                        <a class="project-card see-all" href="https://code-as-a-canvas.devpost.com/project-gallery"
+                            target="_blank" rel="noopener">
                             <div class="proj-body">
                                 <strong>See the full gallery</strong>
                                 <p>Open the Code as a Canvas Devpost gallery.</p>
@@ -498,44 +592,97 @@
                 <div class="carousel-wrapper" id="carouselWrapper">
                     <div class="carousel-slide">
                         <div class="slide-date">August 2026</div>
-                        <div class="slide-title">Writing Competition: Critical converstations in STEM with Shewireswords</div>
-                        <div class="slide-content">In August 2026, we partnered with Shewireswords to host an essay competition about conversations often overlooked in STEM. We received twenty-six entries based on one of two prompts: whether curiosity or intelligence matters more in a STEM career, and what AI means for women's opportunities. We judged each piece on originality, depth of thinking, use of evidence, and clarity, and we're grateful to the panel of women in STEM who evaluated each entry: Divyansha Nashine, Dory Meng, and Sreya Sarathy. To us, the range of perspectives across the entries was a reminder that these conversations are better when more voices are part of them, which speaks directly to our mission to make sure that girls and non-binary members of our community are given equal opportunities in the field of computer science and technology.</div>
+                        <div class="slide-title">Writing Competition: Critical converstations in STEM with Shewireswords
+                        </div>
+                        <div class="slide-content">In August 2026, we partnered with Shewireswords to host an essay
+                            competition about conversations often overlooked in STEM. We received twenty-six entries
+                            based on one of two prompts: whether curiosity or intelligence matters more in a STEM
+                            career, and what AI means for women's opportunities. We judged each piece on originality,
+                            depth of thinking, use of evidence, and clarity, and we're grateful to the panel of women in
+                            STEM who evaluated each entry: Divyansha Nashine, Dory Meng, and Sreya Sarathy. To us, the
+                            range of perspectives across the entries was a reminder that these conversations are better
+                            when more voices are part of them, which speaks directly to our mission to make sure that
+                            girls and non-binary members of our community are given equal opportunities in the field of
+                            computer science and technology.</div>
                     </div>
 
                     <div class="carousel-slide">
                         <div class="slide-date">October 2025</div>
                         <div class="slide-title">Codeshield Workshop with Medisec</div>
-                        <div class="slide-content">In October of 2025, Cherielle collaborated with Medisec to host a workshop focused on the intersection of cybersecurity and healthcare with 30+ participants over the span of two weekends. Cherielle's team organised and managed workshop logistics effectively in order to conduct multiple coding activities and interactive investigations. Through these activities, participants gained useful coding and problem solving skills. Participants also learned important information about the role of cybersecurity in healthcare. Through this event both Cherielle and Medisec received strong online engagement with the shared Instagram post reaching 100+ likes and through this we increased awareness about cybersecurity issues particularly relating to healthcare systems.</div>
+                        <div class="slide-content">In October of 2025, Cherielle collaborated with Medisec to host a
+                            workshop focused on the intersection of cybersecurity and healthcare with 30+ participants
+                            over the span of two weekends. Cherielle's team organised and managed workshop logistics
+                            effectively in order to conduct multiple coding activities and interactive investigations.
+                            Through these activities, participants gained useful coding and problem solving skills.
+                            Participants also learned important information about the role of cybersecurity in
+                            healthcare. Through this event both Cherielle and Medisec received strong online engagement
+                            with the shared Instagram post reaching 100+ likes and through this we increased awareness
+                            about cybersecurity issues particularly relating to healthcare systems.</div>
                     </div>
 
                     <div class="carousel-slide">
                         <div class="slide-date">August 2025</div>
                         <div class="slide-title">Joint Post with Lumora</div>
-                        <div class="slide-content">In August of 2025, Cherielle collaborated with Lumora and created a post on Instagram called "Where AI Can Take You". This post discussed the fields and industries that are changing with AI and how people can use the technology to help with tasks and increase productivity. Cherielle researched information for and designed three of the six slides with meaningful details and insights to educate our audience. This post was targeted at middle and high schoolers to better inform them about how to use AI and new technology to their advantage but also be mindful and appropriate about their usage.</div>
+                        <div class="slide-content">In August of 2025, Cherielle collaborated with Lumora and created a
+                            post on Instagram called "Where AI Can Take You". This post discussed the fields and
+                            industries that are changing with AI and how people can use the technology to help with
+                            tasks and increase productivity. Cherielle researched information for and designed three of
+                            the six slides with meaningful details and insights to educate our audience. This post was
+                            targeted at middle and high schoolers to better inform them about how to use AI and new
+                            technology to their advantage but also be mindful and appropriate about their usage.</div>
                     </div>
 
                     <div class="carousel-slide">
                         <div class="slide-date">July 2025</div>
                         <div class="slide-title">Joint Post with WA STEMHER</div>
-                        <div class="slide-content">In July of 2025, Cherielle collaborated with Washington Stem-Her to create an Instagram post called "All About Interdisciplinary Computer Science", highlighting how computer science can be a useful tool to combine with other fields. Cherielle's team worked on designing and researching information for five slides that discussed the positive aspects that could be gained from applying computer science to other industries and provided deeper examples of how computer science can be used in specific fields. This post was targeted at middle and high school students to inform them about how computer science knowledge is an important skill that they can put to use with other specializations through interdisciplinary computer science.</div>
+                        <div class="slide-content">In July of 2025, Cherielle collaborated with Washington Stem-Her to
+                            create an Instagram post called "All About Interdisciplinary Computer Science", highlighting
+                            how computer science can be a useful tool to combine with other fields. Cherielle's team
+                            worked on designing and researching information for five slides that discussed the positive
+                            aspects that could be gained from applying computer science to other industries and provided
+                            deeper examples of how computer science can be used in specific fields. This post was
+                            targeted at middle and high school students to inform them about how computer science
+                            knowledge is an important skill that they can put to use with other specializations through
+                            interdisciplinary computer science.</div>
                     </div>
 
                     <div class="carousel-slide">
                         <div class="slide-date">February 2025</div>
                         <div class="slide-title">Next Gen Tech Workshop Collab</div>
-                        <div class="slide-content">In December of 2025, Cherielle hosted a workshop with 10+ participants in partnership with Next Gen Tech with the goal of providing digital literacy training for beginners. To achieve this, Cherielle's team designed informational presentations on fundamental digital software use and rudimentary Python for beginner participants. The team then encouraged the participants to use their recently acquired knowledge and skills by creating an interactive game project on Rock Paper Scissors. Through this event, Cherielle helped participants develop foundational skills in Python and digital software by creating a supportive and encouraging learning environment that promoted collaboration. On Instagram, we received much engagement with 140+ likes and several comments on posts and reels.</div>
+                        <div class="slide-content">In December of 2025, Cherielle hosted a workshop with 10+
+                            participants in partnership with Next Gen Tech with the goal of providing digital literacy
+                            training for beginners. To achieve this, Cherielle's team designed informational
+                            presentations on fundamental digital software use and rudimentary Python for beginner
+                            participants. The team then encouraged the participants to use their recently acquired
+                            knowledge and skills by creating an interactive game project on Rock Paper Scissors. Through
+                            this event, Cherielle helped participants develop foundational skills in Python and digital
+                            software by creating a supportive and encouraging learning environment that promoted
+                            collaboration. On Instagram, we received much engagement with 140+ likes and several
+                            comments on posts and reels.</div>
                     </div>
 
                     <div class="carousel-slide">
                         <div class="slide-date">January 2025</div>
                         <div class="slide-title">Pinkgap Medicine Conference II</div>
-                        <div class="slide-content">In January of 2025, Cherielle partnered with 9 other non-profit organizations to address medical issues in a conference. The conference featured a total of 12 speakers and had 250 people in attendance, with the conference also being recorded and published on Youtube to reach a larger audience. Cherielle specifically explored the role of wearable tech in the medical field by creating a presentation and featuring 2 representative speakers. Through this Cherielle shared informative insights and promoted volunteer opportunities to the attendees. The event also gained substantial engagement on social media with the Instagram posts reaching 200 likes and 60 comments collectively.</div>
+                        <div class="slide-content">In January of 2025, Cherielle partnered with 9 other non-profit
+                            organizations to address medical issues in a conference. The conference featured a total of
+                            12 speakers and had 250 people in attendance, with the conference also being recorded and
+                            published on Youtube to reach a larger audience. Cherielle specifically explored the role of
+                            wearable tech in the medical field by creating a presentation and featuring 2 representative
+                            speakers. Through this Cherielle shared informative insights and promoted volunteer
+                            opportunities to the attendees. The event also gained substantial engagement on social media
+                            with the Instagram posts reaching 200 likes and 60 comments collectively.</div>
                     </div>
 
                     <div class="carousel-slide">
                         <div class="slide-date">November 2024</div>
                         <div class="slide-title">Hour of Code Workshop with Pinkgap</div>
-                        <div class="slide-content">In November of 2024, Cherielle worked with Pinkgap to host a workshop targeted at specifically middle school students to introduce them to python basics. The workshop consisted of 10 participants who worked towards a final project showcase where they could present the final project they built. Participants were also offered the chance to earn a $25 Amazon gift card and a $60 grant. Social media engagement consisted of 150 likes and 50 comments across all Instagram posts made on the topic.</div>
+                        <div class="slide-content">In November of 2024, Cherielle worked with Pinkgap to host a workshop
+                            targeted at specifically middle school students to introduce them to python basics. The
+                            workshop consisted of 10 participants who worked towards a final project showcase where they
+                            could present the final project they built. Participants were also offered the chance to
+                            earn a $25 Amazon gift card and a $60 grant. Social media engagement consisted of 150 likes
+                            and 50 comments across all Instagram posts made on the topic.</div>
                     </div>
                 </div>
 

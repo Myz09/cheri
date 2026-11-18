@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
     <title>blog</title>
@@ -84,8 +85,14 @@
         }
 
         @media (max-width: 768px) {
-            .blog-filters { gap: 10px; }
-            .filter-btn { padding: 10px 18px; font-size: 14px; }
+            .blog-filters {
+                gap: 10px;
+            }
+
+            .filter-btn {
+                padding: 10px 18px;
+                font-size: 14px;
+            }
         }
 
         /* Category sections */
@@ -123,8 +130,17 @@
             margin-bottom: 40px;
         }
 
-        @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
         /* Blog cards */
         .blog-card {
@@ -211,9 +227,12 @@
             display: block;
         }
 
-        .hidden { display: none; }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
     <div class="site">
         <header id="header"></header>
@@ -222,7 +241,9 @@
         <div class="blog-overview">
             <h1>Blog</h1>
             <p>
-                Explore stories, insights, and updates from the Cherielle community. From personal experiences in STEM to practical tech tips, our blog showcases the voices and perspectives of those passionate about empowering girls in technology!
+                Explore stories, insights, and updates from the Cherielle community. From personal experiences in STEM
+                to practical tech tips, our blog showcases the voices and perspectives of those passionate about
+                empowering girls in technology!
             </p>
         </div>
 
@@ -270,7 +291,8 @@
             <div class="blog-grid">
                 <a class="blog-card" href="blog-post-code-as-a-canvas.html">
                     <div class="blog-card-image">
-                        <img src="images/codeascanvasblogimage.webp" alt="Behind the Canvas: Hosting Our First Hackathon">
+                        <img src="images/codeascanvasblogimage.webp"
+                            alt="Behind the Canvas: Hosting Our First Hackathon">
                     </div>
                     <div class="blog-card-info">
                         <h3 class="blog-card-title">Behind the Canvas: Hosting Our First Hackathon</h3>
@@ -352,4 +374,5 @@
         });
     </script>
 </body>
+
 </html>
