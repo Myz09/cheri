@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
@@ -16,24 +17,43 @@
     <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png" />
-    <script defer src="js\header.js"></script>
+    <script defer src="./js/header.js"></script>
     <style>
-        .home-sec{
-            min-height:100dvh;
-            align-items:center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        #top{
-            min-height:90dvh;
-            display:flex;
+
+        .home-sec {
+            min-height: 100dvh;
+            align-items: center;
+        }
+
+        #top {
+            min-height: 90dvh;
+            display: flex;
             justify-content: center;
         }
-        
+
+        @media (max-width: 1120px) {
+            body.home-no-scroll {
+                height: auto;
+                overflow-y: auto;
+                overscroll-behavior: initial;
+            }
+
+            #top {
+                min-height: auto;
+            }
+        }
     </style>
 </head>
 <!--nav bar-->
+
 <body class="home-no-scroll">
     <div class="site">
-            <header id = "header"></header>
+        <header id="header"></header>
         <div class="home-sec" id="top">
             <div class="hero">
                 <div class="hero-left">
@@ -45,7 +65,7 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
     <footer id="footer"></footer>
 </body>
 
